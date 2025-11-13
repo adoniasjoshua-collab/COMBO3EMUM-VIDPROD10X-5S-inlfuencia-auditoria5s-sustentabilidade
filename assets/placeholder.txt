@@ -1,0 +1,6 @@
+This file ensures the /assets directory is tracked by Git.
+Subfolders:
+- /assets/images
+- /assets/icons
+
+Replace this file or keep it as a marker.
