@@ -3,6 +3,7 @@ const path = require('node:path');
 
 const root = path.resolve(__dirname, '..');
 const base = 'https://zadonidigital.com.br/';
+const checkout = 'https://hotm.io/trilha10x';
 const updated = '2026-08-22';
 const author = 'Adonias Pereira da Silva';
 
@@ -255,7 +256,7 @@ function header(r, cluster) {
     ['portal', 'Início', 'portal/'], ['5s', '5S', '5s/'], ['produtividade', 'Produtividade', 'produtividade/'],
     ['gestao-ambiental', 'Gestão Ambiental', 'gestao-ambiental/'], ['sobre', 'Sobre', 'sobre/']
   ];
-  return `<a class="skip-link" href="#conteudo">Pular para o conteúdo</a><header class="portal-header"><div class="portal-shell portal-header__inner"><a class="portal-brand" href="${r}portal/" aria-label="Portal 5S e Produtividade — início"><span class="portal-brand__mark" aria-hidden="true">5S</span><span class="portal-brand__text">Portal 5S e Produtividade<small>Conhecimento aplicado</small></span></a><button class="portal-menu-toggle" type="button" aria-label="Abrir menu" aria-controls="portal-nav" aria-expanded="false">☰</button><nav class="portal-nav" id="portal-nav" data-open="false" aria-label="Navegação principal"><ul>${nav.map(([key,label,url]) => `<li><a href="${r}${url}"${key === cluster ? ' aria-current="page"' : ''}>${label}</a></li>`).join('')}<li><a class="nav-cta" href="${r}#oferta">Conheça o Curso</a></li></ul></nav></div></header>`;
+  return `<a class="skip-link" href="#conteudo">Pular para o conteúdo</a><header class="portal-header"><div class="portal-shell portal-header__inner"><a class="portal-brand" href="${r}portal/" aria-label="Portal 5S e Produtividade — início"><span class="portal-brand__mark" aria-hidden="true">5S</span><span class="portal-brand__text">Portal 5S e Produtividade<small>Conhecimento aplicado</small></span></a><button class="portal-menu-toggle" type="button" aria-label="Abrir menu" aria-controls="portal-nav" aria-expanded="false">☰</button><nav class="portal-nav" id="portal-nav" data-open="false" aria-label="Navegação principal"><ul>${nav.map(([key,label,url]) => `<li><a href="${r}${url}"${key === cluster ? ' aria-current="page"' : ''}>${label}</a></li>`).join('')}<li><a class="nav-cta" href="${checkout}" target="_blank" rel="noopener noreferrer">Conheça a Trilha 10X</a></li></ul></nav></div></header>`;
 }
 
 function breadcrumb(page, r) {
@@ -279,7 +280,7 @@ function schemas(page) {
 }
 
 function footer(r) {
-  return `<footer class="portal-footer"><div class="portal-shell"><div class="portal-footer__grid"><div><h2>Portal 5S e Produtividade</h2><p>Conteúdo educacional sobre organização, produtividade e gestão ambiental aplicado ao trabalho e à vida.</p></div><div><h3>Conteúdos</h3><ul><li><a href="${r}5s/">5S</a></li><li><a href="${r}produtividade/">Produtividade</a></li><li><a href="${r}gestao-ambiental/">Gestão Ambiental</a></li><li><a href="${r}#oferta">Curso</a></li></ul></div><div><h3>Transparência</h3><ul><li><a href="${r}sobre/">Sobre o autor</a></li><li><a href="${r}sobre/#como-os-conteudos-sao-produzidos">Política editorial</a></li><li><a href="mailto:adonias.joshua@gmail.com">Contato</a></li></ul></div></div><div class="portal-footer__bottom">Atualizado em 22 de agosto de 2026 · © <span data-year>2026</span> Adonias Pereira da Silva. Conteúdo educacional.</div></div></footer>`;
+  return `<footer class="portal-footer"><div class="portal-shell"><div class="portal-footer__grid"><div><h2>Portal 5S e Produtividade</h2><p>Conteúdo educacional sobre organização, produtividade e gestão ambiental aplicado ao trabalho e à vida.</p></div><div><h3>Conteúdos</h3><ul><li><a href="${r}5s/">5S</a></li><li><a href="${r}produtividade/">Produtividade</a></li><li><a href="${r}gestao-ambiental/">Gestão Ambiental</a></li><li><a href="${checkout}" target="_blank" rel="noopener noreferrer">Trilha 10X</a></li></ul></div><div><h3>Transparência</h3><ul><li><a href="${r}sobre/">Sobre o autor</a></li><li><a href="${r}sobre/#como-os-conteudos-sao-produzidos">Política editorial</a></li><li><a href="mailto:adonias.joshua@gmail.com">Contato</a></li></ul></div></div><div class="portal-footer__bottom">Atualizado em 22 de agosto de 2026 · © <span data-year>2026</span> Adonias Pereira da Silva. Conteúdo educacional.</div></div></footer>`;
 }
 
 function render(page) {
@@ -288,7 +289,7 @@ function render(page) {
   const toc = `<aside class="toc" aria-label="Sumário"><strong>Neste conteúdo</strong><ol>${page.sections.map(([title]) => `<li><a href="#${idFor(title)}">${title}</a></li>`).join('')}</ol></aside>`;
   const related = `<section class="related-posts" aria-labelledby="relacionados"><h2 id="relacionados">Continue aprendendo</h2><ul class="related-links">${page.related.map(([label,url]) => `<li><a href="${r}${url}">${label} →</a></li>`).join('')}</ul></section>`;
   const authorBox = `<aside class="author-box" aria-label="Sobre o autor"><img src="${r}assets/images/adonias-profile-200.jpg" srcset="${r}assets/images/adonias-profile-400.jpg 2x" width="72" height="72" loading="lazy" decoding="async" alt="Adonias Pereira da Silva"><div><h2>Conteúdo por ${author}</h2><p>Técnico em Meio Ambiente, com atuação prática em grandes projetos de construção e mineração. Conteúdo sobre 5S, produtividade, meio ambiente e tecnologia aplicada. <a href="${r}sobre/">Conheça o autor e a política editorial</a>.</p></div></aside>`;
-  const cta = `<aside class="cta-course" aria-labelledby="cta-curso"><h2 id="cta-curso">Quer transformar os conceitos em prática?</h2><p>Conheça a jornada estruturada do curso 5S e Produtividade 10X, com aulas diretas e ferramentas aplicáveis.</p><a class="button" href="${r}#oferta">Conheça o Curso 5S e Produtividade</a></aside>`;
+  const cta = `<aside class="cta-course" aria-labelledby="cta-curso"><h2 id="cta-curso">Conhecer os conceitos não basta quando a rotina continua travada</h2><p>Sem um método, foco, práticas ambientais e comunicação acabam separados. A Trilha 10X conecta os três temas em aulas diretas para ajudar você a transformar conhecimento em ação.</p><a class="button" href="${checkout}" target="_blank" rel="noopener noreferrer">Quero acessar a Trilha 10X por R$ 97</a></aside>`;
   const heroPanel = page.kind === 'hub' ? `<div class="hero-panel"><strong>Aprenda no seu ritmo</strong><p>Guias conectados, exemplos práticos e links para aprofundar cada tema.</p></div>` : '';
   return `<!doctype html>
 <html lang="pt-BR">
@@ -319,7 +320,7 @@ function render(page) {
 ${header(r, page.cluster)}
 ${breadcrumb(page, r)}
 <main id="conteudo">
-  <header class="${page.kind === 'hub' ? 'portal-hero' : 'article-header'}"><div class="portal-shell${page.kind === 'hub' ? ' portal-hero__inner' : ''}"><div><p class="eyebrow">${page.kind === 'hub' ? 'Portal educacional' : 'Guia prático'}</p><h1>${page.h1}</h1><p class="${page.kind === 'hub' ? 'portal-hero__lead' : 'article-header__lead'}">${page.lead}</p>${page.kind === 'hub' ? `<div class="hero-actions"><a class="button button--primary" href="#${idFor(page.sections[0][0])}">Explorar conteúdos</a><a class="button button--secondary" href="${r}#oferta">Conheça o curso</a></div>` : `<div class="article-meta"><span>Por ${author}</span><time datetime="${updated}">Atualizado em 22 de agosto de 2026</time><span>Leitura educativa</span></div>`}</div>${heroPanel}</div></header>
+  <header class="${page.kind === 'hub' ? 'portal-hero' : 'article-header'}"><div class="portal-shell${page.kind === 'hub' ? ' portal-hero__inner' : ''}"><div><p class="eyebrow">${page.kind === 'hub' ? 'Portal educacional' : 'Guia prático'}</p><h1>${page.h1}</h1><p class="${page.kind === 'hub' ? 'portal-hero__lead' : 'article-header__lead'}">${page.lead}</p>${page.kind === 'hub' ? `<div class="hero-actions"><a class="button button--primary" href="#${idFor(page.sections[0][0])}">Explorar conteúdos</a><a class="button button--secondary" href="${checkout}" target="_blank" rel="noopener noreferrer">Conheça a Trilha 10X</a></div>` : `<div class="article-meta"><span>Por ${author}</span><time datetime="${updated}">Atualizado em 22 de agosto de 2026</time><span>Leitura educativa</span></div>`}</div>${heroPanel}</div></header>
   <div class="portal-shell article-layout">${toc}<article class="article">${sectionHtml}${cta}${authorBox}${related}</article></div>
 </main>
 ${footer(r)}
