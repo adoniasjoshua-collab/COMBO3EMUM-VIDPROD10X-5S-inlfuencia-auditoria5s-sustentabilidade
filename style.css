@@ -464,14 +464,7 @@ a:hover { opacity: 0.9; }
   margin: 0 auto;
   box-shadow: 0 0 12px rgba(0,255,136,0.2);
 }
-.old-price { text-decoration: line-through; color: #777; font-size: 1.2rem; }
 .new-price { color: #00E676; font-size: 2rem; font-weight: 700; }
-.countdown { color: #00FF88; font-size: 1rem; background: #081b0f; display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 999px; border: 1px solid rgba(0,255,136,0.2); }
-.timer { color: #00FF88; font-family: 'Orbitron', sans-serif; font-weight: 600; }
-
-/* Glow effect when ending */
-@keyframes goldGlow { 0%,100% { text-shadow: 0 0 0 rgba(255,215,0,0.0); } 50% { text-shadow: 0 0 14px rgba(255,215,0,0.9); } }
-.timer.ending { animation: goldGlow 0.8s ease-in-out infinite; }
 
 /* Offer CTAs */
 .offer-ctas { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
@@ -491,9 +484,6 @@ a:hover { opacity: 0.9; }
 
 /* Hide redundant lifetime badge on small screens */
 @media (max-width: 768px) { .hero-badges { display: none; } }
-
-/* Add hourglass icon to countdown label */
-.countdown::before { content: '⏳'; margin-right: 6px; }
 
 /* Footer link layout without HTML changes */
 .site-footer .flex.gap-16 { flex-wrap: wrap; gap: 12px; justify-content: center; }

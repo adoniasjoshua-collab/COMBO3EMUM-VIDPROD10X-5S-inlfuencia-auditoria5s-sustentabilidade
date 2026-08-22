@@ -28,7 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initCoursesSection();
     initTestimonialsSection();
     enhanceTestimonialsAvatars();
-    initOfferSection();
     initQuizSection();
     initAIAssistant();
     enhanceMethodology();
@@ -154,30 +153,6 @@ function initCoursesSection() {
   const section = document.getElementById('cursos');
   if (!section) return;
   // Additional behaviors could go here (e.g., lazy-loading icons)
-}
-
-// Offer: countdown timer (48h from load) with glow near the end
-function initOfferSection() {
-  const timerEl = document.getElementById('timer');
-  if (!timerEl) return;
-  // Set 48h countdown from page load
-  const endTime = Date.now() + 48 * 60 * 60 * 1000;
-  const countdown = setInterval(() => {
-    const now = Date.now();
-    const distance = endTime - now;
-    if (distance <= 0) {
-      clearInterval(countdown);
-      timerEl.textContent = 'Oferta encerrada!';
-      timerEl.classList.remove('ending');
-      return;
-    }
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    timerEl.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-    if (distance <= 5000) timerEl.classList.add('ending'); else timerEl.classList.remove('ending');
-  }, 1000);
 }
 
 // Add fallback avatars for testimonials

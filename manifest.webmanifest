@@ -1,0 +1,19 @@
+{
+  "name": "Portal 5S e Produtividade",
+  "short_name": "Portal 5S",
+  "description": "Conteúdo educacional sobre 5S, produtividade e gestão ambiental.",
+  "start_url": "./portal/",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f5f7f4",
+  "theme_color": "#116b45",
+  "lang": "pt-BR",
+  "icons": [
+    {
+      "src": "./assets/icons/5s.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
