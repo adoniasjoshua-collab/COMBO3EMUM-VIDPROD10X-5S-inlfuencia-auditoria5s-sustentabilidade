@@ -1,0 +1,29 @@
+Options -Indexes
+
+RewriteEngine On
+
+# Consolida HTTP e www na origem canonica usada pelo sitemap.
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} !^zadonidigital\.com\.br$ [NC]
+RewriteRule ^ https://zadonidigital.com.br%{REQUEST_URI} [R=301,L,NE]
+
+# Evita que /index.html concorra com a URL limpa de cada diretorio.
+RewriteCond %{THE_REQUEST} \s/+(.*/)?index\.html(?:[\s?]) [NC]
+RewriteRule ^(.*/)?index\.html$ https://zadonidigital.com.br/$1 [R=301,L,NE]
+
+ErrorDocument 404 /404.html
+
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 7 days"
+  ExpiresByType application/javascript "access plus 7 days"
+  ExpiresByType image/svg+xml "access plus 30 days"
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/webp "access plus 30 days"
+</IfModule>

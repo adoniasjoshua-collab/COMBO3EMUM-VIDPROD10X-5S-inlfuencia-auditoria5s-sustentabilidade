@@ -15,6 +15,8 @@ const warn = (file, message) => warnings.push(`${file}: ${message}`);
 
 const sitemap = read('sitemap.xml');
 const urls = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(match => match[1]);
+if (new Set(urls).size !== urls.length) fail('sitemap.xml', 'URLs duplicadas');
+if (!urls.length) fail('sitemap.xml', 'nenhuma URL encontrada');
 const files = urls.map(url => {
   const slug = url.slice(base.length);
   return slug ? `${slug}index.html` : 'index.html';
@@ -22,6 +24,14 @@ const files = urls.map(url => {
 const titles = new Map();
 const canonicals = new Set();
 const inbound = new Map(files.map(file => [file, 0]));
+
+function listHtml(directory = root) {
+  return fs.readdirSync(directory, { withFileTypes: true }).flatMap(entry => {
+    if (entry.name === '.git' || entry.name === 'node_modules') return [];
+    const absolute = path.join(directory, entry.name);
+    return entry.isDirectory() ? listHtml(absolute) : (entry.name.endsWith('.html') ? [path.relative(root, absolute).replaceAll('\\', '/')] : []);
+  });
+}
 
 function resolveInternal(source, href) {
   if (/^(?:https?:|mailto:|tel:|#|javascript:)/i.test(href)) return null;
@@ -93,7 +103,23 @@ for (const [file, count] of inbound) {
   if (file !== 'index.html' && file !== 'portal/index.html' && count === 0) fail(file, 'página órfã');
 }
 
-for (const required of ['robots.txt', 'sitemap.xml', '404.html', 'manifest.webmanifest', 'assets/css/portal.css', 'assets/js/portal.js']) {
+for (const file of listHtml()) {
+  const html = read(file);
+  const robots = get(html, /<meta\s+name="robots"\s+content="([^"]+)"/i);
+  if (file === '404.html' || file.startsWith('assets/legal/')) {
+    if (!robots.includes('noindex')) fail(file, 'pagina utilitaria deve usar noindex');
+    continue;
+  }
+  if (!files.includes(file) && !robots.includes('noindex')) fail(file, 'pagina indexavel ausente do sitemap');
+}
+
+if (fs.existsSync(path.join(root, '.htaccess'))) {
+  const htaccess = read('.htaccess');
+  if (!/RewriteCond\s+%\{HTTP_HOST\}/i.test(htaccess)) fail('.htaccess', 'consolidacao de host ausente');
+  if (!/index\\\.html/i.test(htaccess)) fail('.htaccess', 'redirecionamento de index.html ausente');
+}
+
+for (const required of ['.htaccess', 'robots.txt', 'sitemap.xml', '404.html', 'manifest.webmanifest', 'assets/css/portal.css', 'assets/js/portal.js']) {
   if (!fs.existsSync(path.join(root, required))) fail(required, 'arquivo obrigatório ausente');
 }
 
