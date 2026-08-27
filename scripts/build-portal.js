@@ -16,7 +16,7 @@ const pages = [
     lead: 'Um portal educacional para transformar conceitos de 5S, produtividade e gestão ambiental em decisões, rotinas e melhorias que cabem no trabalho real.',
     breadcrumb: [['Portal educacional', 'portal/']],
     sections: [
-      ['Escolha por onde começar', r => `<div class="card-grid card-grid--3"><a class="topic-card" href="${r}ferramentas/gestao-do-tempo/"><span class="topic-card__label">Cronômetro online grátis</span><h3>Tempo 10X</h3><p>Controle horas por tarefa e acompanhe sua produtividade com gráficos e relatórios.</p></a><a class="topic-card" href="${r}5s/"><span class="topic-card__label">Organização</span><h3>Programa 5S</h3><p>Entenda os cinco sensos e aplique-os em empresas, obras e na rotina pessoal.</p></a><a class="topic-card" href="${r}produtividade/"><span class="topic-card__label">Execução</span><h3>Produtividade</h3><p>Defina prioridades, proteja o foco e organize o tempo com técnicas adaptáveis.</p></a><a class="topic-card" href="${r}gestao-ambiental/"><span class="topic-card__label">Responsabilidade</span><h3>Gestão ambiental</h3><p>Conheça controles, práticas e responsabilidades aplicáveis a obras e operações.</p></a></div>`],
+      ['Escolha por onde começar', r => `<div class="card-grid card-grid--3"><a class="topic-card" href="${r}mineracao/"><span class="topic-card__label">Mineração e SSMA</span><h3>Mineração</h3><p>NR-22, segurança, riscos, 5S, produtividade e gestão ambiental.</p></a><a class="topic-card" href="${r}carreira-mineracao/"><span class="topic-card__label">Preparação profissional</span><h3>Carreira na mineração</h3><p>Formação, currículo, canais oficiais e contexto de Carajás sem promessas.</p></a><a class="topic-card" href="${r}ferramentas/"><span class="topic-card__label">Recursos gratuitos</span><h3>Ferramentas</h3><p>Cronômetro, filtros, gráficos e relatórios no navegador com o Tempo 10X.</p></a><a class="topic-card" href="${r}5s/"><span class="topic-card__label">Organização</span><h3>Programa 5S</h3><p>Entenda os cinco sensos e aplique-os em empresas, obras e na rotina pessoal.</p></a><a class="topic-card" href="${r}produtividade/"><span class="topic-card__label">Execução</span><h3>Produtividade</h3><p>Defina prioridades, proteja o foco e organize o tempo com técnicas adaptáveis.</p></a><a class="topic-card" href="${r}gestao-ambiental/"><span class="topic-card__label">Responsabilidade</span><h3>Gestão ambiental</h3><p>Conheça controles, práticas e responsabilidades aplicáveis a obras e operações.</p></a></div>`],
       ['Da leitura para a prática', r => `<p>Os conteúdos são conectados por uma lógica simples: compreender o fundamento, observar o ambiente, testar uma prática pequena e criar um padrão sustentável. Você pode começar pelo guia sobre <a href="${r}5s/o-que-e-5s/">o que é 5S</a>, organizar prioridades com a <a href="${r}produtividade/matriz-eisenhower/">Matriz de Eisenhower</a> ou entender os pilares da <a href="${r}gestao-ambiental/gestao-ambiental-na-construcao-civil/">gestão ambiental na construção civil</a>.</p><div class="callout"><p><strong>Princípio editorial:</strong> produtividade não deve atropelar segurança, qualidade ou requisitos ambientais. Os três temas se fortalecem quando são aplicados em conjunto.</p></div>`],
       ['Conteúdo baseado em experiência e fontes públicas', () => `<p>Os guias combinam experiência prática em projetos de construção, mineração, gestão ambiental, 5S e soluções digitais com referências públicas quando o assunto depende de norma ou legislação. O objetivo é educar e apoiar boas decisões, sem substituir avaliação técnica, procedimentos do empregador ou orientação jurídica.</p>`]
       ,['Como usar este portal', r => `<p>Se você está começando, leia um guia essencial e escolha uma aplicação pequena para testar. Quem lidera equipes pode avançar dos fundamentos para implantação e acompanhamento. Profissionais de obras podem conectar <a href="${r}5s/5s-na-construcao-civil/">organização do canteiro</a>, <a href="${r}gestao-ambiental/gestao-de-residuos/">gestão de resíduos</a> e educação ambiental. Ao final de cada página, os conteúdos relacionados formam uma trilha sem exigir leitura linear.</p><p>Registre dúvidas, resultados e condições que não funcionaram. O portal oferece referências para raciocinar; a adaptação precisa considerar pessoas, riscos, recursos e requisitos do seu contexto.</p>`]
@@ -239,6 +239,10 @@ const pages = [
   }
 ];
 
+// Novos clusters vivem em um módulo separado para manter a expansão editorial
+// independente das páginas históricas e reduzir o risco de regressão.
+pages.push(...require('./portal-expansion.js'));
+
 function rootPrefix(file) {
   return '../'.repeat(file.split('/').length - 1);
 }
@@ -253,8 +257,9 @@ function idFor(text) {
 
 function header(r, cluster) {
   const nav = [
-    ['portal', 'Início', 'portal/'], ['5s', '5S', '5s/'], ['produtividade', 'Produtividade', 'produtividade/'],
-    ['gestao-ambiental', 'Gestão Ambiental', 'gestao-ambiental/'], ['tempo10x', 'Tempo 10X', 'ferramentas/gestao-do-tempo/'], ['sobre', 'Sobre', 'sobre/']
+    ['portal', 'Início', 'portal/'], ['mineracao', 'Mineração', 'mineracao/'], ['5s', '5S', '5s/'],
+    ['produtividade', 'Produtividade', 'produtividade/'], ['gestao-ambiental', 'Meio Ambiente', 'gestao-ambiental/'],
+    ['ferramentas', 'Ferramentas', 'ferramentas/'], ['sobre', 'Sobre', 'sobre/']
   ];
   return `<a class="skip-link" href="#conteudo">Pular para o conteúdo</a><header class="portal-header"><div class="portal-shell portal-header__inner"><a class="portal-brand" href="${r}portal/" aria-label="Portal 5S e Produtividade — início"><span class="portal-brand__mark" aria-hidden="true">5S</span><span class="portal-brand__text">Portal 5S e Produtividade<small>Conhecimento aplicado</small></span></a><button class="portal-menu-toggle" type="button" aria-label="Abrir menu" aria-controls="portal-nav" aria-expanded="false">☰</button><nav class="portal-nav" id="portal-nav" data-open="false" aria-label="Navegação principal"><ul>${nav.map(([key,label,url]) => `<li><a href="${r}${url}"${key === cluster ? ' aria-current="page"' : ''}>${label}</a></li>`).join('')}<li><a class="nav-cta" href="${checkout}" target="_blank" rel="noopener noreferrer">Conheça a Trilha 10X</a></li></ul></nav></div></header>`;
 }
@@ -265,14 +270,15 @@ function breadcrumb(page, r) {
 }
 
 function schemas(page) {
+  const pageUpdated = page.updated || updated;
   const crumbs = [['Início', 'portal/'], ...page.breadcrumb].map(([name,url], index) => ({'@type':'ListItem', position:index + 1, name, item:base + url}));
   const primary = page.kind === 'article' ? {
     '@type':'Article', headline:page.h1, description:page.description, author:{'@id':base+'sobre/#person'},
-    datePublished:updated, dateModified:updated, mainEntityOfPage:{'@type':'WebPage','@id':base+page.slug}, isPartOf:{'@id':base+'#website'}, image:base+'assets/images/adonias-profile-400.jpg', inLanguage:'pt-BR'
+    datePublished:pageUpdated, dateModified:pageUpdated, mainEntityOfPage:{'@type':'WebPage','@id':base+page.slug}, isPartOf:{'@id':base+'#website'}, image:base+'assets/images/adonias-profile-400.jpg', inLanguage:'pt-BR'
   } : page.kind === 'about' ? {
-    '@type':'ProfilePage', mainEntity:{'@id':base+'sobre/#person'}, isPartOf:{'@id':base+'#website'}, dateModified:updated, inLanguage:'pt-BR'
+    '@type':'ProfilePage', mainEntity:{'@id':base+'sobre/#person'}, isPartOf:{'@id':base+'#website'}, dateModified:pageUpdated, inLanguage:'pt-BR'
   } : {
-    '@type':'CollectionPage', name:page.h1, description:page.description, url:base+page.slug, isPartOf:{'@id':base+'#website'}, dateModified:updated, inLanguage:'pt-BR'
+    '@type':'CollectionPage', name:page.h1, description:page.description, url:base+page.slug, isPartOf:{'@id':base+'#website'}, dateModified:pageUpdated, inLanguage:'pt-BR'
   };
   const graph = [primary, {'@type':'BreadcrumbList', itemListElement:crumbs}];
   if (page.slug === 'portal/') graph.push(
@@ -284,7 +290,7 @@ function schemas(page) {
 }
 
 function footer(r) {
-  return `<footer class="portal-footer"><div class="portal-shell"><div class="portal-footer__grid"><div><h2>Portal 5S e Produtividade</h2><p>Conteúdo educacional sobre organização, produtividade e gestão ambiental aplicado ao trabalho e à vida.</p></div><div><h3>Conteúdos</h3><ul><li><a href="${r}ferramentas/gestao-do-tempo/">Tempo 10X</a></li><li><a href="${r}5s/">5S</a></li><li><a href="${r}produtividade/">Produtividade</a></li><li><a href="${r}gestao-ambiental/">Gestão Ambiental</a></li><li><a href="${checkout}" target="_blank" rel="noopener noreferrer">Trilha 10X</a></li></ul></div><div><h3>Transparência</h3><ul><li><a href="${r}sobre/">Sobre o autor</a></li><li><a href="${r}sobre/#como-os-conteudos-sao-produzidos">Política editorial</a></li><li><a href="mailto:adonias.joshua@gmail.com">Contato</a></li></ul></div></div><div class="portal-footer__bottom">Atualizado em 22 de agosto de 2026 · © <span data-year>2026</span> Adonias Pereira da Silva. Conteúdo educacional.</div></div></footer>`;
+  return `<footer class="portal-footer"><div class="portal-shell"><div class="portal-footer__grid"><div><h2>Portal 5S e Produtividade</h2><p>Conteúdo educacional sobre mineração, segurança, organização, produtividade e gestão ambiental.</p></div><div><h3>Conteúdos</h3><ul><li><a href="${r}mineracao/">Mineração e SSMA</a></li><li><a href="${r}carreira-mineracao/">Carreira na mineração</a></li><li><a href="${r}ferramentas/">Ferramentas gratuitas</a></li><li><a href="${r}5s/">5S</a></li><li><a href="${r}produtividade/">Produtividade</a></li><li><a href="${r}gestao-ambiental/">Gestão Ambiental</a></li></ul></div><div><h3>Transparência</h3><ul><li><a href="${r}sobre/">Sobre o autor</a></li><li><a href="${r}politica-editorial/">Política editorial</a></li><li><a href="mailto:adonias.joshua@gmail.com">Contato</a></li><li><a href="${checkout}" target="_blank" rel="noopener noreferrer">Conheça a Trilha 10X</a></li></ul></div></div><div class="portal-footer__bottom">Conteúdo revisado periodicamente · © <span data-year>2026</span> Adonias Pereira da Silva.</div></div></footer>`;
 }
 
 function whatsappContact(r) {
@@ -293,6 +299,7 @@ function whatsappContact(r) {
 
 function render(page) {
   const r = rootPrefix(page.file);
+  const pageUpdated = page.updated || updated;
   const sectionHtml = page.sections.map(([title,body]) => `<section aria-labelledby="${idFor(title)}"><h2 id="${idFor(title)}">${title}</h2>${body(r)}</section>`).join('');
   const toc = `<aside class="toc" aria-label="Sumário"><strong>Neste conteúdo</strong><ol>${page.sections.map(([title]) => `<li><a href="#${idFor(title)}">${title}</a></li>`).join('')}</ol></aside>`;
   const related = `<section class="related-posts" aria-labelledby="relacionados"><h2 id="relacionados">Continue aprendendo</h2><ul class="related-links">${page.related.map(([label,url]) => `<li><a href="${r}${url}">${label} →</a></li>`).join('')}</ul></section>`;
@@ -328,7 +335,7 @@ function render(page) {
 ${header(r, page.cluster)}
 ${breadcrumb(page, r)}
 <main id="conteudo">
-  <header class="${page.kind === 'hub' ? 'portal-hero' : 'article-header'}"><div class="portal-shell${page.kind === 'hub' ? ' portal-hero__inner' : ''}"><div><p class="eyebrow">${page.kind === 'hub' ? 'Portal educacional' : 'Guia prático'}</p><h1>${page.h1}</h1><p class="${page.kind === 'hub' ? 'portal-hero__lead' : 'article-header__lead'}">${page.lead}</p>${page.kind === 'hub' ? `<div class="hero-actions">${page.cluster === 'portal' ? `<a class="button button--primary" href="${r}ferramentas/gestao-do-tempo/">Usar ferramenta grátis</a>` : ''}<a class="button ${page.cluster === 'portal' ? 'button--secondary' : 'button--primary'}" href="#${idFor(page.sections[0][0])}">Explorar conteúdos</a><a class="button button--secondary" href="${checkout}" target="_blank" rel="noopener noreferrer">Conheça a Trilha 10X</a></div>` : `<div class="article-meta"><span>Por ${author}</span><time datetime="${updated}">Atualizado em 22 de agosto de 2026</time><span>Leitura educativa</span></div>`}</div>${heroPanel}</div></header>
+  <header class="${page.kind === 'hub' ? 'portal-hero' : 'article-header'}"><div class="portal-shell${page.kind === 'hub' ? ' portal-hero__inner' : ''}"><div><p class="eyebrow">${page.kind === 'hub' ? 'Portal educacional' : 'Guia prático'}</p><h1>${page.h1}</h1><p class="${page.kind === 'hub' ? 'portal-hero__lead' : 'article-header__lead'}">${page.lead}</p>${page.kind === 'hub' ? `<div class="hero-actions">${page.cluster === 'portal' ? `<a class="button button--primary" href="${r}ferramentas/gestao-do-tempo/">Usar ferramenta grátis</a>` : ''}<a class="button ${page.cluster === 'portal' ? 'button--secondary' : 'button--primary'}" href="#${idFor(page.sections[0][0])}">Explorar conteúdos</a><a class="button button--secondary" href="${checkout}" target="_blank" rel="noopener noreferrer">Conheça a Trilha 10X</a></div>` : `<div class="article-meta"><span>Por ${author}</span><time datetime="${pageUpdated}">Atualizado em ${new Intl.DateTimeFormat('pt-BR', {dateStyle:'long', timeZone:'UTC'}).format(new Date(pageUpdated + 'T12:00:00Z'))}</time><span>Leitura educativa</span></div>`}</div>${heroPanel}</div></header>
   <div class="portal-shell article-layout">${toc}<article class="article">${sectionHtml}${cta}${authorBox}${related}</article></div>
 </main>
 ${footer(r)}
@@ -346,7 +353,8 @@ for (const page of pages) {
 }
 
 const sitemapUrls = ['', ...pages.map(page => page.slug), 'ferramentas/gestao-do-tempo/'];
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapUrls.map(slug => `  <url><loc>${base}${slug}</loc><lastmod>${slug === 'ferramentas/gestao-do-tempo/' ? '2026-08-27' : updated}</lastmod></url>`).join('\n')}\n</urlset>\n`;
+const pageBySlug = new Map(pages.map(page => [page.slug, page]));
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapUrls.map(slug => `  <url><loc>${base}${slug}</loc><lastmod>${slug === 'ferramentas/gestao-do-tempo/' ? '2026-08-27' : (pageBySlug.get(slug)?.updated || updated)}</lastmod></url>`).join('\n')}\n</urlset>\n`;
 fs.writeFileSync(path.join(root, 'sitemap.xml'), sitemap, 'utf8');
 fs.writeFileSync(path.join(root, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${base}sitemap.xml\n`, 'utf8');
 

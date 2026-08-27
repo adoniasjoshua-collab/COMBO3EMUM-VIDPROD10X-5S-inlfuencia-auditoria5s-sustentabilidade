@@ -156,7 +156,7 @@ th { color: var(--portal-primary-dark); background: #edf5f0; }
   .portal-footer__grid { grid-template-columns: 1.5fr 1fr 1fr; }
   .portal-hero__inner { grid-template-columns: minmax(0, 1.55fr) minmax(260px, .7fr); }
 }
-@media (min-width: 980px) {
+@media (min-width: 1120px) {
   .portal-menu-toggle { display: none; }
   .portal-nav { display: block; position: static; padding: 0; background: transparent; border: 0; border-radius: 0; box-shadow: none; }
   .portal-nav ul { display: flex; align-items: center; }

@@ -22,6 +22,7 @@ const files = urls.map(url => {
   return slug ? `${slug}index.html` : 'index.html';
 });
 const titles = new Map();
+const descriptions = new Map();
 const canonicals = new Set();
 const inbound = new Map(files.map(file => [file, 0]));
 
@@ -63,6 +64,8 @@ for (const file of files) {
   else if (titles.has(title)) fail(file, `title duplicado com ${titles.get(title)}`);
   else titles.set(title, file);
   if (!description || description.length < 100 || description.length > 180) warn(file, `meta description com ${description.length} caracteres`);
+  if (description && descriptions.has(description)) fail(file, `meta description duplicada com ${descriptions.get(description)}`);
+  else if (description) descriptions.set(description, file);
   if (canonical !== expectedCanonical) fail(file, `canonical incorreto: ${canonical}`);
   if (canonicals.has(canonical)) fail(file, 'canonical duplicado');
   canonicals.add(canonical);
@@ -71,6 +74,8 @@ for (const file of files) {
   if (!/property="og:title"/i.test(html) || !/property="og:image"/i.test(html)) fail(file, 'Open Graph incompleto');
   if (!/name="twitter:card"/i.test(html)) fail(file, 'Twitter Card ausente');
   if (!/application\/ld\+json/i.test(html)) fail(file, 'JSON-LD ausente');
+  if (file !== 'index.html' && !/class="breadcrumb\b/i.test(html)) fail(file, 'breadcrumb visual ausente');
+  if (file !== 'index.html' && !/"BreadcrumbList"/i.test(html)) fail(file, 'BreadcrumbList ausente');
   for (const block of html.matchAll(/<script\s+type="application\/ld\+json">([\s\S]*?)<\/script>/gi)) {
     try { JSON.parse(block[1]); } catch (error) { fail(file, `JSON-LD inválido: ${error.message}`); }
   }
@@ -127,6 +132,7 @@ for (const required of ['.htaccess', 'robots.txt', 'sitemap.xml', '404.html', 'm
 
 info.push(`${files.length} URLs auditadas`);
 info.push(`${titles.size} títulos únicos`);
+info.push(`${descriptions.size} descrições únicas válidas`);
 info.push(`${[...inbound.values()].reduce((sum, value) => sum + value, 0)} links internos entre URLs indexáveis`);
 console.log(`SEO AUDIT\n${info.map(line => `✓ ${line}`).join('\n')}`);
 if (warnings.length) console.log(`\nAVISOS (${warnings.length})\n${warnings.map(line => `! ${line}`).join('\n')}`);
