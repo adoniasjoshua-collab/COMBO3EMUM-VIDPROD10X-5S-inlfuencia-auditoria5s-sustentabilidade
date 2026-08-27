@@ -5,10 +5,11 @@
     try {
       const storage = global.Tempo10X.Storage;
       const activities = new global.Tempo10X.Activities.ActivityService(storage);
-      const timer = new global.Tempo10X.Timer.TimerService(storage, activities);
-      const ui = new global.Tempo10X.UI.AppUI(activities, timer, storage);
+      const entries = new global.Tempo10X.Entries.TimeEntryService(storage, activities);
+      const timer = new global.Tempo10X.Timer.TimerService(storage, activities, entries);
+      const ui = new global.Tempo10X.UI.AppUI(activities, entries, timer, storage);
       ui.init();
-      global.Tempo10X.app = Object.freeze({ storage, activities, timer, ui });
+      global.Tempo10X.app = Object.freeze({ storage, activities, entries, timer, ui });
     } catch (error) {
       const feedback = document.querySelector('#tool-feedback');
       if (feedback) {

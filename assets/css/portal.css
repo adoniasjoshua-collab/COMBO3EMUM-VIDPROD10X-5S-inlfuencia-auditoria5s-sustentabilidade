@@ -146,6 +146,11 @@ th { color: var(--portal-primary-dark); background: #edf5f0; }
 .portal-footer a { color: #e8f5ed; }
 .portal-footer__bottom { margin-top: 2rem; padding-top: 1.2rem; border-top: 1px solid rgba(255,255,255,.14); color: #a9bdb2; font-size: .82rem; }
 
+.whatsapp-contact { position: fixed; right: clamp(12px, 2vw, 24px); bottom: max(18px, env(safe-area-inset-bottom)); z-index: 90; display: inline-flex; align-items: center; gap: .55rem; min-height: 52px; padding: .65rem .9rem; color: #fff; background: #128c4b; border: 2px solid rgba(255,255,255,.9); border-radius: 999px; box-shadow: 0 10px 28px rgba(0,0,0,.3); font-size: .88rem; font-weight: 800; line-height: 1; text-decoration: none; transition: transform .2s ease, background-color .2s ease, box-shadow .2s ease; }
+.whatsapp-contact:hover { color: #fff; background: #0d743d; transform: translateY(-2px); box-shadow: 0 14px 34px rgba(0,0,0,.36); }
+.whatsapp-contact:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+.whatsapp-contact img { width: 26px; height: 26px; flex: 0 0 auto; }
+
 @media (min-width: 720px) {
   .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .portal-footer__grid { grid-template-columns: 1.5fr 1fr 1fr; }
@@ -162,12 +167,14 @@ th { color: var(--portal-primary-dark); background: #edf5f0; }
 @media (max-width: 420px) {
   .portal-brand__text { max-width: 180px; font-size: .86rem; }
   .author-box { grid-template-columns: 1fr; }
+  .whatsapp-contact { width: 54px; height: 54px; min-height: 0; padding: 0; justify-content: center; }
+  .whatsapp-contact__label { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
 }
 @media print {
-  .portal-header, .portal-footer, .cta-course, .toc { display: none; }
+  .portal-header, .portal-footer, .cta-course, .toc, .whatsapp-contact { display: none; }
   body { background: #fff; }
   .article-layout { display: block; }
   .article { max-width: none; }

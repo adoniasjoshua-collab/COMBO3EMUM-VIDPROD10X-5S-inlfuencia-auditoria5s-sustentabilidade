@@ -2,9 +2,10 @@
   'use strict';
 
   class TimerService {
-    constructor(storage, activities, now) {
+    constructor(storage, activities, entries, now) {
       this.storage = storage;
       this.activities = activities;
+      this.entries = entries;
       this.now = now || (() => Date.now());
     }
 
@@ -31,9 +32,11 @@
       const active = this.current();
       if (active && active.activityId !== id) throw new Error('Finalize o cronômetro ativo antes de iniciar outro.');
       if (active && active.state === 'running') return active;
-      const timer = active || { activityId: id, accumulatedMs: 0 };
+      const timestamp = this.now();
+      const timer = active || { activityId: id, accumulatedMs: 0, sessionStartedAt: timestamp };
       timer.state = 'running';
-      timer.startedAt = this.now();
+      timer.startedAt = timestamp;
+      if (!Number.isFinite(Number(timer.sessionStartedAt))) timer.sessionStartedAt = timestamp;
       this.storage.setActiveTimer(timer);
       this.activities.update(id, { status: 'em andamento' });
       return timer;
@@ -63,8 +66,10 @@
     finish() {
       const timer = this.current();
       if (!timer) throw new Error('Não há cronômetro ativo.');
+      const endedAt = this.now();
       const elapsed = this.elapsed(timer);
       const activity = this.activities.find(timer.activityId);
+      if (elapsed > 0) this.entries.createFromTimer(timer.activityId, Number(timer.sessionStartedAt) || endedAt - elapsed, endedAt, elapsed);
       this.activities.update(timer.activityId, { trackedMs: (activity.trackedMs || 0) + elapsed, status: 'concluída' });
       this.storage.setActiveTimer(null);
       return elapsed;

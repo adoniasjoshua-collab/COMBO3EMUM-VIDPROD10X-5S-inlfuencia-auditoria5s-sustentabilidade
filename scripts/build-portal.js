@@ -16,7 +16,7 @@ const pages = [
     lead: 'Um portal educacional para transformar conceitos de 5S, produtividade e gestão ambiental em decisões, rotinas e melhorias que cabem no trabalho real.',
     breadcrumb: [['Portal educacional', 'portal/']],
     sections: [
-      ['Escolha por onde começar', r => `<div class="card-grid card-grid--3"><a class="topic-card" href="${r}ferramentas/gestao-do-tempo/"><span class="topic-card__label">Ferramenta gratuita</span><h3>Tempo 10X</h3><p>Planeje atividades, acompanhe horas e gere relatórios diretamente no navegador.</p></a><a class="topic-card" href="${r}5s/"><span class="topic-card__label">Organização</span><h3>Programa 5S</h3><p>Entenda os cinco sensos e aplique-os em empresas, obras e na rotina pessoal.</p></a><a class="topic-card" href="${r}produtividade/"><span class="topic-card__label">Execução</span><h3>Produtividade</h3><p>Defina prioridades, proteja o foco e organize o tempo com técnicas adaptáveis.</p></a><a class="topic-card" href="${r}gestao-ambiental/"><span class="topic-card__label">Responsabilidade</span><h3>Gestão ambiental</h3><p>Conheça controles, práticas e responsabilidades aplicáveis a obras e operações.</p></a></div>`],
+      ['Escolha por onde começar', r => `<div class="card-grid card-grid--3"><a class="topic-card" href="${r}ferramentas/gestao-do-tempo/"><span class="topic-card__label">Cronômetro online grátis</span><h3>Tempo 10X</h3><p>Controle horas por tarefa e acompanhe sua produtividade com gráficos e relatórios.</p></a><a class="topic-card" href="${r}5s/"><span class="topic-card__label">Organização</span><h3>Programa 5S</h3><p>Entenda os cinco sensos e aplique-os em empresas, obras e na rotina pessoal.</p></a><a class="topic-card" href="${r}produtividade/"><span class="topic-card__label">Execução</span><h3>Produtividade</h3><p>Defina prioridades, proteja o foco e organize o tempo com técnicas adaptáveis.</p></a><a class="topic-card" href="${r}gestao-ambiental/"><span class="topic-card__label">Responsabilidade</span><h3>Gestão ambiental</h3><p>Conheça controles, práticas e responsabilidades aplicáveis a obras e operações.</p></a></div>`],
       ['Da leitura para a prática', r => `<p>Os conteúdos são conectados por uma lógica simples: compreender o fundamento, observar o ambiente, testar uma prática pequena e criar um padrão sustentável. Você pode começar pelo guia sobre <a href="${r}5s/o-que-e-5s/">o que é 5S</a>, organizar prioridades com a <a href="${r}produtividade/matriz-eisenhower/">Matriz de Eisenhower</a> ou entender os pilares da <a href="${r}gestao-ambiental/gestao-ambiental-na-construcao-civil/">gestão ambiental na construção civil</a>.</p><div class="callout"><p><strong>Princípio editorial:</strong> produtividade não deve atropelar segurança, qualidade ou requisitos ambientais. Os três temas se fortalecem quando são aplicados em conjunto.</p></div>`],
       ['Conteúdo baseado em experiência e fontes públicas', () => `<p>Os guias combinam experiência prática em projetos de construção, mineração, gestão ambiental, 5S e soluções digitais com referências públicas quando o assunto depende de norma ou legislação. O objetivo é educar e apoiar boas decisões, sem substituir avaliação técnica, procedimentos do empregador ou orientação jurídica.</p>`]
       ,['Como usar este portal', r => `<p>Se você está começando, leia um guia essencial e escolha uma aplicação pequena para testar. Quem lidera equipes pode avançar dos fundamentos para implantação e acompanhamento. Profissionais de obras podem conectar <a href="${r}5s/5s-na-construcao-civil/">organização do canteiro</a>, <a href="${r}gestao-ambiental/gestao-de-residuos/">gestão de resíduos</a> e educação ambiental. Ao final de cada página, os conteúdos relacionados formam uma trilha sem exigir leitura linear.</p><p>Registre dúvidas, resultados e condições que não funcionaram. O portal oferece referências para raciocinar; a adaptação precisa considerar pessoas, riscos, recursos e requisitos do seu contexto.</p>`]
@@ -156,7 +156,7 @@ const pages = [
       ['Proteja o foco de forma realista', r => `<p>Agrupe tarefas semelhantes, silencie notificações quando for seguro e prepare materiais antes de começar. A <a href="${r}produtividade/tecnica-pomodoro/">Técnica Pomodoro</a> pode criar ritmo, mas deve ser adaptada ao trabalho e interrompida diante de situações críticas.</p>`],
       ['Crie margem e critérios para interrupções', () => `<p>Defina janelas para respostas, canais para urgências reais e blocos livres. Quando algo novo chegar, pergunte o que será adiado ou removido. Aceitar uma tarefa sem revisar capacidade transforma a agenda em promessa impossível.</p>`],
       ['Faça uma revisão diária e semanal', () => `<ul class="practice-list"><li>O que foi concluído e por quê?</li><li>O que ficou pendente e qual é o próximo passo?</li><li>Quais interrupções se repetiram?</li><li>Que compromisso pode ser eliminado, delegado ou renegociado?</li><li>Quanto espaço a próxima semana precisa reservar?</li></ul>`],
-      ['Organize também o ambiente', r => `<p>Tempo se perde quando materiais, informações e versões não são encontrados. Use os princípios de <a href="${r}produtividade/5s-e-produtividade/">5S e produtividade</a> para reduzir atrito físico e digital.</p><p>Para transformar o planejamento em uma lista prática e acompanhar o tempo de execução, use gratuitamente a <a href="${r}ferramentas/gestao-do-tempo/">ferramenta Tempo 10X</a>.</p>`]
+      ['Organize também o ambiente', r => `<p>Tempo se perde quando materiais, informações e versões não são encontrados. Use os princípios de <a href="${r}produtividade/5s-e-produtividade/">5S e produtividade</a> para reduzir atrito físico e digital.</p><p>Para transformar o planejamento em execução mensurável, use o <a href="${r}ferramentas/gestao-do-tempo/">cronômetro de tarefas online do Tempo 10X</a> e compare horas planejadas e registradas.</p>`]
     ], related: [['Matriz de Eisenhower', 'produtividade/matriz-eisenhower/'], ['Técnica Pomodoro', 'produtividade/tecnica-pomodoro/'], ['5S e produtividade', 'produtividade/5s-e-produtividade/']]
   },
   {
@@ -287,6 +287,10 @@ function footer(r) {
   return `<footer class="portal-footer"><div class="portal-shell"><div class="portal-footer__grid"><div><h2>Portal 5S e Produtividade</h2><p>Conteúdo educacional sobre organização, produtividade e gestão ambiental aplicado ao trabalho e à vida.</p></div><div><h3>Conteúdos</h3><ul><li><a href="${r}ferramentas/gestao-do-tempo/">Tempo 10X</a></li><li><a href="${r}5s/">5S</a></li><li><a href="${r}produtividade/">Produtividade</a></li><li><a href="${r}gestao-ambiental/">Gestão Ambiental</a></li><li><a href="${checkout}" target="_blank" rel="noopener noreferrer">Trilha 10X</a></li></ul></div><div><h3>Transparência</h3><ul><li><a href="${r}sobre/">Sobre o autor</a></li><li><a href="${r}sobre/#como-os-conteudos-sao-produzidos">Política editorial</a></li><li><a href="mailto:adonias.joshua@gmail.com">Contato</a></li></ul></div></div><div class="portal-footer__bottom">Atualizado em 22 de agosto de 2026 · © <span data-year>2026</span> Adonias Pereira da Silva. Conteúdo educacional.</div></div></footer>`;
 }
 
+function whatsappContact(r) {
+  return `<a class="whatsapp-contact" href="https://wa.me/5594992993138?text=Ol%C3%A1%2C%20Adonias!%20Vim%20do%20Portal%205S%20e%20Produtividade%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida." target="_blank" rel="noopener noreferrer" aria-label="Falar diretamente com Adonias pelo WhatsApp"><img src="${r}assets/icons/whatsapp.svg" width="26" height="26" loading="lazy" alt="" aria-hidden="true"><span class="whatsapp-contact__label">Fale com o autor</span></a>`;
+}
+
 function render(page) {
   const r = rootPrefix(page.file);
   const sectionHtml = page.sections.map(([title,body]) => `<section aria-labelledby="${idFor(title)}"><h2 id="${idFor(title)}">${title}</h2>${body(r)}</section>`).join('');
@@ -328,6 +332,7 @@ ${breadcrumb(page, r)}
   <div class="portal-shell article-layout">${toc}<article class="article">${sectionHtml}${cta}${authorBox}${related}</article></div>
 </main>
 ${footer(r)}
+${whatsappContact(r)}
 <script src="${r}assets/js/portal.js" defer></script>
 </body>
 </html>
@@ -341,7 +346,7 @@ for (const page of pages) {
 }
 
 const sitemapUrls = ['', ...pages.map(page => page.slug), 'ferramentas/gestao-do-tempo/'];
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapUrls.map(slug => `  <url><loc>${base}${slug}</loc><lastmod>${slug === 'ferramentas/gestao-do-tempo/' ? '2026-08-26' : updated}</lastmod></url>`).join('\n')}\n</urlset>\n`;
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapUrls.map(slug => `  <url><loc>${base}${slug}</loc><lastmod>${slug === 'ferramentas/gestao-do-tempo/' ? '2026-08-27' : updated}</lastmod></url>`).join('\n')}\n</urlset>\n`;
 fs.writeFileSync(path.join(root, 'sitemap.xml'), sitemap, 'utf8');
 fs.writeFileSync(path.join(root, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${base}sitemap.xml\n`, 'utf8');
 

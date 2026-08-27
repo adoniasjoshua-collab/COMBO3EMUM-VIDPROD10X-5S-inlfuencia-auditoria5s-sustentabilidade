@@ -260,13 +260,16 @@ a:hover { opacity: 0.9; }
 .badge-lifetime { border-color: rgba(0,230,118,0.5); background: linear-gradient(135deg, rgba(0,230,118,0.18), rgba(0,123,255,0.18)); }
 
 /* Floating WhatsApp button */
-.whatsapp-float { position: fixed; right: 16px; bottom: 20px; width: 56px; height: 56px; display: inline-flex; align-items: center; justify-content: center; border-radius: 999px; background: #25D366; color: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.35); z-index: 80; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.whatsapp-float { position: fixed; right: 16px; bottom: 20px; min-height: 56px; padding: 0 16px; display: inline-flex; align-items: center; justify-content: center; gap: 9px; border: 2px solid rgba(255,255,255,.9); border-radius: 999px; background: #128c4b; color: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.35); font-weight: 800; text-decoration: none; z-index: 80; transition: transform 0.2s ease, box-shadow 0.2s ease; }
 .whatsapp-float:hover { transform: translateY(-2px) scale(1.03); box-shadow: 0 14px 36px rgba(0,0,0,0.45); }
 .whatsapp-float::after { content: ""; position: absolute; inset: -6px; border-radius: 999px; border: 2px solid rgba(37,211,102,0.45); animation: ringPulse 2.4s ease-out infinite; }
 @keyframes ringPulse { 0% { transform: scale(0.9); opacity: 1; } 70% { transform: scale(1.25); opacity: 0; } 100% { opacity: 0; } }
 .whatsapp-tooltip { position: fixed; right: 16px; bottom: 88px; background: #0a0d12; color: #e5e7eb; border: 1px solid var(--border); border-radius: 12px; padding: 8px 12px; font-size: 0.9rem; box-shadow: 0 10px 30px rgba(0,0,0,0.35); opacity: 0; transform: translateY(6px); pointer-events: none; transition: opacity 0.3s ease, transform 0.3s ease; z-index: 79; }
 .whatsapp-tooltip.show { opacity: 1; transform: translateY(0); }
 .whatsapp-float img { width: 28px; height: 28px; }
+.whatsapp-float:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+@media (max-width: 420px) { .whatsapp-float { width: 56px; height: 56px; min-height: 0; padding: 0; } .whatsapp-float__label { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; } }
+@media print { .whatsapp-float, .whatsapp-tooltip { display: none; } }
 
 /* Screen-reader only utility */
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }

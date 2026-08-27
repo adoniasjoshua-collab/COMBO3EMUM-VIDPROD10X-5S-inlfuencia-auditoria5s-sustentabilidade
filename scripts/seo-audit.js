@@ -106,6 +106,8 @@ for (const [file, count] of inbound) {
 for (const file of listHtml()) {
   const html = read(file);
   const robots = get(html, /<meta\s+name="robots"\s+content="([^"]+)"/i);
+  if (!/class="[^"]*whatsapp-(?:contact|float)/i.test(html)) fail(file, 'atalho de contato pelo WhatsApp ausente');
+  if (!/wa\.me\/5594992993138/i.test(html)) fail(file, 'número oficial do WhatsApp ausente');
   if (file === '404.html' || file.startsWith('assets/legal/')) {
     if (!robots.includes('noindex')) fail(file, 'pagina utilitaria deve usar noindex');
     continue;
