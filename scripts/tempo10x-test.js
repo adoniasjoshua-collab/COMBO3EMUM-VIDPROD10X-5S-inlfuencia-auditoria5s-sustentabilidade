@@ -74,6 +74,10 @@ assert.equal(entries.all().filter(entry => entry.activityId === created.id && en
 
 const report = reports.buildReport(activities.all(), entries.all(), { category: 'Trabalho', dateFrom: '2026-08-01', dateTo: '2026-08-31' });
 const summary = reports.summarize(report);
+const taskRows = reports.taskBreakdown(report);
+assert.equal(taskRows.length, 1, 'comparativo retorna tarefas filtradas');
+assert.equal(taskRows[0].plannedMs, 60 * 60000, 'comparativo preserva planejado da tarefa');
+assert.equal(taskRows[0].trackedMs, 45_000, 'comparativo preserva registrado da tarefa');
 assert.equal(summary.plannedMs, 60 * 60000, 'tempo planejado');
 assert.equal(summary.trackedMs, 45_000, 'tempo registrado pelas sessões');
 assert.equal(summary.completed, 1, 'conclusão');
@@ -112,7 +116,8 @@ assert.deepEqual(Array.from(activities.all()), [], 'recuperação de armazenamen
 
 const uiSource = fs.readFileSync(path.join(root, 'assets/js/tempo10x/ui.js'), 'utf8');
 const toolPage = fs.readFileSync(path.join(root, 'ferramentas/gestao-do-tempo/index.html'), 'utf8');
-assert.equal((toolPage.match(/tempo10x\/[a-z]+\.js\?v=20260831-2/g) || []).length, 7, 'modulos usam cache-buster consistente');
+assert.equal((toolPage.match(/tempo10x\/[a-z]+\.js\?v=20260831-4/g) || []).length, 7, 'modulos usam cache-buster consistente');
+assert.ok(toolPage.includes('tempo10x.css?v=20260831-4'), 'estilos usam cache-buster consistente');
 assert.equal(/\.innerHTML\s*=/.test(uiSource), false, 'dados do usuário não usam innerHTML');
 
 console.log('TEMPO 10X V2 TEST: aprovado — migração, sessões, timer, períodos, KPIs, gráficos, CSV e backup validados.');

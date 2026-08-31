@@ -241,12 +241,21 @@
       const details = element('dl', 'activity-details');
       const active = this.timer.current();
       const liveMs = active && active.activityId === activity.id ? this.timer.elapsed(active) : 0;
+      const trackedMs = Math.max(0, Number(activity.trackedMs) || 0) + liveMs;
+      const plannedMs = Math.max(0, Number(activity.plannedMinutes) || 0) * 60000;
+      const varianceMs = trackedMs - plannedMs;
+      const usage = plannedMs ? (trackedMs / plannedMs) * 100 : null;
+      const result = !plannedMs ? 'Sem planejamento' : varianceMs > 0 ? 'Acima do planejado' : varianceMs < 0 ? 'Dentro do planejado' : 'No planejado';
+      const resultClass = !plannedMs ? '' : varianceMs > 0 ? 'metric-is-over' : varianceMs < 0 ? 'metric-is-under' : 'metric-is-on-target';
       const values = [
         ['Categoria', activity.category || 'Sem categoria'], ['Data', formatDate(activity.date)],
         ['Horário', activity.startTime || activity.endTime ? `${activity.startTime || '—'}–${activity.endTime || '—'}` : 'Não definido'],
-        ['Planejado', activity.plannedMinutes ? `${activity.plannedMinutes} min` : 'Não definido'], ['Registrado', formatDuration((activity.trackedMs || 0) + liveMs)]
+        ['Planejado', plannedMs ? formatHours(plannedMs) : 'Não definido'], ['Registrado', formatDuration(trackedMs)],
+        ['Variação', plannedMs ? `${varianceMs > 0 ? '+' : varianceMs < 0 ? '−' : ''}${formatHours(Math.abs(varianceMs))}` : '—', resultClass],
+        ['Uso do plano', usage === null ? '—' : `${Math.round(usage)}%`, resultClass],
+        ['Resultado', result, resultClass]
       ];
-      values.forEach(([label, value]) => { const group = element('div'); group.append(element('dt', '', label), element('dd', '', value)); details.append(group); });
+      values.forEach(([label, value, className]) => { const group = element('div', className || ''); group.append(element('dt', '', label), element('dd', '', value)); details.append(group); });
       card.append(details);
       if (activity.notes) card.append(element('p', 'activity-notes', `Observações: ${activity.notes}`));
       const actions = element('div', 'activity-actions');
@@ -293,6 +302,7 @@
       this.renderDailyChart(report);
       this.renderCategoryChart(report);
       this.renderStatusChart(report);
+      this.renderTaskComparison(report);
       this.renderCategoryTable(report);
       this.renderEntryTable(report);
       this.renderWeeklyTable(report);
@@ -324,19 +334,73 @@
       const rows = this.reports.groupByCategory(report);
       const chart = document.querySelector('#category-chart');
       chart.replaceChildren();
-      const max = Math.max(1, ...rows.map(row => row.trackedMs));
+      const max = Math.max(1, ...rows.flatMap(row => [row.plannedMs, row.trackedMs]));
       rows.forEach(row => {
         const item = element('div', 'category-bar');
+        item.setAttribute('role', 'listitem');
+        item.setAttribute('aria-label', `${row.category}: planejado ${formatHours(row.plannedMs)}, registrado ${formatHours(row.trackedMs)}`);
         const label = element('div', 'category-bar__label');
-        label.append(element('span', '', row.category), element('strong', '', formatHours(row.trackedMs)));
-        const track = element('div', 'category-bar__track');
-        const fill = element('span', 'category-bar__fill');
-        fill.style.width = row.trackedMs ? `${Math.max(2, (row.trackedMs / max) * 100)}%` : '0';
-        track.append(fill);
-        item.append(label, track);
+        const variance = row.trackedMs - row.plannedMs;
+        const comparison = !row.plannedMs ? 'Sem planejamento' : variance > 0 ? `+${formatHours(variance)} acima` : variance < 0 ? `${formatHours(Math.abs(variance))} abaixo` : 'No planejado';
+        const comparisonClass = variance > 0 ? 'is-over' : variance < 0 ? 'is-under' : 'is-on-target';
+        label.append(element('span', '', row.category), element('strong', `category-bar__variance ${comparisonClass}`, comparison));
+        item.append(label);
+        [['Planejado', row.plannedMs, 'is-planned'], ['Registrado', row.trackedMs, 'is-tracked']].forEach(([name, value, className]) => {
+          const series = element('div', 'category-bar__series');
+          const track = element('div', 'category-bar__track');
+          const fill = element('span', `category-bar__fill ${className}`);
+          fill.style.width = value ? `${Math.max(2, (value / max) * 100)}%` : '0';
+          track.append(fill);
+          series.append(element('span', 'category-bar__series-label', name), track, element('strong', 'category-bar__value', formatHours(value)));
+          item.append(series);
+        });
         chart.append(item);
       });
+      chart.setAttribute('aria-label', rows.length ? `Comparação de tempo planejado e registrado em ${rows.length} categorias` : 'Sem categorias no período');
       document.querySelector('#category-chart-empty').hidden = rows.length > 0;
+    }
+
+    renderTaskComparison(report) {
+      const rows = this.reports.taskBreakdown(report);
+      const chart = document.querySelector('#task-comparison-chart');
+      chart.replaceChildren();
+      const max = Math.max(1, ...rows.flatMap(row => [row.plannedMs, row.trackedMs]));
+      const groups = new Map();
+      rows.forEach(row => {
+        const tasks = groups.get(row.category) || [];
+        tasks.push(row);
+        groups.set(row.category, tasks);
+      });
+      groups.forEach((tasks, category) => {
+        const group = element('section', 'task-category-group');
+        group.setAttribute('role', 'listitem');
+        group.setAttribute('aria-label', `${category}: ${tasks.length} ${tasks.length === 1 ? 'tarefa' : 'tarefas'}`);
+        const heading = element('div', 'task-category-heading');
+        heading.append(element('h4', '', category), element('span', '', `${tasks.length} ${tasks.length === 1 ? 'tarefa' : 'tarefas'}`));
+        group.append(heading);
+        tasks.forEach(task => {
+          const item = element('div', 'task-comparison-row');
+          const copy = element('div', 'task-comparison-copy');
+          const usage = task.plannedMs ? Math.round((task.trackedMs / task.plannedMs) * 100) : null;
+          copy.append(element('strong', '', task.title), element('span', '', usage === null ? 'Sem planejamento' : `${usage}% do planejado`));
+          const bars = element('div', 'task-comparison-bars');
+          [['P', task.plannedMs, 'is-planned', 'Planejado'], ['R', task.trackedMs, 'is-tracked', 'Registrado']].forEach(([shortName, value, className, fullName]) => {
+            const series = element('div', 'task-comparison-series');
+            const track = element('div', 'category-bar__track');
+            const fill = element('span', `category-bar__fill ${className}`);
+            fill.style.width = value ? `${Math.max(2, (value / max) * 100)}%` : '0';
+            track.append(fill);
+            series.append(element('span', 'task-series-label', shortName), track, element('strong', 'task-series-value', formatHours(value)));
+            series.setAttribute('aria-label', `${fullName}: ${formatHours(value)}`);
+            bars.append(series);
+          });
+          item.append(copy, bars);
+          group.append(item);
+        });
+        chart.append(group);
+      });
+      chart.setAttribute('aria-label', rows.length ? `Comparação de ${rows.length} tarefas agrupadas por categoria` : 'Sem tarefas no período');
+      document.querySelector('#task-comparison-empty').hidden = rows.length > 0;
     }
 
     renderStatusChart(report) {

@@ -108,6 +108,24 @@
     return Array.from(groups.values()).sort((a, b) => b.trackedMs - a.trackedMs || a.category.localeCompare(b.category, 'pt-BR'));
   }
 
+  function taskBreakdown(report) {
+    const scheduledIds = new Set(report.scheduledActivities.map(activity => activity.id));
+    const trackedByActivity = new Map();
+    report.entries.forEach(entry => trackedByActivity.set(entry.activityId, (trackedByActivity.get(entry.activityId) || 0) + Math.max(0, Number(entry.durationMs) || 0)));
+    return report.activities.map(activity => {
+      const plannedMs = scheduledIds.has(activity.id) ? Math.max(0, Number(activity.plannedMinutes) || 0) * 60000 : 0;
+      const trackedMs = trackedByActivity.get(activity.id) || 0;
+      return {
+        id: activity.id,
+        title: activity.title,
+        category: activity.category || 'Sem categoria',
+        plannedMs,
+        trackedMs,
+        varianceMs: trackedMs - plannedMs
+      };
+    }).sort((a, b) => a.category.localeCompare(b.category, 'pt-BR') || b.trackedMs - a.trackedMs || a.title.localeCompare(b.title, 'pt-BR'));
+  }
+
   function dailyBreakdown(report) {
     const days = new Map();
     function day(date) {
@@ -157,5 +175,5 @@
   }
 
   global.Tempo10X = global.Tempo10X || {};
-  global.Tempo10X.Reports = Object.freeze({ periodRange, buildReport, summarize, groupByCategory, dailyBreakdown, statusBreakdown, weeklyBreakdown, detailedEntries, toCsv });
+  global.Tempo10X.Reports = Object.freeze({ periodRange, buildReport, summarize, groupByCategory, taskBreakdown, dailyBreakdown, statusBreakdown, weeklyBreakdown, detailedEntries, toCsv });
 })(window);
