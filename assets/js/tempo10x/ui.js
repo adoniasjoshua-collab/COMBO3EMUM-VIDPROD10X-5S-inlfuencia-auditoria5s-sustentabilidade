@@ -302,7 +302,7 @@
       this.renderDailyChart(report);
       this.renderCategoryChart(report);
       this.renderStatusChart(report);
-      this.renderTaskComparison(report);
+      this.renderActivityTimeChart(report);
       this.renderCategoryTable(report);
       this.renderEntryTable(report);
       this.renderWeeklyTable(report);
@@ -360,47 +360,38 @@
       document.querySelector('#category-chart-empty').hidden = rows.length > 0;
     }
 
-    renderTaskComparison(report) {
-      const rows = this.reports.taskBreakdown(report);
-      const chart = document.querySelector('#task-comparison-chart');
+    renderActivityTimeChart(report) {
+      const rows = this.reports.activityTimeBreakdown(report);
+      const chart = document.querySelector('#activity-time-chart');
       chart.replaceChildren();
-      const max = Math.max(1, ...rows.flatMap(row => [row.plannedMs, row.trackedMs]));
+      const max = Math.max(1, ...rows.map(row => row.trackedMs));
       const groups = new Map();
       rows.forEach(row => {
-        const tasks = groups.get(row.category) || [];
-        tasks.push(row);
-        groups.set(row.category, tasks);
+        const activities = groups.get(row.category) || [];
+        activities.push(row);
+        groups.set(row.category, activities);
       });
-      groups.forEach((tasks, category) => {
-        const group = element('section', 'task-category-group');
+      groups.forEach((activities, category) => {
+        const group = element('section', 'activity-time-group');
         group.setAttribute('role', 'listitem');
-        group.setAttribute('aria-label', `${category}: ${tasks.length} ${tasks.length === 1 ? 'tarefa' : 'tarefas'}`);
-        const heading = element('div', 'task-category-heading');
-        heading.append(element('h4', '', category), element('span', '', `${tasks.length} ${tasks.length === 1 ? 'tarefa' : 'tarefas'}`));
+        group.setAttribute('aria-label', `${category}: ${activities.length} ${activities.length === 1 ? 'atividade' : 'atividades'} com tempo registrado`);
+        const heading = element('div', 'activity-time-heading');
+        heading.append(element('h4', '', category), element('span', '', `${activities.length} ${activities.length === 1 ? 'atividade' : 'atividades'}`));
         group.append(heading);
-        tasks.forEach(task => {
-          const item = element('div', 'task-comparison-row');
-          const copy = element('div', 'task-comparison-copy');
-          const usage = task.plannedMs ? Math.round((task.trackedMs / task.plannedMs) * 100) : null;
-          copy.append(element('strong', '', task.title), element('span', '', usage === null ? 'Sem planejamento' : `${usage}% do planejado`));
-          const bars = element('div', 'task-comparison-bars');
-          [['P', task.plannedMs, 'is-planned', 'Planejado'], ['R', task.trackedMs, 'is-tracked', 'Registrado']].forEach(([shortName, value, className, fullName]) => {
-            const series = element('div', 'task-comparison-series');
-            const track = element('div', 'category-bar__track');
-            const fill = element('span', `category-bar__fill ${className}`);
-            fill.style.width = value ? `${Math.max(2, (value / max) * 100)}%` : '0';
-            track.append(fill);
-            series.append(element('span', 'task-series-label', shortName), track, element('strong', 'task-series-value', formatHours(value)));
-            series.setAttribute('aria-label', `${fullName}: ${formatHours(value)}`);
-            bars.append(series);
-          });
-          item.append(copy, bars);
+        activities.forEach(activity => {
+          const item = element('div', 'activity-time-row');
+          item.setAttribute('aria-label', `${activity.title}: ${formatHours(activity.trackedMs)} registrados`);
+          const track = element('div', 'activity-time-track');
+          const fill = element('span', 'activity-time-fill');
+          fill.style.width = `${Math.max(2, (activity.trackedMs / max) * 100)}%`;
+          track.append(fill);
+          item.append(element('strong', 'activity-time-title', activity.title), track, element('strong', 'activity-time-value', formatHours(activity.trackedMs)));
           group.append(item);
         });
         chart.append(group);
       });
-      chart.setAttribute('aria-label', rows.length ? `Comparação de ${rows.length} tarefas agrupadas por categoria` : 'Sem tarefas no período');
-      document.querySelector('#task-comparison-empty').hidden = rows.length > 0;
+      chart.setAttribute('aria-label', rows.length ? `Tempo registrado em ${rows.length} atividades agrupadas por categoria` : 'Sem atividades com tempo registrado no período');
+      document.querySelector('#activity-time-empty').hidden = rows.length > 0;
     }
 
     renderStatusChart(report) {
