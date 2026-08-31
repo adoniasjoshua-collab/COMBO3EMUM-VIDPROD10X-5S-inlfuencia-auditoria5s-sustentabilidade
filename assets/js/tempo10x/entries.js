@@ -20,6 +20,19 @@
     return !Number.isNaN(date.getTime());
   }
 
+  function manualInterval(activity) {
+    if (!activity || !validDate(activity.date) || !/^\d{2}:\d{2}$/.test(activity.startTime || '') || !/^\d{2}:\d{2}$/.test(activity.endTime || '')) return null;
+    const [year, month, day] = activity.date.split('-').map(Number);
+    const [startHour, startMinute] = activity.startTime.split(':').map(Number);
+    const [endHour, endMinute] = activity.endTime.split(':').map(Number);
+    const started = new Date(year, month - 1, day, startHour, startMinute, 0, 0);
+    const ended = new Date(year, month - 1, day, endHour, endMinute, 0, 0);
+    if (ended < started) ended.setDate(ended.getDate() + 1);
+    const durationMs = ended.getTime() - started.getTime();
+    if (!Number.isFinite(durationMs) || durationMs <= 0) return null;
+    return { date: activity.date, startedAt: started.toISOString(), endedAt: ended.toISOString(), durationMs };
+  }
+
   function validateEntry(input, activityIds, preserveId) {
     if (!input || typeof input !== 'object' || Array.isArray(input)) throw new Error('Sessão de tempo inválida.');
     const activityId = String(input.activityId || '');
@@ -74,11 +87,40 @@
       });
     }
 
+    totalForActivity(activityId, entries) {
+      const id = String(activityId);
+      return (entries || this.all()).filter(entry => entry.activityId === id).reduce((sum, entry) => sum + Math.max(0, Number(entry.durationMs) || 0), 0);
+    }
+
+    syncManual(activity) {
+      const entries = this.all();
+      const id = String(activity.id);
+      const existingManual = entries.find(entry => entry.activityId === id && entry.source === 'manual');
+      const automaticEntries = entries.filter(entry => entry.activityId === id && entry.source !== 'manual');
+      const next = entries.filter(entry => entry.activityId !== id || entry.source !== 'manual');
+      const interval = manualInterval(activity);
+
+      // The typed interval is an alternative to the timer. Automatic or
+      // migrated sessions take precedence so the same period is not doubled.
+      if (interval && automaticEntries.length === 0) {
+        next.push(validateEntry({
+          ...interval,
+          id: existingManual && existingManual.id,
+          activityId: id,
+          source: 'manual',
+          createdAt: existingManual && existingManual.createdAt
+        }, this.activityIds(), Boolean(existingManual)));
+      }
+
+      this.storage.setTimeEntries(next);
+      return this.totalForActivity(id, next);
+    }
+
     removeForActivity(activityId) {
       this.storage.setTimeEntries(this.all().filter(entry => entry.activityId !== String(activityId)));
     }
   }
 
   global.Tempo10X = global.Tempo10X || {};
-  global.Tempo10X.Entries = Object.freeze({ SOURCES, localDate, validateEntry, TimeEntryService });
+  global.Tempo10X.Entries = Object.freeze({ SOURCES, localDate, manualInterval, validateEntry, TimeEntryService });
 })(window);

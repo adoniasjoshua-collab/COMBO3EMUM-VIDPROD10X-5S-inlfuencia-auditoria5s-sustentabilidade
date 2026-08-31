@@ -40,6 +40,21 @@ assert.equal(updated.status, 'em andamento', 'UPDATE');
 assert.throws(() => activities.create({ title: 'Data inválida', date: '2026-99-99' }), /data/, 'validação de data');
 const second = activities.create({ title: 'Estudar 5S', category: 'Estudo', date: '2026-08-27', priority: 'média', status: 'pendente', plannedMinutes: 30 });
 
+const manual = activities.create({ title: 'Reuniao manual', category: 'Familia', date: '2026-08-28', startTime: '09:00', endTime: '12:00', priority: 'alta', status: 'concluída', plannedMinutes: 120 });
+let manualTracked = entries.syncManual(manual);
+activities.update(manual.id, { trackedMs: manualTracked });
+assert.equal(manualTracked, 3 * 60 * 60000, 'intervalo manual calcula o total realizado');
+assert.equal(entries.all().filter(entry => entry.activityId === manual.id).length, 1, 'intervalo manual cria uma unica sessao');
+assert.equal(entries.all().find(entry => entry.activityId === manual.id).source, 'manual', 'sessao identifica origem manual');
+const changedManual = activities.update(manual.id, { endTime: '12:30' });
+manualTracked = entries.syncManual(changedManual);
+activities.update(manual.id, { trackedMs: manualTracked });
+assert.equal(manualTracked, 210 * 60000, 'edicao manual recalcula o total');
+assert.equal(entries.all().filter(entry => entry.activityId === manual.id).length, 1, 'edicao manual nao duplica sessao');
+const manualReport = reports.buildReport(activities.all(), entries.all(), { category: 'Familia', dateFrom: '2026-08-01', dateTo: '2026-08-31' });
+assert.equal(reports.summarize(manualReport).trackedMs, 210 * 60000, 'tempo manual atualiza KPIs e relatorios');
+assert.equal(reports.detailedEntries(manualReport)[0].source, 'manual', 'relatorio detalha a origem manual');
+
 let now = Date.parse('2026-08-26T12:00:00Z');
 const timer = new window.Tempo10X.Timer.TimerService(storage, activities, entries, () => now);
 timer.start(created.id);
@@ -52,8 +67,10 @@ timer.resume();
 now += 15_000;
 assert.equal(timer.finish(), 45_000, 'retomada/finalização');
 assert.equal(activities.find(created.id).trackedMs, 45_000, 'total compatível na atividade');
-assert.equal(entries.all().length, 1, 'sessão individual criada');
-assert.equal(entries.all()[0].durationMs, 45_000, 'duração da sessão');
+assert.equal(entries.all().length, 2, 'sessoes manual e automatica criadas');
+const timerEntry = entries.all().find(entry => entry.activityId === created.id && entry.source === 'timer');
+assert.equal(timerEntry.durationMs, 45_000, 'duração da sessão');
+assert.equal(entries.all().filter(entry => entry.activityId === created.id && entry.source === 'manual').length, 0, 'cronometro prevalece sobre intervalo manual');
 
 const report = reports.buildReport(activities.all(), entries.all(), { category: 'Trabalho', dateFrom: '2026-08-01', dateTo: '2026-08-31' });
 const summary = reports.summarize(report);
@@ -74,8 +91,8 @@ const backup = storage.createBackup();
 entries.removeForActivity(second.id);
 activities.remove(second.id);
 storage.restoreBackup(JSON.parse(JSON.stringify(backup)), window.Tempo10X.Activities.validateActivity, window.Tempo10X.Entries.validateEntry);
-assert.equal(activities.all().length, 2, 'backup restaura atividades');
-assert.equal(entries.all().length, 1, 'backup restaura sessões');
+assert.equal(activities.all().length, 3, 'backup restaura atividades');
+assert.equal(entries.all().length, 2, 'backup restaura sessões');
 assert.throws(() => storage.restoreBackup({ schemaVersion: 99, activities: [] }, window.Tempo10X.Activities.validateActivity, window.Tempo10X.Entries.validateEntry), /versão/, 'versão incompatível');
 
 const legacyActivity = { ...created, id: 'legacy-activity', trackedMs: 120000 };

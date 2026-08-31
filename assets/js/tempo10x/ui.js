@@ -137,8 +137,9 @@
       event.preventDefault();
       const updating = Boolean(this.editingId);
       this.run(() => {
-        if (this.editingId) this.activities.update(this.editingId, this.formData());
-        else this.activities.create(this.formData());
+        const activity = this.editingId ? this.activities.update(this.editingId, this.formData()) : this.activities.create(this.formData());
+        const trackedMs = this.entries.syncManual(activity);
+        if (trackedMs !== activity.trackedMs) this.activities.update(activity.id, { trackedMs });
         this.resetForm();
       }, updating ? 'Atividade atualizada.' : 'Atividade criada.');
     }
@@ -375,7 +376,8 @@
       body.replaceChildren(...this.reports.detailedEntries(report).map(entry => {
         const activity = entry.activity || {};
         const row = element('tr');
-        [formatDate(entry.date), activity.title || 'Atividade removida', activity.category || 'Sem categoria', formatTime(entry.startedAt), formatTime(entry.endedAt), formatHours(entry.durationMs), entry.source === 'legacy' ? 'Histórico migrado' : 'Cronômetro'].forEach(value => row.append(element('td', '', value)));
+        const source = entry.source === 'legacy' ? 'Histórico migrado' : entry.source === 'manual' ? 'Informado manualmente' : 'Cronômetro';
+        [formatDate(entry.date), activity.title || 'Atividade removida', activity.category || 'Sem categoria', formatTime(entry.startedAt), formatTime(entry.endedAt), formatHours(entry.durationMs), source].forEach(value => row.append(element('td', '', value)));
         return row;
       }));
     }

@@ -70,7 +70,8 @@
       const elapsed = this.elapsed(timer);
       const activity = this.activities.find(timer.activityId);
       if (elapsed > 0) this.entries.createFromTimer(timer.activityId, Number(timer.sessionStartedAt) || endedAt - elapsed, endedAt, elapsed);
-      this.activities.update(timer.activityId, { trackedMs: (activity.trackedMs || 0) + elapsed, status: 'concluída' });
+      const trackedMs = this.entries.syncManual(activity);
+      this.activities.update(timer.activityId, { trackedMs, status: 'concluída' });
       this.storage.setActiveTimer(null);
       return elapsed;
     }
