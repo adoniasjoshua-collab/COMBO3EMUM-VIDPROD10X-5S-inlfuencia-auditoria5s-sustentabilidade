@@ -1,4 +1,5 @@
 const updated = '2026-08-27';
+const regionalUpdated = '2026-09-13';
 const nr22 = 'https://www.gov.br/trabalho-e-emprego/pt-br/acesso-a-informacao/participacao-social/conselhos-e-orgaos-colegiados/comissao-tripartite-partitaria-permanente/normas-regulamentadora/normas-regulamentadoras-vigentes/norma-regulamentadora-no-22-nr-22';
 const nr1 = 'https://www.gov.br/trabalho-e-emprego/pt-br/acesso-a-informacao/participacao-social/conselhos-e-orgaos-colegiados/comissao-tripartite-partitaria-permanente/normas-regulamentadoras/normas-regulamentadoras-vigentes/nr-1';
 const anmData = 'https://www.gov.br/anm/pt-br/acesso-a-informacao/dados-abertos/bases-de-dados/bases-de-dados/';
@@ -54,7 +55,7 @@ module.exports = [
     related: [['NR-22', 'mineracao/nr-22/'], ['Mineração', 'mineracao/'], ['Política editorial', 'politica-editorial/']]
   },
   {
-    file: 'mineracao/index.html', slug: 'mineracao/', cluster: 'mineracao', kind: 'hub', updated,
+    file: 'mineracao/index.html', slug: 'mineracao/', cluster: 'mineracao', kind: 'hub', updated: regionalUpdated,
     title: 'Mineração: Segurança, Meio Ambiente, 5S e Produtividade',
     description: 'Guias educativos sobre mineração, NR-22, segurança, riscos, gestão ambiental, 5S, produtividade e contexto profissional em Carajás.',
     h1: 'Mineração: conhecimento aplicado à segurança, ambiente e produção',
@@ -63,7 +64,7 @@ module.exports = [
     sections: [
       ['Comece pelos fundamentos de segurança', r => `<div class="card-grid card-grid--3"><a class="topic-card" href="${r}mineracao/nr-22/"><span class="topic-card__label">Norma setorial</span><h3>NR-22</h3><p>Campo de aplicação, responsabilidades, riscos, capacitação e emergências.</p></a><a class="topic-card" href="${r}mineracao/seguranca-na-mineracao/"><h3>Segurança na mineração</h3><p>Planejamento, controles, comunicação e aprendizagem operacional.</p></a><a class="topic-card" href="${r}mineracao/riscos-na-mineracao/"><h3>Riscos na mineração</h3><p>Como reconhecer perigos sem reduzir a análise a uma lista genérica.</p></a></div>`],
       ['Organização e desempenho responsável', r => `<div class="card-grid card-grid--3"><a class="topic-card" href="${r}mineracao/5s-na-mineracao/"><h3>5S na mineração</h3><p>Oficinas, almoxarifados, frentes, áreas administrativas e ambientais.</p></a><a class="topic-card" href="${r}mineracao/produtividade-na-mineracao/"><h3>Produtividade na mineração</h3><p>Fluxo, confiabilidade, planejamento e melhoria contínua com segurança.</p></a><a class="topic-card" href="${r}mineracao/gestao-ambiental-na-mineracao/"><h3>Gestão ambiental</h3><p>Aspectos, controles, monitoramento, resíduos e fechamento.</p></a></div>`],
-      ['Carajás e desenvolvimento regional', r => `<p>O contexto mineral de <a href="${r}mineracao/canaa-dos-carajas/">Canaã dos Carajás</a> e <a href="${r}mineracao/parauapebas/">Parauapebas</a> exige conteúdo local baseado em fontes públicas, sem sugerir vínculo com empresas ou órgãos. As páginas regionais orientam onde consultar dados e como pensar qualificação, segurança e meio ambiente.</p>`],
+      ['Carajás e desenvolvimento regional', r => `<div class="card-grid"><a class="topic-card" href="${r}mineracao/canaa-dos-carajas/"><span class="topic-card__label">Guia regional</span><h3>Mineração em Canaã dos Carajás</h3><p>Contexto local, qualificação, segurança, meio ambiente e fontes públicas.</p></a><a class="topic-card" href="${r}mineracao/parauapebas/"><span class="topic-card__label">Guia regional</span><h3>Mineração em Parauapebas</h3><p>Carajás, preparação profissional, dados minerais e cuidado com fraudes.</p></a></div><p>Os guias regionais ajudam a pesquisar o território sem sugerir vínculo com empresas ou órgãos. Use as fontes oficiais para confirmar dados, requisitos e oportunidades.</p>`],
       ['Limites deste conteúdo', () => `<p>Os guias não divulgam procedimentos internos, parâmetros operacionais, mapas restritos ou informações de emergência de empreendimentos. Condições de campo devem ser avaliadas pela organização e por profissionais habilitados. Em caso de divergência, prevalecem a legislação vigente, o procedimento autorizado e a orientação do responsável técnico.</p>`]
     ],
     related: [['NR-22', 'mineracao/nr-22/'], ['Carreira na mineração', 'carreira-mineracao/'], ['Ferramentas', 'ferramentas/']]
@@ -188,23 +189,24 @@ module.exports = [
     related: [['Gestão ambiental', 'gestao-ambiental/'], ['Riscos na mineração', 'mineracao/riscos-na-mineracao/'], ['5S na mineração', 'mineracao/5s-na-mineracao/']]
   },
   {
-    file: 'mineracao/canaa-dos-carajas/index.html', slug: 'mineracao/canaa-dos-carajas/', cluster: 'mineracao', kind: 'article', updated,
+    file: 'mineracao/canaa-dos-carajas/index.html', slug: 'mineracao/canaa-dos-carajas/', cluster: 'mineracao', kind: 'article', updated: regionalUpdated,
     title: 'Mineração em Canaã dos Carajás: Carreira, SSMA e Dados',
     description: 'Contexto educativo sobre mineração em Canaã dos Carajás, qualificação, segurança, meio ambiente e consulta a fontes públicas oficiais.',
     h1: 'Mineração em Canaã dos Carajás: contexto e preparação profissional',
     lead: 'Uma leitura regional baseada em fontes públicas, sem vínculo com mineradoras e sem promessa de emprego ou contratação.',
     breadcrumb: [['Mineração', 'mineracao/'], ['Canaã dos Carajás', 'mineracao/canaa-dos-carajas/']],
     sections: [
-      ['Contexto regional', () => `<p>Canaã dos Carajás integra a região mineral do sudeste paraense. Seu crescimento e as atividades associadas à mineração criam demandas diversas em operação, manutenção, construção, segurança, meio ambiente, logística, serviços e administração. Isso não significa que toda oportunidade esteja disponível nem que uma formação garanta contratação.</p><p>Dados demográficos e territoriais devem ser conferidos no <a href="${ibgeCanaa}" target="_blank" rel="noopener noreferrer">IBGE Cidades</a>.</p>`],
+      ['Contexto regional', () => `<p>Canaã dos Carajás integra a região mineral do sudeste paraense. Seu crescimento e as atividades associadas à mineração criam demandas diversas em operação, manutenção, construção, segurança, meio ambiente, logística, serviços e administração. Isso não significa que toda oportunidade esteja disponível nem que uma formação garanta contratação.</p><p>O <a href="${ibgeCanaa}" target="_blank" rel="noopener noreferrer">IBGE Cidades</a> informa área territorial de 3.146,748 km² (2025) e população de 77.079 pessoas no Censo 2022. Consulte a fonte para atualizações e para não misturar anos de referência.</p>`],
       ['Como consultar a atividade mineral', () => `<p>A <a href="${anmData}" target="_blank" rel="noopener noreferrer">ANM disponibiliza bases abertas</a> sobre processos minerários, produção, CFEM, SIGMINE e barragens. Como os dados podem ser declaratórios, atualizados em frequências diferentes ou exigir interpretação espacial, consulte os metadados e evite conclusões sobre empresa ou empreendimento a partir de uma única tabela.</p>`],
       ['Segurança e meio ambiente', r => `<p>Quem trabalha ou busca trabalhar no setor precisa compreender que regras e treinamentos variam conforme função e risco. Comece pela visão geral da <a href="${r}mineracao/nr-22/">NR-22</a>, aprofunde <a href="${r}mineracao/seguranca-na-mineracao/">segurança na mineração</a> e conecte a rotina à <a href="${r}mineracao/gestao-ambiental-na-mineracao/">gestão ambiental</a>.</p>`],
       ['Qualificação responsável', r => `<p>Compare cursos reconhecidos, requisitos de entrada, carga horária, prática e campo de atuação. O <a href="${cnct}" target="_blank" rel="noopener noreferrer">Catálogo Nacional de Cursos Técnicos do MEC</a> ajuda a conferir perfis formais. Veja também o guia sobre <a href="${r}carreira-mineracao/como-trabalhar-na-mineracao/">como trabalhar na mineração</a>.</p>`],
-      ['Fontes locais e cuidado com fraudes', () => `<p>Para serviços públicos, licenciamento e legislação municipal, utilize portais oficiais e confirme domínio, data e órgão responsável. Desconfie de cobrança por vaga, promessa de contratação ou solicitação de dados sensíveis fora de canais verificáveis. Este portal não representa empresa, prefeitura, ANM ou instituição de ensino.</p>`]
+      ['Fontes locais e cuidado com fraudes', () => `<p>Para serviços públicos, licenciamento e legislação municipal, utilize portais oficiais e confirme domínio, data e órgão responsável. Desconfie de cobrança por vaga, promessa de contratação ou solicitação de dados sensíveis fora de canais verificáveis. Este portal não representa empresa, prefeitura, ANM ou instituição de ensino.</p>`],
+      ['Da pesquisa à próxima ação', r => `<p>Depois de consultar as fontes, organize estudos, documentos e próximos passos na <a href="${r}ferramentas/matriz-eisenhower/">Matriz de Eisenhower online</a>. Para acompanhar o tempo dedicado à qualificação e à preparação, use o <a href="${r}ferramentas/gestao-do-tempo/">cronômetro de tarefas Tempo 10X</a>.</p>`]
     ],
     related: [['Carreira na mineração', 'carreira-mineracao/'], ['NR-22', 'mineracao/nr-22/'], ['Parauapebas', 'mineracao/parauapebas/']]
   },
   {
-    file: 'mineracao/parauapebas/index.html', slug: 'mineracao/parauapebas/', cluster: 'mineracao', kind: 'article', updated,
+    file: 'mineracao/parauapebas/index.html', slug: 'mineracao/parauapebas/', cluster: 'mineracao', kind: 'article', updated: regionalUpdated,
     title: 'Mineração em Parauapebas: Carreira, Segurança e Ambiente',
     description: 'Guia regional sobre mineração em Parauapebas, preparação profissional, NR-22, segurança, meio ambiente e fontes públicas oficiais.',
     h1: 'Mineração em Parauapebas: contexto, segurança e carreira',
@@ -215,12 +217,13 @@ module.exports = [
       ['Dados minerais sem suposições', () => `<p>Processos, produção e arrecadação podem ser investigados nas <a href="${anmData}" target="_blank" rel="noopener noreferrer">bases de dados da ANM</a>. A existência de processo ou arrecadação não comprova vaga, contratação, condição operacional ou impacto específico. Use a base adequada, confira a atualização e complemente a análise com fontes locais oficiais.</p>`],
       ['NR-22 e preparação para o trabalho', r => `<p>A <a href="${r}mineracao/nr-22/">NR-22</a> é referência setorial, mas treinamentos e autorizações dependem da atividade. Uma pessoa candidata pode estudar conceitos de risco, comunicação, 5S e meio ambiente, porém não deve executar tarefa para a qual não esteja qualificada, autorizada e orientada.</p>`],
       ['Meio ambiente e território', r => `<p>Mineração interage com água, solo, biodiversidade, uso do território, infraestrutura e comunidades. A gestão depende de estudos, licenças, monitoramentos e participação institucional. Leia os fundamentos de <a href="${r}mineracao/gestao-ambiental-na-mineracao/">gestão ambiental na mineração</a> sem atribuir conclusões genéricas a um empreendimento local.</p>`],
-      ['Busca de oportunidades com segurança', r => `<p>Consulte canais oficiais de empregadores e o <a href="${sine}" target="_blank" rel="noopener noreferrer">serviço Sine</a>. Nunca pague por promessa de vaga. Organize currículo, documentos e evidências de formação, e adapte a candidatura aos requisitos publicados. O roteiro completo está em <a href="${r}carreira-mineracao/como-trabalhar-na-mineracao/">como trabalhar na mineração</a>.</p>`]
+      ['Busca de oportunidades com segurança', r => `<p>Consulte canais oficiais de empregadores e o <a href="${sine}" target="_blank" rel="noopener noreferrer">serviço Sine</a>. Nunca pague por promessa de vaga. Organize currículo, documentos e evidências de formação, e adapte a candidatura aos requisitos publicados. O roteiro completo está em <a href="${r}carreira-mineracao/como-trabalhar-na-mineracao/">como trabalhar na mineração</a>.</p>`],
+      ['Da pesquisa à próxima ação', r => `<p>Ao pesquisar oportunidades, requisitos e informações sobre mineração em Parauapebas, organize o que é urgente e importante na <a href="${r}ferramentas/matriz-eisenhower/">Matriz de Eisenhower online</a>. Depois, acompanhe o tempo investido em estudos, currículo e preparação com o <a href="${r}ferramentas/gestao-do-tempo/">cronômetro de tarefas Tempo 10X</a>.</p>`]
     ],
     related: [['Como trabalhar na mineração', 'carreira-mineracao/como-trabalhar-na-mineracao/'], ['Segurança na mineração', 'mineracao/seguranca-na-mineracao/'], ['Canaã dos Carajás', 'mineracao/canaa-dos-carajas/']]
   },
   {
-    file: 'carreira-mineracao/index.html', slug: 'carreira-mineracao/', cluster: 'mineracao', kind: 'hub', updated,
+    file: 'carreira-mineracao/index.html', slug: 'carreira-mineracao/', cluster: 'mineracao', kind: 'hub', updated: regionalUpdated,
     title: 'Carreira na Mineração: Profissões, Cursos e Preparação',
     description: 'Entenda caminhos de carreira na mineração, áreas profissionais, formação, segurança, currículo e pesquisa responsável de oportunidades.',
     h1: 'Carreira na mineração: construa preparação, não promessa',
@@ -230,7 +233,7 @@ module.exports = [
       ['Por onde começar', r => `<div class="card-grid"><a class="topic-card" href="${r}carreira-mineracao/como-trabalhar-na-mineracao/"><span class="topic-card__label">Guia essencial</span><h3>Como trabalhar na mineração</h3><p>Mapeie funções, lacunas, formação, currículo, canais oficiais e segurança contra fraudes.</p></a><a class="topic-card" href="${r}mineracao/nr-22/"><span class="topic-card__label">Contexto de segurança</span><h3>Entenda a NR-22</h3><p>Conheça o alcance da norma sem confundir leitura introdutória com capacitação obrigatória.</p></a></div>`],
       ['Áreas profissionais', () => `<p>Operação, manutenção, geologia, mineração, beneficiamento, segurança, meio ambiente, laboratório, planejamento, tecnologia, suprimentos, logística, construção e administração podem participar da cadeia. Cada função tem requisitos próprios; “trabalhar em mineração” não corresponde a uma única formação.</p>`],
       ['Formação e reconhecimento', () => `<p>Compare o perfil profissional e o campo de atuação no <a href="${cnct}" target="_blank" rel="noopener noreferrer">Catálogo Nacional de Cursos Técnicos do MEC</a>. Para graduação, consulte o e-MEC. Curso livre pode desenvolver conhecimento complementar, mas não substitui habilitação técnica, registro ou capacitação obrigatória quando exigidos.</p>`],
-      ['Carajás sem atalhos', r => `<p>As páginas sobre <a href="${r}mineracao/canaa-dos-carajas/">Canaã dos Carajás</a> e <a href="${r}mineracao/parauapebas/">Parauapebas</a> organizam fontes regionais. Elas não representam empresas, não anunciam vagas e não prometem colocação.</p>`]
+      ['Carajás sem atalhos', r => `<p>As páginas sobre <a href="${r}mineracao/canaa-dos-carajas/">Canaã dos Carajás</a> e <a href="${r}mineracao/parauapebas/">Parauapebas</a> organizam fontes regionais. Elas não representam empresas, não anunciam vagas e não prometem colocação.</p><p>Para transformar a pesquisa em preparação, use a <a href="${r}ferramentas/matriz-eisenhower/">Matriz de Eisenhower online</a> para priorizar ações e o <a href="${r}ferramentas/gestao-do-tempo/">Tempo 10X</a> para registrar o tempo dedicado aos próximos passos.</p>`]
     ],
     related: [['Como trabalhar na mineração', 'carreira-mineracao/como-trabalhar-na-mineracao/'], ['Mineração', 'mineracao/'], ['Produtividade na mineração', 'mineracao/produtividade-na-mineracao/']]
   },
