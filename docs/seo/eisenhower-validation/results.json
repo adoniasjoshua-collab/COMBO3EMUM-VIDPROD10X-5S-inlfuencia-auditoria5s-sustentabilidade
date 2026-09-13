@@ -1,0 +1,16 @@
+{
+  "browser": "152.0.7977.83",
+  "widths": [
+    320,
+    360,
+    375,
+    390,
+    768,
+    1024,
+    1440
+  ],
+  "axeViolations": 0,
+  "initialCLS": 0.01778365162037037,
+  "browserErrors": [],
+  "passed": true
+}
