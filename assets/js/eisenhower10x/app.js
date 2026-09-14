@@ -1,7 +1,7 @@
 import { Store, KEYS, validateState } from './storage.js';
 import { saveTask, classify, QUADRANTS } from './tasks.js';
 import { reward, localDay } from './gamification.js';
-import { render, announce } from './ui.js';
+import { render, announce } from './ui.js?v=20260914-3';
 import { initDragDrop } from './dragdrop.js';
 import { formatDateBR, parseDateBR, initDateInput } from './dates.js';
 

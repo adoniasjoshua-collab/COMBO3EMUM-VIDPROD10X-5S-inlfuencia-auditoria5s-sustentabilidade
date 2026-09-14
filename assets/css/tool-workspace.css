@@ -1,0 +1,92 @@
+.workspace-site { background: #f6f8f7; }
+.workspace { position: relative; scroll-margin-top: 85px; background: #fff; border: 1px solid #dce5df; border-radius: 16px; padding: 24px; margin-bottom: 32px; }
+.workspace [hidden] { display: none !important; }
+.workspace-header { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 20px; }
+.workspace-brand { font-size: 1.25rem; font-weight: 750; color: #173d2c; }
+.workspace-brand small { display: block; font-size: .85rem; font-weight: 400; color: #52645a; margin-top: 4px; }
+.workspace button, .workspace select { min-height: 44px; }
+.workspace-focus, .workspace-nav button { font: inherit; cursor: pointer; border: 1px solid #ccd9d1; border-radius: 8px; background: #fff; color: #244c37; padding: 10px 14px; }
+.workspace-nav { display: flex; gap: 6px; padding: 6px; background: #f1f5f2; border-radius: 12px; margin-bottom: 20px; }
+.workspace-nav button { flex: 1; border-color: transparent; background: transparent; font-weight: 650; }
+.workspace-nav button[aria-pressed="true"] { background: #126b46; color: #fff; }
+.workspace-panel { min-width: 0; }
+.workspace .eisenhower-toolbar h2 { font-size: 1.05rem; }
+.workspace .eisenhower-toolbar p { display: none; }
+.workspace .eisenhower-quadrant { background: #fafcfb; border-radius: 10px; }
+.workspace .eisenhower-card { background: #fff; }
+.workspace-list { grid-template-columns: minmax(0, 1fr) !important; }
+.workspace-list .eisenhower-quadrant { border-top-width: 1px; border-left: 3px solid var(--quadrant); }
+.workspace-list .eisenhower-card { border: 0; border-bottom: 1px solid #dce5df; border-radius: 0; }
+.workspace-list .eisenhower-description { display: none; }
+.workspace-filter { display: flex; align-items: center; gap: 12px; font-size: .9rem; }
+.workspace-filter select { flex: 1; max-width: 300px; }
+.workspace-extra { padding: 12px; border: 1px solid #dce5df; border-radius: 10px; margin-bottom: 16px; background: #fafcfb; }
+.workspace-extra summary { cursor: pointer; padding: 6px 0; color: #244c37; font-weight: 600; }
+.workspace .report-panel, .workspace .tool-panel { margin: 0; box-shadow: none; }
+.workspace .activities-panel { box-shadow: none; border-radius: 12px; padding: 16px; }
+.workspace .activity-card { border-radius: 10px; }
+.workspace .activity-time-summary { color: #244c37; font-weight: 650; font-variant-numeric: tabular-nums; }
+.workspace .activity-disclosure { margin-block: 12px; }
+.workspace .activity-disclosure summary { cursor: pointer; padding-block: 8px; color: #52645a; font-size: .9rem; }
+.workspace .active-timer { position: sticky; top: 76px; z-index: 12; box-shadow: 0 6px 20px #173d2c12; }
+.workspace-focused > .portal-header, .workspace-focused > .breadcrumb, .workspace-focused > .portal-footer, .workspace-focused > .whatsapp-contact,
+.workspace-focused .eisenhower-intro, .workspace-focused .eisenhower-help, .workspace-focused .tool-hero, .workspace-focused .tool-content-layout { display: none; }
+.workspace-focused .workspace { margin-top: 16px; scroll-margin-top: 0; }
+.workspace-focused .active-timer { top: 8px; }
+.workspace-site > .whatsapp-contact { position: static; display: flex; width: fit-content; margin: 20px auto; }
+body.workspace-focused > .whatsapp-contact { display: none; }
+@media (min-width: 1120px) {
+  .workspace { padding-left: 204px; min-height: 560px; }
+  .workspace-nav { position: absolute; left: 20px; top: 24px; width: 160px; flex-direction: column; }
+  .workspace-nav button { text-align: left; }
+  .workspace-list .eisenhower-list { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 767px) {
+  .workspace-site { padding-bottom: calc(82px + env(safe-area-inset-bottom)); }
+  .workspace { padding: 14px; border-radius: 12px; scroll-margin-top: 76px; }
+  .workspace-header { align-items: flex-start; gap: 8px; }
+  .workspace-brand { font-size: 1.05rem; }
+  .workspace-focus { font-size: .75rem; padding: 8px; max-width: 108px; }
+  .workspace-nav { position: fixed; bottom: 0; left: 0; right: 0; z-index: 30; margin: 0; border-radius: 16px 16px 0 0; border-top: 1px solid #ccd9d1; padding: 8px 8px calc(8px + env(safe-area-inset-bottom)); background: #fff; box-shadow: 0 -4px 20px #173d2c12; }
+  .workspace-nav button { font-size: .8rem; padding: 10px 5px; }
+  .workspace .eisenhower-toolbar { position: sticky; top: 68px; z-index: 11; padding: 10px 0; background: #fff; }
+  .workspace-focused .eisenhower-toolbar { top: 0; }
+  .workspace .eisenhower-toolbar h2 { max-width: 140px; font-size: .95rem; }
+  .workspace .eisenhower-quadrant { padding: 10px; }
+  .workspace .active-timer { top: 68px; padding: 12px; }
+  .workspace .active-timer .timer-progress-wrap { display: none; }
+  .workspace-site .eisenhower-dialog { width: 100%; max-width: 100%; max-height: 88dvh; margin: auto 0 0; border-radius: 20px 20px 0 0; padding: 20px 16px calc(20px + env(safe-area-inset-bottom)); }
+  .workspace-site .eisenhower-intro { padding-block: 20px 12px; }
+  .workspace-site .eisenhower-intro h1 { font-size: 1.65rem; }
+  .workspace-site .eisenhower-intro p { font-size: .9rem; }
+}
+@media print {
+  .workspace { padding: 0; border: 0; }
+  .workspace-header, .workspace-nav, .workspace-filter { display: none !important; }
+  .workspace .active-timer { position: static; }
+  .workspace-site { padding: 0; }
+}
+/* Compact task rows: disclosure owns details, quick action remains separate. */
+.workspace .compact-task { display: grid; grid-template-columns: 44px minmax(0, 1fr); align-items: start; gap: 4px; padding: 6px; margin: 0; border: 0; border-bottom: 1px solid #dce5df; border-radius: 0; background: #fff; }
+.workspace .task-disclosure { margin: 0; min-width: 0; }
+.workspace .compact-title { display: flex; align-items: center; gap: 8px; min-height: 44px; padding: 6px 4px; cursor: pointer; list-style: none; }
+.workspace .compact-title::-webkit-details-marker { display: none; }
+.workspace .compact-title::after { content: '⌄'; margin-left: auto; flex: 0 0 24px; text-align: center; color: #52645a; }
+.workspace .task-disclosure[open] > .compact-title::after { content: '⌃'; }
+.workspace .compact-title h3, .workspace .compact-title h4 { margin: 0; padding: 0; font-size: .95rem; line-height: 1.4; overflow-wrap: anywhere; font-weight: 600; }
+.workspace .compact-quick { display: grid; place-items: center; width: 44px; height: 44px; min-height: 44px; padding: 0; color: #116b45; background: transparent; border: 1px solid transparent; border-radius: 8px; font: inherit; font-size: 1.15rem; cursor: pointer; }
+.workspace .compact-quick:disabled { color: #65756b; cursor: default; opacity: .55; }
+.workspace .compact-body { padding: 4px 4px 12px; }
+.workspace .compact-body .eisenhower-description { display: block; }
+.workspace .eisenhower-list, .workspace .activity-list { gap: 0; }
+.workspace .completed-group { margin-top: 12px; grid-column: 1 / -1; }
+.workspace .completed-group > summary { min-height: 44px; padding: 10px 4px; color: #52645a; cursor: pointer; font-weight: 600; font-size: .9rem; }
+.workspace .completed-group .compact-title h3, .workspace .completed-group .compact-title h4 { color: #52645a; }
+.workspace .compact-running { color: #116b45; font-size: .7rem; white-space: nowrap; }
+.workspace .compact-collapse { display: block; margin: 0 0 8px auto; background: transparent; color: #52645a; border: 0; font: inherit; font-size: .8rem; cursor: pointer; padding: 8px; }
+.workspace .compact-title:focus-visible, .workspace .completed-group > summary:focus-visible { outline: 2px solid #116b45; outline-offset: 2px; border-radius: 4px; }
+@media print {
+  .workspace .task-disclosure, .workspace .completed-group { display: block !important; }
+  .workspace .compact-task { display: block; break-inside: avoid; }
+  .workspace .compact-quick, .workspace .compact-collapse, .workspace .compact-title::after { display: none !important; }
+}

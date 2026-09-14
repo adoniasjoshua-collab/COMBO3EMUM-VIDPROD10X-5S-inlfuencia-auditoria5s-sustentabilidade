@@ -230,14 +230,17 @@
     }
 
     card(activity) {
-      const card = element('article', 'activity-card');
+      const card = element('article', 'activity-card compact-task');
+      card.dataset.taskId = activity.id;
       card.setAttribute('aria-label', `Atividade: ${activity.title}`);
-      const top = element('div', 'activity-card__top');
+      const disclosure = element('details', 'task-disclosure'); disclosure.dataset.disclosure = activity.id;
+      const top = element('summary', 'compact-title'); top.dataset.focus = `${activity.id}-summary`;
       const badges = element('div', 'activity-badges');
       badges.append(element('span', `badge priority-${activity.priority}`, activity.priority), element('span', 'badge status-badge', activity.status));
-      top.append(element('h3', '', activity.title), badges);
-      card.append(top);
-      if (activity.description) card.append(element('p', 'activity-description', activity.description));
+      top.append(element('h3', '', activity.title));
+      disclosure.append(top); card.append(disclosure);
+      const body = element('div', 'compact-body'); disclosure.append(body); body.append(badges);
+      if (activity.description) body.append(element('p', 'activity-description', activity.description));
       const details = element('dl', 'activity-details');
       const active = this.timer.current();
       const liveMs = active && active.activityId === activity.id ? this.timer.elapsed(active) : 0;
@@ -256,22 +259,43 @@
         ['Resultado', result, resultClass]
       ];
       values.forEach(([label, value, className]) => { const group = element('div', className || ''); group.append(element('dt', '', label), element('dd', '', value)); details.append(group); });
-      card.append(details);
-      if (activity.notes) card.append(element('p', 'activity-notes', `Observações: ${activity.notes}`));
+      body.append(element('p', 'activity-time-summary', `${formatDuration(trackedMs)} registrado${plannedMs ? ` · ${formatHours(plannedMs)} planejado` : ''}`), details);
+      if (activity.notes) body.append(element('p', 'activity-notes', `Observações: ${activity.notes}`));
       const actions = element('div', 'activity-actions');
-      if (!active) actions.append(this.actionButton('Iniciar cronômetro', 'tool-button tool-button--primary', () => this.run(() => this.timer.start(activity.id), 'Cronômetro iniciado.')));
-      else if (active.activityId === activity.id) actions.append(element('span', 'active-label', active.state === 'running' ? 'Cronometrando agora' : 'Cronômetro pausado'));
+      const isCurrent = active && active.activityId === activity.id;
+      const label = isCurrent ? active.state === 'running' ? 'Pausar cronômetro' : 'Retomar cronômetro' : 'Iniciar cronômetro';
+      const quick = this.actionButton(isCurrent && active.state === 'running' ? 'Ⅱ' : '▶', 'compact-quick', () => this.run(() => isCurrent ? active.state === 'running' ? this.timer.pause() : this.timer.resume() : this.timer.start(activity.id), `${label}: ${activity.title}`));
+      quick.setAttribute('aria-label', `${label}: ${activity.title}`); quick.title = label; quick.dataset.focus = `${activity.id}-timer`;
+      quick.disabled = Boolean(active && !isCurrent); card.prepend(quick);
+      if (isCurrent) top.append(element('small', 'compact-running', active.state === 'running' ? 'Em foco' : 'Pausado'));
       actions.append(this.actionButton('Editar', 'tool-button tool-button--quiet', () => this.edit(activity)), this.actionButton('Excluir', 'tool-button tool-button--danger', () => this.remove(activity)));
-      card.append(actions);
+      body.append(actions);
       return card;
     }
 
     render() {
+      const focused = document.activeElement?.dataset.focus;
+      const open = new Set([...this.list.querySelectorAll('[data-disclosure][open]')].map(el => el.dataset.disclosure));
       const all = this.activities.all();
+      const app = document.querySelector('.tempo-app');
+      app.taskAnalyticsData = all;
+      app.dispatchEvent(new CustomEvent('tasks:updated', { detail: all }));
       this.refreshCategoryOptions(all);
       const report = this.reports.buildReport(all, this.entries.all(), this.filters());
       const activities = report.activities.sort((a, b) => `${a.date || '9999'}${a.startTime || '99:99'}${a.createdAt}`.localeCompare(`${b.date || '9999'}${b.startTime || '99:99'}${b.createdAt}`));
-      this.list.replaceChildren(...activities.map(activity => this.card(activity)));
+      const activeId = this.timer.current()?.activityId;
+      const completed = activities.filter(activity => activity.status === 'concluída' && activity.id !== activeId);
+      const children = activities.filter(activity => activity.status !== 'concluída' || activity.id === activeId).map(activity => this.card(activity));
+      if (completed.length) {
+        const group = element('details', 'completed-group'); group.dataset.disclosure = 'completed';
+        group.append(element('summary', '', `Concluídas (${completed.length})`), ...completed.map(activity => this.card(activity))); children.push(group);
+      }
+      this.list.replaceChildren(...children);
+      this.list.querySelectorAll('[data-disclosure]').forEach(el => { el.open = open.has(el.dataset.disclosure); });
+      if (focused) {
+        const target = this.list.querySelector(`[data-focus="${CSS.escape(focused)}"]`);
+        (target?.closest('.completed-group:not([open])')?.querySelector('summary') || target)?.focus();
+      }
       this.empty.hidden = activities.length > 0;
       this.count.textContent = `${activities.length} ${activities.length === 1 ? 'atividade' : 'atividades'}`;
       this.renderReports(report);
