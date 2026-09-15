@@ -117,7 +117,7 @@
     run(action, success) {
       try {
         action();
-        this.announce(success, false);
+        if (success) this.announce(success, false);
         this.render();
       } catch (error) {
         this.announce(error.message || 'Não foi possível concluir a ação.', true);
@@ -137,11 +137,23 @@
       event.preventDefault();
       const updating = Boolean(this.editingId);
       this.run(() => {
-        const activity = this.editingId ? this.activities.update(this.editingId, this.formData()) : this.activities.create(this.formData());
-        const trackedMs = this.entries.syncManual(activity);
+        const input = this.formData();
+        const replaceExisting = this.form.elements.timeSource.value === 'manual';
+        const candidate = global.Tempo10X.Activities.validateActivity(input, false);
+        if (replaceExisting) {
+          const interval = global.Tempo10X.Entries.manualInterval(candidate);
+          if (!interval) throw new Error('Informe data, horário inicial e horário final para usar o intervalo manual.');
+          const active = this.timer.current();
+          if (active && active.activityId === this.editingId) throw new Error('Finalize o cronômetro desta atividade antes de substituir o tempo registrado.');
+          const existing = this.entries.all().filter(entry => entry.activityId === this.editingId);
+          if (existing.length && !global.confirm(`Substituir todas as ${existing.length} sessões desta atividade por um único registro manual de ${formatDuration(interval.durationMs)} (horas:minutos:segundos)? As sessões anteriores serão removidas. Cancelar mantém os dados e a edição aberta.`)) return;
+        }
+        const activity = this.editingId ? this.activities.update(this.editingId, input) : this.activities.create(input);
+        const trackedMs = this.entries.syncManual(activity, replaceExisting);
         if (trackedMs !== activity.trackedMs) this.activities.update(activity.id, { trackedMs });
         this.resetForm();
-      }, updating ? 'Atividade atualizada.' : 'Atividade criada.');
+        this.announce(updating ? 'Atividade atualizada.' : 'Atividade criada.', false);
+      });
     }
 
     resetForm() {
@@ -157,6 +169,7 @@
 
     edit(activity) {
       this.editingId = activity.id;
+      this.form.elements.timeSource.value = 'keep';
       Object.entries(activity).forEach(([key, value]) => { if (this.form.elements[key]) this.form.elements[key].value = value; });
       document.querySelector('#form-title').textContent = 'Editar atividade';
       document.querySelector('#form-submit').textContent = 'Atualizar atividade';

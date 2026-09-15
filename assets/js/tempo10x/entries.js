@@ -92,17 +92,20 @@
       return (entries || this.all()).filter(entry => entry.activityId === id).reduce((sum, entry) => sum + Math.max(0, Number(entry.durationMs) || 0), 0);
     }
 
-    syncManual(activity) {
+    syncManual(activity, replaceExisting = false) {
       const entries = this.all();
       const id = String(activity.id);
       const existingManual = entries.find(entry => entry.activityId === id && entry.source === 'manual');
       const automaticEntries = entries.filter(entry => entry.activityId === id && entry.source !== 'manual');
-      const next = entries.filter(entry => entry.activityId !== id || entry.source !== 'manual');
       const interval = manualInterval(activity);
+      if (replaceExisting && !interval) throw new Error('Informe data e horários válidos para substituir o tempo registrado.');
+      const active = this.storage.getActiveTimer();
+      if (replaceExisting && active && active.activityId === id) throw new Error('Finalize o cronômetro desta atividade antes de substituir o tempo registrado.');
+      const next = entries.filter(entry => entry.activityId !== id || (!replaceExisting && entry.source !== 'manual'));
 
       // The typed interval is an alternative to the timer. Automatic or
       // migrated sessions take precedence so the same period is not doubled.
-      if (interval && automaticEntries.length === 0) {
+      if (interval && (replaceExisting || automaticEntries.length === 0)) {
         next.push(validateEntry({
           ...interval,
           id: existingManual && existingManual.id,

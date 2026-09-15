@@ -20,10 +20,10 @@
   <link rel="icon" href="../../assets/icons/5s.svg" type="image/svg+xml">
   <link rel="manifest" href="../../manifest.webmanifest">
   <link rel="stylesheet" href="../../assets/css/portal.css">
-  <link rel="stylesheet" href="../../assets/css/tempo10x.css?v=20260914-3">
+  <link rel="stylesheet" href="../../assets/css/tempo10x.css?v=20260914-4">
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://zadonidigital.com.br/ferramentas/gestao-do-tempo/#webpage","name":"Cronômetro de Tarefas Online Grátis | Tempo 10X","description":"Cronometre tarefas, controle horas por atividade e acompanhe sua produtividade com filtros, gráficos e relatórios gratuitos no navegador.","url":"https://zadonidigital.com.br/ferramentas/gestao-do-tempo/","isPartOf":{"@id":"https://zadonidigital.com.br/#website"},"mainEntity":{"@id":"https://zadonidigital.com.br/ferramentas/gestao-do-tempo/#app"},"dateModified":"2026-09-02","inLanguage":"pt-BR"},{"@type":"WebApplication","@id":"https://zadonidigital.com.br/ferramentas/gestao-do-tempo/#app","name":"Tempo 10X","alternateName":"Cronômetro de Tarefas e Gestão do Tempo","softwareVersion":"2.0","url":"https://zadonidigital.com.br/ferramentas/gestao-do-tempo/","applicationCategory":"ProductivityApplication","operatingSystem":"Qualquer navegador moderno","browserRequirements":"JavaScript e armazenamento local habilitados","featureList":["Cronômetro de tarefas","Barra de progresso em tempo real","Histórico de sessões","Filtros por período","Gráficos de produtividade","Relatórios CSV e PDF"],"isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"BRL"},"inLanguage":"pt-BR"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Preciso criar uma conta para usar o Tempo 10X?","acceptedAnswer":{"@type":"Answer","text":"Não. A ferramenta funciona no navegador e utiliza armazenamento local."}},{"@type":"Question","name":"O cronômetro continua correto se eu fechar a página?","acceptedAnswer":{"@type":"Answer","text":"Sim. O cálculo usa timestamps persistidos e volta a mostrar o tempo correto ao reabrir a página no mesmo navegador."}},{"@type":"Question","name":"Posso exportar um relatório das horas por tarefa?","acceptedAnswer":{"@type":"Answer","text":"Sim. Os filtros e relatórios permitem exportar as sessões em CSV ou imprimir e salvar o painel em PDF."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://zadonidigital.com.br/portal/"},{"@type":"ListItem","position":2,"name":"Produtividade","item":"https://zadonidigital.com.br/produtividade/"},{"@type":"ListItem","position":3,"name":"Tempo 10X","item":"https://zadonidigital.com.br/ferramentas/gestao-do-tempo/"}]}]}</script>
-<link rel="stylesheet" href="../../assets/css/tool-workspace.css?v=20260914-3">
-<link rel="stylesheet" href="../../assets/css/task-analytics.css?v=20260914-3">
+<link rel="stylesheet" href="../../assets/css/tool-workspace.css?v=20260914-4">
+<link rel="stylesheet" href="../../assets/css/task-analytics.css?v=20260914-4">
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -67,6 +67,7 @@
           <div class="field"><label for="plannedMinutes">Duração planejada (minutos)</label><input id="plannedMinutes" name="plannedMinutes" type="number" min="0" max="10080" step="5" inputmode="numeric"></div>
           <div class="field"><label for="startTime">Horário inicial</label><input id="startTime" name="startTime" type="time"></div>
           <div class="field"><label for="endTime">Horário final</label><input id="endTime" name="endTime" type="time"></div>
+          <div class="field field--wide"><label for="timeSource">Tempo registrado ao salvar</label><select id="timeSource" name="timeSource" aria-describedby="timeSource-help"><option value="keep" selected>Manter cronômetro ou histórico existente</option><option value="manual">Substituir pelo intervalo manual</option></select><small id="timeSource-help">Sem sessões de cronômetro ou histórico, os horários informados calculam o tempo automaticamente. Para corrigir um registro existente, escolha substituir pelo intervalo manual. A duração planejada é apenas uma meta.</small></div>
           <div class="field field--wide"><label for="status">Status</label><select id="status" name="status"><option value="pendente" selected>Pendente</option><option value="em andamento">Em andamento</option><option value="pausada">Pausada</option><option value="concluída">Concluída</option></select></div>
           <div class="field field--wide"><label for="notes">Observações</label><textarea id="notes" name="notes" rows="3" maxlength="1000"></textarea></div>
           <div class="form-actions field--wide"><button id="form-submit" class="tool-button tool-button--primary" type="submit">Salvar atividade</button><button id="form-cancel" class="tool-button tool-button--quiet" type="button" hidden>Cancelar edição</button></div>
@@ -148,15 +149,15 @@
 <a class="whatsapp-contact" href="https://wa.me/5594992993138?text=Ol%C3%A1%2C%20Adonias!%20Estou%20usando%20o%20Tempo%2010X%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida%20sobre%20a%20ferramenta." target="_blank" rel="noopener noreferrer" aria-label="Tirar uma dúvida sobre o Tempo 10X com Adonias pelo WhatsApp"><img src="../../assets/icons/whatsapp.svg" width="26" height="26" loading="lazy" alt="" aria-hidden="true"><span class="whatsapp-contact__label">Dúvidas? Fale com o autor</span></a>
 
 <script src="../../assets/js/portal.js" defer></script>
-<script src="../../assets/js/tempo10x/storage.js?v=20260914-3" defer></script>
-<script src="../../assets/js/tempo10x/activities.js?v=20260914-3" defer></script>
-<script src="../../assets/js/tempo10x/entries.js?v=20260914-3" defer></script>
-<script src="../../assets/js/tempo10x/timer.js?v=20260914-3" defer></script>
-<script src="../../assets/js/tempo10x/reports.js?v=20260914-3" defer></script>
-<script src="../../assets/js/tempo10x/ui.js?v=20260914-3" defer></script>
-<script src="../../assets/js/tempo10x/app.js?v=20260914-3" defer></script>
-<script src="../../assets/js/tool-workspace.js?v=20260914-3" defer></script>
-<script src="../../assets/js/task-metrics.js?v=20260914-3" defer></script>
-<script src="../../assets/js/task-analytics.js?v=20260914-3" defer></script>
+<script src="../../assets/js/tempo10x/storage.js?v=20260914-4" defer></script>
+<script src="../../assets/js/tempo10x/activities.js?v=20260914-4" defer></script>
+<script src="../../assets/js/tempo10x/entries.js?v=20260914-4" defer></script>
+<script src="../../assets/js/tempo10x/timer.js?v=20260914-4" defer></script>
+<script src="../../assets/js/tempo10x/reports.js?v=20260914-4" defer></script>
+<script src="../../assets/js/tempo10x/ui.js?v=20260914-4" defer></script>
+<script src="../../assets/js/tempo10x/app.js?v=20260914-4" defer></script>
+<script src="../../assets/js/tool-workspace.js?v=20260914-4" defer></script>
+<script src="../../assets/js/task-metrics.js?v=20260914-4" defer></script>
+<script src="../../assets/js/task-analytics.js?v=20260914-4" defer></script>
 </body>
 </html>

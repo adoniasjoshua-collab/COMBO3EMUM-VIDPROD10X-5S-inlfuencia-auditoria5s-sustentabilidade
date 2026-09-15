@@ -116,8 +116,49 @@ assert.deepEqual(Array.from(activities.all()), [], 'recuperação de armazenamen
 
 const uiSource = fs.readFileSync(path.join(root, 'assets/js/tempo10x/ui.js'), 'utf8');
 const toolPage = fs.readFileSync(path.join(root, 'ferramentas/gestao-do-tempo/index.html'), 'utf8');
-assert.equal((toolPage.match(/tempo10x\/[a-z]+\.js\?v=20260914-3/g) || []).length, 7, 'modulos usam cache-buster consistente');
-assert.ok(toolPage.includes('tempo10x.css?v=20260914-3'), 'estilos usam cache-buster consistente');
+assert.equal((toolPage.match(/tempo10x\/[a-z]+\.js\?v=20260914-4/g) || []).length, 7, 'modulos usam cache-buster consistente');
+assert.ok(toolPage.includes('tempo10x.css?v=20260914-4'), 'estilos usam cache-buster consistente');
 assert.equal(/\.innerHTML\s*=/.test(uiSource), false, 'dados do usuário não usam innerHTML');
 
 console.log('TEMPO 10X V2 TEST: aprovado — migração, sessões, timer, períodos, KPIs, gráficos, CSV e backup validados.');
+
+// Manual correction of a short timer session, without changing other activities.
+{
+  const env = environment();
+  const api = env.Tempo10X;
+  const service = new api.Activities.ActivityService(api.Storage);
+  const sessions = new api.Entries.TimeEntryService(api.Storage, service);
+  const task = service.create({ title: 'Cafe', date: '2026-09-14', startTime: '07:00', endTime: '07:10', plannedMinutes: 10 });
+  sessions.create({ activityId: task.id, date: task.date, durationMs: 10000, source: 'timer' });
+  const other = service.create({ title: 'Outra atividade' });
+  sessions.create({ activityId: other.id, date: task.date, durationMs: 20000, source: 'timer' });
+  assert.equal(sessions.syncManual(task), 10000, 'default preserves timer');
+  const before = JSON.stringify(sessions.all());
+  assert.throws(() => sessions.syncManual({ ...task, endTime: '' }, true), /Informe data/);
+  assert.equal(JSON.stringify(sessions.all()), before);
+  api.Storage.setActiveTimer({ activityId: task.id, state: 'paused' });
+  assert.throws(() => sessions.syncManual(task, true), /Finalize/);
+  api.Storage.setActiveTimer(null);
+  const ui = Object.create(api.UI.AppUI.prototype);
+  Object.assign(ui, { editingId: task.id, activities: service, entries: sessions,
+    timer: { current: () => null }, form: { elements: { timeSource: { value: 'manual' } } },
+    formData: () => ({ ...task, title: 'Alterado' }), render: () => {},
+    announce: () => {}, resetForm: () => { throw new Error('Cancel must keep form open'); } });
+  env.confirm = () => false;
+  ui.onSubmit({ preventDefault() {} });
+  assert.equal(JSON.stringify(sessions.all()), before, 'cancel preserves sessions');
+  assert.equal(service.find(task.id).title, 'Cafe', 'cancel preserves activity');
+  env.confirm = () => true;
+  ui.resetForm = () => {};
+  ui.onSubmit({ preventDefault() {} });
+  assert.equal(service.find(task.id).trackedMs, 600000);
+  assert.equal(api.UI.formatDuration(600000), '00:10:00');
+  assert.equal(sessions.totalForActivity(other.id), 20000);
+  assert.equal(sessions.all().filter(entry => entry.activityId === task.id).length, 1);
+  assert.equal(sessions.syncManual(service.find(task.id)), 600000, 'reload preserves correction');
+  const report = api.Reports.buildReport([service.find(task.id)], sessions.all().filter(entry => entry.activityId === task.id), {});
+  assert.equal(api.Reports.summarize(report).trackedMs, 600000);
+  assert.equal(api.Reports.summarize(report).varianceMs, 0);
+  assert.equal(sessions.all().find(entry => entry.activityId === task.id).source, 'manual');
+  console.log('Manual correction: confirmed replacement, cancellation, active timer and persistence passed.');
+}
