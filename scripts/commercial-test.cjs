@@ -32,6 +32,9 @@ for(const [file,addition]of [
   const after=normalize(fs.readFileSync(file,'utf8'));
   if(file === 'index.html') {
     const withoutHomeNavigation = html => html
+      .replace(/home-portal\.css\?v=[^" ]+/g, "home-portal.css")
+      .replace(/(<a class="(?:footer-whats|social-icon whatsapp|whatsapp-float)" href=")[^"]+"/g, '$1CONTACT"')
+      .replace(/<span class="whatsapp-float__label">[^<]+<\/span>/g, '<span class="whatsapp-float__label">CONTACT</span>')
       .replace('    <link rel="stylesheet" href="./assets/css/home-portal.css" />\n','')
       .replace('    <script src="./assets/js/home-portal.js" defer></script>\n','')
       .replace('<body class="home-portal">','<body>')

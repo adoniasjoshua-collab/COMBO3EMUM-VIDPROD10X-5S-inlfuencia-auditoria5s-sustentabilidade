@@ -93,3 +93,12 @@
   .home-service-links a { flex:1 1 135px; }
 }
 @media(prefers-reduced-motion:reduce) { .home-portal { scroll-behavior:auto; } }
+
+/* Prioridade comercial local, com acesso editorial preservado. */
+.home-discovery #home-cases { margin-top:32px; padding:24px; background:#edf3e8; border:1px solid #b6cbb8; border-radius:5px; }
+.home-knowledge { margin-top:32px; padding-block:28px; border-top:1px solid #d5e0d8; }
+.home-knowledge > p { color:#53675c; line-height:1.7; }
+.home-knowledge .home-service-links { margin-top:20px; }
+.home-discovery .home-explore-grid { grid-template-columns:1fr; }
+.home-commercial-help { line-height:1.8; }
+.home-discovery .home-commercial-help { color:#234935; }
