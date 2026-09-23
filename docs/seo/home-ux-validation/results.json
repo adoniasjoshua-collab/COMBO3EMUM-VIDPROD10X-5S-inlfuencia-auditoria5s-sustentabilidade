@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "scope": "Header e acessos novos; não certifica seções antigas do curso",
+  "results": [
+    {
+      "width": 320,
+      "servicesTop": 457,
+      "overflow": false,
+      "axeViolations": 0
+    },
+    {
+      "width": 390,
+      "servicesTop": 428,
+      "overflow": false,
+      "axeViolations": 0
+    },
+    {
+      "width": 768,
+      "servicesTop": 328,
+      "overflow": false,
+      "axeViolations": 0
+    },
+    {
+      "width": 1024,
+      "servicesTop": 347,
+      "overflow": false,
+      "axeViolations": 0
+    },
+    {
+      "width": 1440,
+      "servicesTop": 377,
+      "overflow": false,
+      "axeViolations": 0
+    }
+  ],
+  "consoleErrors": []
+}

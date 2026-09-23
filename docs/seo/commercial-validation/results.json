@@ -1,0 +1,308 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "route": "servicos-digitais/",
+      "width": 320,
+      "axeViolations": 0
+    },
+    {
+      "route": "seo-local-canaa-dos-carajas/",
+      "width": 320,
+      "axeViolations": 0
+    },
+    {
+      "route": "otimizacao-google-meu-negocio-canaa/",
+      "width": 320,
+      "axeViolations": 0
+    },
+    {
+      "route": "meta-ads-negocios-locais-canaa/",
+      "width": 320,
+      "axeViolations": 0
+    },
+    {
+      "route": "otimizacao-canal-youtube/",
+      "width": 320,
+      "axeViolations": 0
+    },
+    {
+      "route": "mentoria-seo-trafego-pago/",
+      "width": 320,
+      "axeViolations": 0
+    },
+    {
+      "route": "diagnostico-presenca-digital/",
+      "width": 320,
+      "axeViolations": 0
+    },
+    {
+      "route": "marketing-local/melhorar-presenca-google-maps/",
+      "width": 320,
+      "axeViolations": 0
+    },
+    {
+      "route": "marketing-local/erros-google-meu-negocio/",
+      "width": 320,
+      "axeViolations": 0
+    },
+    {
+      "route": "marketing-local/categoria-principal-perfil-google/",
+      "width": 320,
+      "axeViolations": 0
+    },
+    {
+      "route": "marketing-local/site-ou-whatsapp-perfil-google/",
+      "width": 320,
+      "axeViolations": 0
+    },
+    {
+      "route": "marketing-local/avaliacoes-negocios-locais/",
+      "width": 320,
+      "axeViolations": 0
+    },
+    {
+      "route": "marketing-local/quando-anunciar-meta-ads/",
+      "width": 320,
+      "axeViolations": 0
+    },
+    {
+      "route": "cases/zadoni-presentes/",
+      "width": 320,
+      "axeViolations": 0
+    },
+    {
+      "route": "cases/zadoni-digital/",
+      "width": 320,
+      "axeViolations": 0
+    },
+    {
+      "route": "servicos-digitais/",
+      "width": 375,
+      "axeViolations": 0
+    },
+    {
+      "route": "seo-local-canaa-dos-carajas/",
+      "width": 375,
+      "axeViolations": 0
+    },
+    {
+      "route": "otimizacao-google-meu-negocio-canaa/",
+      "width": 375,
+      "axeViolations": 0
+    },
+    {
+      "route": "meta-ads-negocios-locais-canaa/",
+      "width": 375,
+      "axeViolations": 0
+    },
+    {
+      "route": "otimizacao-canal-youtube/",
+      "width": 375,
+      "axeViolations": 0
+    },
+    {
+      "route": "mentoria-seo-trafego-pago/",
+      "width": 375,
+      "axeViolations": 0
+    },
+    {
+      "route": "diagnostico-presenca-digital/",
+      "width": 375,
+      "axeViolations": 0
+    },
+    {
+      "route": "marketing-local/melhorar-presenca-google-maps/",
+      "width": 375,
+      "axeViolations": 0
+    },
+    {
+      "route": "marketing-local/erros-google-meu-negocio/",
+      "width": 375,
+      "axeViolations": 0
+    },
+    {
+      "route": "marketing-local/categoria-principal-perfil-google/",
+      "width": 375,
+      "axeViolations": 0
+    },
+    {
+      "route": "marketing-local/site-ou-whatsapp-perfil-google/",
+      "width": 375,
+      "axeViolations": 0
+    },
+    {
+      "route": "marketing-local/avaliacoes-negocios-locais/",
+      "width": 375,
+      "axeViolations": 0
+    },
+    {
+      "route": "marketing-local/quando-anunciar-meta-ads/",
+      "width": 375,
+      "axeViolations": 0
+    },
+    {
+      "route": "cases/zadoni-presentes/",
+      "width": 375,
+      "axeViolations": 0
+    },
+    {
+      "route": "cases/zadoni-digital/",
+      "width": 375,
+      "axeViolations": 0
+    },
+    {
+      "route": "servicos-digitais/",
+      "width": 768,
+      "axeViolations": 0
+    },
+    {
+      "route": "seo-local-canaa-dos-carajas/",
+      "width": 768,
+      "axeViolations": 0
+    },
+    {
+      "route": "otimizacao-google-meu-negocio-canaa/",
+      "width": 768,
+      "axeViolations": 0
+    },
+    {
+      "route": "meta-ads-negocios-locais-canaa/",
+      "width": 768,
+      "axeViolations": 0
+    },
+    {
+      "route": "otimizacao-canal-youtube/",
+      "width": 768,
+      "axeViolations": 0
+    },
+    {
+      "route": "mentoria-seo-trafego-pago/",
+      "width": 768,
+      "axeViolations": 0
+    },
+    {
+      "route": "diagnostico-presenca-digital/",
+      "width": 768,
+      "axeViolations": 0
+    },
+    {
+      "route": "marketing-local/melhorar-presenca-google-maps/",
+      "width": 768,
+      "axeViolations": 0
+    },
+    {
+      "route": "marketing-local/erros-google-meu-negocio/",
+      "width": 768,
+      "axeViolations": 0
+    },
+    {
+      "route": "marketing-local/categoria-principal-perfil-google/",
+      "width": 768,
+      "axeViolations": 0
+    },
+    {
+      "route": "marketing-local/site-ou-whatsapp-perfil-google/",
+      "width": 768,
+      "axeViolations": 0
+    },
+    {
+      "route": "marketing-local/avaliacoes-negocios-locais/",
+      "width": 768,
+      "axeViolations": 0
+    },
+    {
+      "route": "marketing-local/quando-anunciar-meta-ads/",
+      "width": 768,
+      "axeViolations": 0
+    },
+    {
+      "route": "cases/zadoni-presentes/",
+      "width": 768,
+      "axeViolations": 0
+    },
+    {
+      "route": "cases/zadoni-digital/",
+      "width": 768,
+      "axeViolations": 0
+    },
+    {
+      "route": "servicos-digitais/",
+      "width": 1440,
+      "axeViolations": 0
+    },
+    {
+      "route": "seo-local-canaa-dos-carajas/",
+      "width": 1440,
+      "axeViolations": 0
+    },
+    {
+      "route": "otimizacao-google-meu-negocio-canaa/",
+      "width": 1440,
+      "axeViolations": 0
+    },
+    {
+      "route": "meta-ads-negocios-locais-canaa/",
+      "width": 1440,
+      "axeViolations": 0
+    },
+    {
+      "route": "otimizacao-canal-youtube/",
+      "width": 1440,
+      "axeViolations": 0
+    },
+    {
+      "route": "mentoria-seo-trafego-pago/",
+      "width": 1440,
+      "axeViolations": 0
+    },
+    {
+      "route": "diagnostico-presenca-digital/",
+      "width": 1440,
+      "axeViolations": 0
+    },
+    {
+      "route": "marketing-local/melhorar-presenca-google-maps/",
+      "width": 1440,
+      "axeViolations": 0
+    },
+    {
+      "route": "marketing-local/erros-google-meu-negocio/",
+      "width": 1440,
+      "axeViolations": 0
+    },
+    {
+      "route": "marketing-local/categoria-principal-perfil-google/",
+      "width": 1440,
+      "axeViolations": 0
+    },
+    {
+      "route": "marketing-local/site-ou-whatsapp-perfil-google/",
+      "width": 1440,
+      "axeViolations": 0
+    },
+    {
+      "route": "marketing-local/avaliacoes-negocios-locais/",
+      "width": 1440,
+      "axeViolations": 0
+    },
+    {
+      "route": "marketing-local/quando-anunciar-meta-ads/",
+      "width": 1440,
+      "axeViolations": 0
+    },
+    {
+      "route": "cases/zadoni-presentes/",
+      "width": 1440,
+      "axeViolations": 0
+    },
+    {
+      "route": "cases/zadoni-digital/",
+      "width": 1440,
+      "axeViolations": 0
+    }
+  ],
+  "scenarios": 9,
+  "consoleErrors": [],
+  "externalRequests": []
+}

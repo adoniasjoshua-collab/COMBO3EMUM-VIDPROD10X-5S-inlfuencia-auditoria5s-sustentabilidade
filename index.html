@@ -30,33 +30,35 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./assets/css/home-portal.css" />
+    <script src="./assets/js/home-portal.js" defer></script>
 
     <!-- Preload critical images for LCP (hero bg and logo) -->
     <link rel="preload" as="image" href="./assets/images/hero-bg.svg" type="image/svg+xml" fetchpriority="high" />
     <link rel="preload" as="image" href="./assets/icons/5s.svg" type="image/svg+xml" fetchpriority="high" />
     <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://zadonidigital.com.br/#website","name":"Produtividade 10X","alternateName":"Portal 5S e Produtividade","url":"https://zadonidigital.com.br/","inLanguage":"pt-BR","publisher":{"@id":"https://zadonidigital.com.br/sobre/#person"}},{"@type":"WebPage","name":"Combo Produtividade 10X","description":"Curso de Produtividade 10X, 5S e Comunicação Persuasiva.","url":"https://zadonidigital.com.br/","isPartOf":{"@id":"https://zadonidigital.com.br/#website"},"inLanguage":"pt-BR","author":{"@id":"https://zadonidigital.com.br/sobre/#person"}},{"@type":"Person","@id":"https://zadonidigital.com.br/sobre/#person","name":"Adonias Pereira da Silva","jobTitle":"Técnico em Meio Ambiente","url":"https://zadonidigital.com.br/sobre/","image":"https://zadonidigital.com.br/assets/images/adonias-profile-400.jpg"}]}</script>
   </head>
-  <body>
+  <body class="home-portal">
     <!-- HEADER -->
-    <header class="site-header navbar" aria-label="Cabeçalho do site">
+    <a class="home-skip" href="#inicio">Pular para os acessos do portal</a>
+    <header class="site-header navbar home-header" aria-label="Cabeçalho do site">
       <div class="container navbar-inner">
-        <a class="brand flex items-center gap-12" href="#hero" aria-label="Início">
-          <img src="./assets/icons/5s.svg" alt="Combo Produtividade 10X" class="logo" width="48" height="48" loading="eager" decoding="async" fetchpriority="high" />
-          <span class="brand-text">Combo Produtividade 10X</span>
+        <a class="home-brand" href="#inicio" aria-label="Zadoni Digital — início">
+          <span class="home-brand-mark" aria-hidden="true">Z.</span>
+          <span>Zadoni Digital<small>Conhecimento e soluções digitais</small></span>
         </a>
-        <button class="hamburger" aria-label="Abrir menu" aria-controls="primary-nav" aria-expanded="false">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
+        <button class="home-menu-toggle" type="button" aria-label="Abrir menu" aria-controls="primary-nav" aria-expanded="false">
+          <span aria-hidden="true">☰</span> Menu
         </button>
-        <nav id="primary-nav" class="nav nav-links" aria-label="Navegação principal">
+        <nav id="primary-nav" class="home-main-nav" aria-label="Navegação principal">
           <ul>
-            <li><a href="#hero">Início</a></li>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#cursos">Cursos</a></li>
+            <li><a href="./servicos-digitais/">Serviços</a></li>
+            <li><a href="./ferramentas/">Ferramentas</a></li>
             <li><a href="./portal/">Conteúdos</a></li>
-            <li><a href="./ferramentas/gestao-do-tempo/">Ferramenta grátis</a></li>
-            <li><a href="#cta">Contato</a></li>
+            <li><a href="#home-cases">Cases</a></li>
+            <li><a href="#hero">Trilha 10X</a></li>
+            <li><a href="./servicos-digitais/#contato">Contato</a></li>
+            <li><a class="home-nav-cta" href="./diagnostico-presenca-digital/">Diagnóstico →</a></li>
           </ul>
         </nav>
       </div>
@@ -64,6 +66,34 @@
     <div class="menu-backdrop" aria-hidden="true"></div>
 
     <main>
+      <!-- HOME DISCOVERY START -->
+      <section class="home-discovery" id="inicio" aria-labelledby="home-discovery-title">
+        <div class="container">
+          <div class="home-intro">
+            <p class="home-eyebrow">Zadoni Digital · Por Adonias Joshua</p>
+            <h2 id="home-discovery-title">Conhecimento para evoluir.<br><span>Soluções para colocar em prática.</span></h2>
+            <p class="home-lead">Serviços digitais para o seu negócio, ferramentas para organizar a rotina e conteúdo para aprender. Escolha o caminho que faz sentido para você.</p>
+            <div class="home-primary-actions"><a class="home-action" href="./servicos-digitais/">Conhecer os serviços <span aria-hidden="true">→</span></a><a class="home-text-link" href="./diagnostico-presenca-digital/">Quero um diagnóstico inicial →</a></div>
+          </div>
+          <nav class="home-paths" aria-label="Escolha o que procura">
+            <a class="home-path" href="./servicos-digitais/"><span class="home-path-label">Para o seu negócio</span><h3>Serviços digitais</h3><p>SEO Local, Google, sites, anúncios, YouTube e mentoria.</p><span class="home-path-link">Encontrar o serviço certo →</span></a>
+            <a class="home-path" href="./ferramentas/"><span class="home-path-label">Para a sua rotina</span><h3>Ferramentas gratuitas</h3><p>Tempo 10X e Matriz de Eisenhower para organizar atividades.</p><span class="home-path-link">Explorar as ferramentas →</span></a>
+            <a class="home-path" href="./portal/"><span class="home-path-label">Para aprender</span><h3>Portal de conteúdos</h3><p>Produtividade, mineração, 5S e gestão ambiental.</p><span class="home-path-link">Escolher um tema →</span></a>
+            <a class="home-path" href="#hero"><span class="home-path-label">Para se desenvolver</span><h3>Trilha Produtividade 10X</h3><p>Conheça o curso, as aulas e a proposta de formação.</p><span class="home-path-link">Conhecer a Trilha 10X ↓</span></a>
+          </nav>
+          <section class="home-service-access" aria-labelledby="home-services-title"><div><p class="home-eyebrow">Atendimento a negócios locais em Canaã dos Carajás</p><h2 id="home-services-title">Qual é a próxima prioridade da sua empresa?</h2></div><div class="home-service-links"><a href="./seo-local-canaa-dos-carajas/">SEO Local →</a><a href="./otimizacao-google-meu-negocio-canaa/">Perfil da Empresa no Google →</a><a href="./servicos-digitais/#sites">Sites e conversão →</a><a href="./meta-ads-negocios-locais-canaa/">Meta Ads →</a><a href="./otimizacao-canal-youtube/">Otimização de YouTube →</a><a href="./mentoria-seo-trafego-pago/">Mentoria em SEO e tráfego pago →</a></div></section>
+          <section class="home-author" aria-labelledby="home-author-title">
+            <img src="./assets/images/adonias-joshua-apresentacao.jpeg" width="1086" height="1448" loading="lazy" decoding="async" alt="Adonias Joshua em ambiente de trabalho, usando colete de segurança" />
+            <div><p class="home-eyebrow">Quem está por trás dos projetos</p><h2 id="home-author-title">Adonias Joshua</h2><p>Experiência de campo e desenvolvimento digital conectados em projetos próprios, ferramentas e conteúdo. Sou o criador da Zadoni Digital e responsável pelos trabalhos apresentados neste portal.</p><p>Minha trajetória em mineração, construção e meio ambiente faz parte da base dos conteúdos de produtividade, 5S e gestão ambiental.</p><div class="home-primary-actions"><a class="home-text-link" href="./sobre/">Conheça minha trajetória →</a><a class="home-text-link" href="./servicos-digitais/#contato">Conversar sobre seu projeto →</a></div></div>
+          </section>
+          <div class="home-explore-grid">
+            <section class="home-feature" aria-labelledby="home-tools-title"><p class="home-eyebrow">Da leitura à prática</p><h2 id="home-tools-title">Abra uma ferramenta.</h2><a class="home-case-link" href="./ferramentas/gestao-do-tempo/"><img src="./assets/images/tempo10x-interface.jpg" width="1360" height="840" loading="lazy" decoding="async" alt="Tempo 10X: formulario de nova atividade vazio"><span><strong>Tempo 10X</strong><small>Acompanhe tempo e atividades.</small></span><span aria-hidden="true">→</span></a><a class="home-case-link" href="./ferramentas/matriz-eisenhower/"><img src="./assets/images/matriz-eisenhower-interface.jpg" width="1360" height="840" loading="lazy" decoding="async" alt="Matriz de Eisenhower com quatro quadrantes e nenhuma tarefa cadastrada"><span><strong>Matriz de Eisenhower</strong><small>Organize tarefas por prioridade.</small></span><span aria-hidden="true">→</span></a></section>
+            <section class="home-feature" id="home-cases" aria-labelledby="home-cases-title"><p class="home-eyebrow">Projetos próprios</p><h2 id="home-cases-title">Conheça o trabalho.</h2><a class="home-case-link" href="./cases/zadoni-presentes/"><img src="./assets/images/zadoni-presentes-site.jpg" width="1360" height="840" loading="lazy" decoding="async" alt="Site da Zadoni Presentes: loja, produtos e categorias"><span><strong>Zadoni Presentes</strong><small>Site e presença digital de um negócio local.</small></span><span aria-hidden="true">→</span></a><a href="./cases/zadoni-digital/"><span><strong>Portal Zadoni Digital</strong><small>Conteúdo, ferramentas web e SEO.</small></span><span aria-hidden="true">→</span></a></section>
+          </div>
+          <p class="home-course-transition">Quer conhecer a formação? A Trilha Produtividade 10X começa logo abaixo. <a href="#hero">Ver o curso ↓</a></p>
+        </div>
+      </section>
+      <!-- HOME DISCOVERY END -->
       <!-- HERO -->
       <section id="hero" class="hero hero-section" aria-label="Seção principal">
         <img class="hero-bg" src="./assets/images/hero-bg.svg" alt="" role="presentation" loading="eager" decoding="async" fetchpriority="high" />
@@ -428,6 +458,7 @@
               <li><a class="footer-link" href="./assets/legal/politica-reembolso.html" target="_blank" rel="noopener">Política de Reembolso</a></li>
               <li><a class="footer-link" href="./assets/legal/termos-de-uso.html" target="_blank" rel="noopener">Termos de Uso</a></li>
               <li><a class="footer-link" href="./portal/">Portal educacional</a></li>
+              <li><a class="footer-link" href="./servicos-digitais/">Serviços digitais — Zadoni Digital</a></li>
               <li><a class="footer-link" href="./ferramentas/gestao-do-tempo/">Tempo 10X — ferramenta grátis</a></li>
             </ul>
           </div>

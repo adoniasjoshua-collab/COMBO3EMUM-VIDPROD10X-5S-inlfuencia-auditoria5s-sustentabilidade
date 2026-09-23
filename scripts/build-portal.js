@@ -358,7 +358,11 @@ ${whatsappContact(r)}
 for (const page of pages) {
   const target = path.join(root, ...page.file.split('/'));
   fs.mkdirSync(path.dirname(target), {recursive: true});
-  fs.writeFileSync(target, render(page), 'utf8');
+  // A página Sobre tem conteúdo editorial aprovado fora do catálogo antigo.
+  const html = page.slug === 'sobre/'
+    ? fs.readFileSync(path.join(__dirname, 'templates/sobre.template'), 'utf8')
+    : render(page);
+  fs.writeFileSync(target, html, 'utf8');
 }
 
 const sitemapUrls = ['', ...pages.map(page => page.slug), 'ferramentas/gestao-do-tempo/', 'ferramentas/matriz-eisenhower/'];
@@ -368,3 +372,4 @@ fs.writeFileSync(path.join(root, 'sitemap.xml'), sitemap, 'utf8');
 fs.writeFileSync(path.join(root, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${base}sitemap.xml\n`, 'utf8');
 
 console.log(`Portal gerado: ${pages.length} páginas e ${sitemapUrls.length} URLs no sitemap.`);
+require('./build-commercial.cjs').build();

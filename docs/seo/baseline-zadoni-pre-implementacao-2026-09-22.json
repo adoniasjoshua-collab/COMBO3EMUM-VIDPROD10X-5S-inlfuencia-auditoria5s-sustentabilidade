@@ -1,0 +1,2811 @@
+{
+  "date": "2026-09-22",
+  "commit": "241acf1313bca1ff9761f41e685b4337a339d706",
+  "scope": "Arquivos locais; sem confirmação de publicação ou indexação",
+  "sitemap": [
+    "https://zadonidigital.com.br/",
+    "https://zadonidigital.com.br/portal/",
+    "https://zadonidigital.com.br/5s/",
+    "https://zadonidigital.com.br/5s/o-que-e-5s/",
+    "https://zadonidigital.com.br/5s/programa-5s/",
+    "https://zadonidigital.com.br/5s/5s-na-empresa/",
+    "https://zadonidigital.com.br/5s/5s-na-construcao-civil/",
+    "https://zadonidigital.com.br/5s/5s-na-vida-pessoal/",
+    "https://zadonidigital.com.br/produtividade/",
+    "https://zadonidigital.com.br/produtividade/tecnica-pomodoro/",
+    "https://zadonidigital.com.br/produtividade/matriz-eisenhower/",
+    "https://zadonidigital.com.br/produtividade/gestao-do-tempo/",
+    "https://zadonidigital.com.br/produtividade/5s-e-produtividade/",
+    "https://zadonidigital.com.br/gestao-ambiental/",
+    "https://zadonidigital.com.br/gestao-ambiental/gestao-ambiental-na-construcao-civil/",
+    "https://zadonidigital.com.br/gestao-ambiental/gestao-de-residuos/",
+    "https://zadonidigital.com.br/gestao-ambiental/educacao-ambiental-em-obras/",
+    "https://zadonidigital.com.br/sobre/",
+    "https://zadonidigital.com.br/politica-editorial/",
+    "https://zadonidigital.com.br/ferramentas/",
+    "https://zadonidigital.com.br/atualizacoes/",
+    "https://zadonidigital.com.br/mineracao/",
+    "https://zadonidigital.com.br/mineracao/nr-22/",
+    "https://zadonidigital.com.br/mineracao/seguranca-na-mineracao/",
+    "https://zadonidigital.com.br/mineracao/riscos-na-mineracao/",
+    "https://zadonidigital.com.br/mineracao/5s-na-mineracao/",
+    "https://zadonidigital.com.br/mineracao/produtividade-na-mineracao/",
+    "https://zadonidigital.com.br/mineracao/gestao-ambiental-na-mineracao/",
+    "https://zadonidigital.com.br/mineracao/canaa-dos-carajas/",
+    "https://zadonidigital.com.br/mineracao/parauapebas/",
+    "https://zadonidigital.com.br/carreira-mineracao/",
+    "https://zadonidigital.com.br/carreira-mineracao/como-trabalhar-na-mineracao/",
+    "https://zadonidigital.com.br/ferramentas/gestao-do-tempo/",
+    "https://zadonidigital.com.br/ferramentas/matriz-eisenhower/"
+  ],
+  "hashes": {
+    ".htaccess": "c1a1a3fa595f1bc34ad8601a28abbbf351b9cf7fed58d724eb4bca25c6ed694b",
+    "404.html": "5dfb6360af84a852053bda8fe1c74e53b9392ce9c443d9b295a2778f88589ed0",
+    "5s/5s-na-construcao-civil/index.html": "b63d99f1f40b90e0509b829e0adbb9d6e79dbff550cb5c71b0ef912d9f41f381",
+    "5s/5s-na-empresa/index.html": "208f1514291fdd365ae8f5edd08b1ca86ec38e0d70a785a52771aa8d5181066a",
+    "5s/5s-na-vida-pessoal/index.html": "786f02a05f0110005ffe470f8a54d50ffea45b9b990aeb2942d9e7fca220c3d9",
+    "5s/index.html": "b54dadab6e52c0985ccf56cd44224064bd5bfa501e0fe046e243530ac475341d",
+    "5s/o-que-e-5s/index.html": "2394e0e5ea285bd9a2fe61fe400991316d3e892ed4755d4fd132fbcd249bd416",
+    "5s/programa-5s/index.html": "eee0efc37f5af78aceb5ef998e75b00e535c180853c782c05642df63220ed07c",
+    "assets/css/eisenhower10x.css": "46c4b98565bce61587aa9b330d627ccf83a63eb9a28d3d18cc20d59d802c1a2a",
+    "assets/css/portal.css": "f795efbf10ef1fe57bd2c41cc4f8743914df809098703f2192590f79a865b05c",
+    "assets/css/task-analytics.css": "7fbf287c2efc8baee2c9f9022c8a132d2c954193d2c5e9abbb2d4f78509ba365",
+    "assets/css/tempo10x.css": "98fe539645ef91544a216761b2f08514bd43ddce9f85296329ca461657fe3e1f",
+    "assets/css/tool-workspace.css": "ae4e5e1c7cfff909aeb247b9dbe3d51eb720495f144236954811f696405a21df",
+    "assets/icons/5s.svg": "7464584b648f42f867cf8f5350e67ae10b30b20d27904a8d3610e0d6e8ddd705",
+    "assets/icons/comunicacao.svg": "1b0c58c3708bcca2046f03a7059352674ea5252534c05f5f323be8f19c50934b",
+    "assets/icons/foco.svg": "71095bb9b0fb8c07ddab9c5163fb6548609ba162526314e2dee27b28fff00163",
+    "assets/icons/instagram.svg": "ff604921ad272f0b33a88efef842f1b8ff1510ad01cc499a85bfb5af8ef25c5e",
+    "assets/icons/linkedin.svg": "91eb8e147322ee2802992530baa5e9437680b08683678e59f12b379b07f5cb65",
+    "assets/icons/whatsapp.svg": "f53dd12aaf5dd3f0c0b1e845608d6038f8bf24ae39936a45ca67f312a11575ba",
+    "assets/icons/youtube.svg": "c1ce9cbbf188dafa929b0346ae5e41546641500a8e2d88dfecc16a9abf46222d",
+    "assets/images/ADONIAS FULLSTAK.jpeg": "e41f81bdc4f750713e74008a0ae7dd1927eae05ef3d858f4123c5a400f7cc9b9",
+    "assets/images/adonias-profile-200.jpg": "194ad3348f2956f8242183950070ccfba965495a182def0b5fbc8f90b48f1eb2",
+    "assets/images/adonias-profile-400.jpg": "27baa0bc6235fb9f9bac7753d113ac171d5342a90a3eae406fd564c3056e94b0",
+    "assets/images/adonias-silva.svg": "497c820bdf60fe7b186a48d3cf201acd8045372f81597c3e7676eb1415c18223",
+    "assets/images/fotos testemunhas prod10x/Carla mendes - engenheira de produção.png": "e0479def3152cf3674fd41645c1c9ffd702aab0856b9301a78cac216995f935f",
+    "assets/images/fotos testemunhas prod10x/João almeida - Encarregado de obras.png": "90e47f92edc5cab761ace933c031c4e35df1e1cf48dd19f2c3cba0e51b7f5e59",
+    "assets/images/fotos testemunhas prod10x/ana ribeiro.png": "c188534db2729f4c6fdf4e66a445b5c37ee0e5c570ba4fd0fcd35d1b5576f744",
+    "assets/images/fotos testemunhas prod10x/luiz santos tecnico em manutenção.png": "de2ca98b848b65fa554ea7bf20426ea907186f9fadc41307b0f018e1aa1799ae",
+    "assets/images/hero-bg.svg": "8403ced88f86f8886fd2b9e1dceedb0a2de480615f4338633e0253736388c41c",
+    "assets/img/avatar-default.svg": "23b93e979a1d3fcd82f4bb3b6e1fc4af9b80af499eafac0b819ec81695a8d8d9",
+    "assets/js/eisenhower10x/app.js": "64ddf9a6a634886758f8b33c1dc99027c82d06f3ae64f7cb5aa3b1b4e19db9cd",
+    "assets/js/eisenhower10x/charts.js": "850075e12c8056c68eccc79fe6843df8a98b2f3f8417c0f8de868b3d62dcb05b",
+    "assets/js/eisenhower10x/dates.js": "a58477b47ee1da5110a21de361a3c8e6e892fa3eb25579fecc8b49dfaa539dcb",
+    "assets/js/eisenhower10x/dragdrop.js": "73d9c93a43eb5f50961d4a90bae70b3f21934329e144ad468c8edb1b785213cc",
+    "assets/js/eisenhower10x/gamification.js": "c5fd3bce54f668b7998dca8f2c7b35c8dda0009bbe0dbe674e584ba8725b701d",
+    "assets/js/eisenhower10x/storage.js": "0c5c17dfa7fd953a3d3ff5cdd3b3ea92107f45fe4a29206bf5162872214cb26b",
+    "assets/js/eisenhower10x/tasks.js": "d7781b36e350f3ddaeeceaefd77f9a10a04b4bfd5c7f97ef95d87e6f2e96fded",
+    "assets/js/eisenhower10x/ui.js": "2761c1d1d90238a028f81f1c258fa48c072ab2779e991741421d258c80da8656",
+    "assets/js/portal.js": "010f2e1ada24e0e2fe274e74349e2f09ce4cd66e1a6f9955b6ced0c6af6ac4c4",
+    "assets/js/task-analytics.js": "17716dc3c50d5daf288325df02c7ab97fc50b5f1289108e1e54ca357bc232da3",
+    "assets/js/task-metrics.js": "c80247f1b8c788191e8614701e9a2a27a8e965824608d16393e911cb764a9810",
+    "assets/js/tempo10x/activities.js": "64e3868bdd5b6e41166f6ebe43ff9244be56c5a87c174f75f418a9204c11616e",
+    "assets/js/tempo10x/app.js": "82f48370855a1d82768551f8ad25696c0a3f3186bbe10c07e70021ba1f712e1f",
+    "assets/js/tempo10x/entries.js": "8c5c2cc4318b8401ad530fb8f08b8187284d7f642e171c3c429c57d9ac1eb556",
+    "assets/js/tempo10x/reports.js": "7f41492bc917ea81757d4237f71a135a740d13548275b57fab0f2d9065b2606a",
+    "assets/js/tempo10x/storage.js": "35f3bf5ca340af6bd0b87c6100e736c903db044c15a8aa53a6bd17fc6c251200",
+    "assets/js/tempo10x/timer.js": "79cecdf140678702e6de3bebfdadf01c90073132a65a8ccf151741d403a304fb",
+    "assets/js/tempo10x/ui.js": "c67e65322593761a7f34c49a9a061fcbdc889e7452512fc3fbf25d7b0ef76c6c",
+    "assets/js/tool-workspace.js": "bd8ec416792aa1865b56fe335c859554e44206768a38683284893255587fb6c9",
+    "assets/legal/politica-privacidade.html": "bd23a91f92478b668880a133d48101c909c6c772a6b39d8d07dce5616dccf02d",
+    "assets/legal/politica-reembolso.html": "b0331ce1c6caa0f16cfb3216ee0242c0a5cc1166d5c28dd3bd22816200da9fcc",
+    "assets/legal/termos-de-uso.html": "e7d64cc608bd1974b2633084cb14d2838c068eab1646b3cd8b66f642cf7b17f9",
+    "assets/placeholder.txt": "2df3735ce78c7a76026d2eba6919479d8c0e12617471d9ceba08f76c0327cd54",
+    "assets/testimonials/ana-ribeiro-128.jpg": "b26e625844c84d2f3276859a79e1f11068771b69b6040733757bcb87fb91a402",
+    "assets/testimonials/ana-ribeiro-256.jpg": "6eeadee03ad601e02879a794b97153850ab08fb09a64022c7f4916909bcc4035",
+    "assets/testimonials/ana-ribeiro.png": "c188534db2729f4c6fdf4e66a445b5c37ee0e5c570ba4fd0fcd35d1b5576f744",
+    "assets/testimonials/carla-mendes-128.jpg": "4aacb09d947095a2da03d939b5744bce6a7f41814daa67b46ecaa750d0ec8902",
+    "assets/testimonials/carla-mendes-256.jpg": "9d5795033f80ca53e965d8ed6a6b61b8c62cfd57234bdfce008a8a911f3e1af3",
+    "assets/testimonials/carla-mendes.png": "e0479def3152cf3674fd41645c1c9ffd702aab0856b9301a78cac216995f935f",
+    "assets/testimonials/joao-almeida-128.jpg": "8b973c0023493c7af828093365984abfc08f817cf48af9b9a773613a4cfcf4bc",
+    "assets/testimonials/joao-almeida-256.jpg": "538dd17cb390154d3859e46adeee6bdcfbadf50074b773ee698aa37b44366241",
+    "assets/testimonials/joao-almeida.png": "90e47f92edc5cab761ace933c031c4e35df1e1cf48dd19f2c3cba0e51b7f5e59",
+    "assets/testimonials/luiz-santos-128.jpg": "62242a61b148483f095325183799cd91ee36def31d78f3adea98c3897397b15d",
+    "assets/testimonials/luiz-santos-256.jpg": "bf770eeb6f00ca92c02ed3eb2a86d9795034e67bfe9dab825360904bf16e2484",
+    "assets/testimonials/luiz-santos.png": "de2ca98b848b65fa554ea7bf20426ea907186f9fadc41307b0f018e1aa1799ae",
+    "atualizacoes/index.html": "daaac814b95dc7ef826ef1b8c87c393313d4177aa770ec90873586b1fd0edbba",
+    "carreira-mineracao/como-trabalhar-na-mineracao/index.html": "188847381d9ebeec5e81ddfd66f6ad7c351d0c1ef8389a3a013abdf3f617bba0",
+    "carreira-mineracao/index.html": "0164b00940a0746a8f7d6f68a39ee854b289e4fdd7688c5ea68ce4f0a06cf561",
+    "ferramentas/gestao-do-tempo/index.html": "7ac643c09866827a6b050db3ce9e256c4efad26e3d6bfd45018cf95817650474",
+    "ferramentas/index.html": "7b450e7b00534d8d649d7e4ef6ae681f940ab25f9d675de3c6ff6a1ee82016d7",
+    "ferramentas/matriz-eisenhower/index.html": "5734b10393936aa09505e2a03c4f38c6a0b82e0954213bcb680c9c0b71ecdebb",
+    "gestao-ambiental/educacao-ambiental-em-obras/index.html": "cd4a8fe2794e4be8d377482615dd658f789f23b924b8ccd39ba8fb515a21eea6",
+    "gestao-ambiental/gestao-ambiental-na-construcao-civil/index.html": "e647b2702e9dc04924fe38de42b71f85fc302fb698420b55df63fbe05d950b7a",
+    "gestao-ambiental/gestao-de-residuos/index.html": "4295127c988b95673acea8ddd39bf4d782ef04df44b0160c7b0a70ed2582fe30",
+    "gestao-ambiental/index.html": "b76f4e52bbfa56819f2139d9f8d47456cecb256ffc5e80fea68538f7fe8bfb8c",
+    "index.html": "66253e9b04f7781f84ca070664ca0b33d4ff92568dcfc338a3d765800a8a52d0",
+    "manifest.webmanifest": "a260cdd546e790f6b619140c290d5bb673e65842137ec8b829482bbfec9c9337",
+    "mineracao/5s-na-mineracao/index.html": "c8b72b6fd42211ede2820cbf3a5bd386626e0157cdfeea154f03905755fecd30",
+    "mineracao/canaa-dos-carajas/index.html": "e9a04d62d6327427d2e6d6df530318401500eabe756a721dbdee0b1070cac390",
+    "mineracao/gestao-ambiental-na-mineracao/index.html": "a46141b99d6e3dc004392cb9cc75cd567326dc437d9215e5c4b1912e3cc83b97",
+    "mineracao/index.html": "32601552ba72a0d0d8a3a630b562e0a8d7a3676d3f0c9bc3e4a9064854767788",
+    "mineracao/nr-22/index.html": "6226debf04661260c1cc30c63cef20b589db970c79c2d6546b7d5203a9520376",
+    "mineracao/parauapebas/index.html": "b60997486de8b92444a4b4a9750d9f7c26a761812cc8f76aac0e06e1d7a44872",
+    "mineracao/produtividade-na-mineracao/index.html": "ca64c7347fd3218fd031b4a6915d53e16dae6a850edbd70b3b7a84998f9c0ca1",
+    "mineracao/riscos-na-mineracao/index.html": "048832923b099c3f9e7ff9239cb5c63a8b35b1d95a8aea223916829d6abf06ab",
+    "mineracao/seguranca-na-mineracao/index.html": "b175f4468c7ed2487648748fef5638f3eb86a5850417ad1dbee1b3beb88e8fc6",
+    "politica-editorial/index.html": "8c49d68d24d090bb458f747f3c27edfabd9a816881fa31beb760188834305c39",
+    "portal/index.html": "13b8d470097811e6589f7b81631563b835180f1dd0ac4149f4c7efd38b84a67c",
+    "produtividade/5s-e-produtividade/index.html": "50a71495f9b330526b0546592aae0c40a32cd742ad2514f6cb85117a7636329f",
+    "produtividade/gestao-do-tempo/index.html": "93f5e55c4cbed9dedd6cc1d1f7722a7516585795ae60bdfa0c2808f6f91f7673",
+    "produtividade/index.html": "ec0d8f2280897e0d60d0da89b5e9cc3bc48566438e0f53ad2f444040eb8dfe2a",
+    "produtividade/matriz-eisenhower/index.html": "fd9864a4e58e0d402b21d797dfcff1613b3737cdc27d29324e4165d04a39b94d",
+    "produtividade/tecnica-pomodoro/index.html": "9bcae8dcdae9d18b34f22b5a3a2581fdc9091caef96f7d97eb492ece1c8189b3",
+    "robots.txt": "76ef72d801d96dd66bf1adee5b50687a88993919dfe2d3cc7053e6308e28d5c8",
+    "script.js": "49010113eff3240f5a86f1e738bce225aed7b58098d68c31e6fd6b1ec16ac2b3",
+    "scripts/build-portal.js": "29ea5b776cd8c8dcf92b8cca3fb09e3ce75e8f5c41723bcf6ecd94fe24818253",
+    "scripts/eisenhower10x-browser-test.cjs": "75a9ecf9d1db9d8eca56b5b9d8bfa2585b91663165814cd935530389bcc5e51c",
+    "scripts/eisenhower10x-test.mjs": "498a4ca92c5f0dd15786e51657dd6f09c03807de14274017b81d671c998d6479",
+    "scripts/portal-expansion.js": "d593c75a2e21822e332ba24bf274838ba8095788dff53ce3e9ee132af6c659eb",
+    "scripts/seo-audit.js": "cf4b06e8148e947d43b016eabcc7f6e9f10cb66295570179513d7e1889eaadd0",
+    "scripts/seo-regression.js": "3f5a1d58f236af29c23b3ba29d64bc31e1f6ccde5814e248e1c9708ba84eb02a",
+    "scripts/smoke-test.js": "eae078c987bd43eb369f8c804dd107841aa23e097aa4e1f2a76b648f5df14992",
+    "scripts/task-metrics-test.cjs": "1c2dd348d17d0043196d1dd618ade8606e92e39ca27e8f8c9bebd488ab89f303",
+    "scripts/tempo10x-test.js": "fb61d808abb75682d2fbe6decb82e79cf10ee6fffc0b5b1c7de6bdab0f484e8c",
+    "scripts/workspace-browser-test.cjs": "f25ee1f0dfc2f186aae8578d7993cc997439e5b439ee3714e41db17dd24597ff",
+    "sitemap.xml": "2f55b6ac7f7f49fe1830ef879833ee3539fdfc2b8fe1ca5f9ee7b8366aa0d9aa",
+    "sobre/index.html": "8b27f208600334a795de062dedda994f16996b2b08d52b0321cc96d46f4c77f9",
+    "style.css": "d6f6c886ac0521c05203ebefad9dcd42dddbc64315b6195e09d3e6c83b8aef4e"
+  },
+  "pages": [
+    {
+      "file": "404.html",
+      "route": "/404.html",
+      "title": "Conteúdo não encontrado | Portal 5S e Produtividade",
+      "description": "A página solicitada não foi encontrada. Acesse os guias de 5S, produtividade e gestão ambiental.",
+      "h1": [
+        "Conteúdo não encontrado"
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "inSitemap": false,
+      "schema": [],
+      "schemaErrors": [],
+      "outgoing": [
+        "/404.html",
+        "/portal/",
+        "/mineracao/",
+        "/5s/",
+        "/produtividade/",
+        "/gestao-ambiental/",
+        "/ferramentas/"
+      ],
+      "ctas": [
+        {
+          "href": "https://wa.me/5594992993138?text=Ol%C3%A1%2C%20Adonias!%20Vim%20do%20Portal%205S%20e%20Produtividade%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida.",
+          "text": "Fale com o autor"
+        }
+      ],
+      "indexation": "Não verificada no Search Console",
+      "incoming": []
+    },
+    {
+      "file": "5s/5s-na-construcao-civil/index.html",
+      "route": "/5s/5s-na-construcao-civil/",
+      "title": "5S na Construção Civil: Organização e Produtividade na Obra",
+      "description": "Veja como aplicar 5S na construção civil para organizar materiais, ferramentas, frentes de trabalho e resíduos com responsabilidade.",
+      "h1": [
+        "5S na construção civil: organização aplicada ao canteiro"
+      ],
+      "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+      "canonical": "https://zadonidigital.com.br/5s/5s-na-construcao-civil/",
+      "inSitemap": true,
+      "schema": [
+        "Article",
+        "WebPage",
+        "BreadcrumbList",
+        "ListItem"
+      ],
+      "schemaErrors": [],
+      "outgoing": [
+        "/5s/5s-na-construcao-civil/",
+        "/portal/",
+        "/mineracao/",
+        "/5s/",
+        "/produtividade/",
+        "/gestao-ambiental/",
+        "/ferramentas/",
+        "/sobre/",
+        "/gestao-ambiental/gestao-ambiental-na-construcao-civil/",
+        "/gestao-ambiental/gestao-de-residuos/",
+        "/5s/5s-na-empresa/",
+        "/carreira-mineracao/",
+        "/politica-editorial/"
+      ],
+      "ctas": [
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Quero acessar a Trilha 10X por R$ 97"
+        },
+        {
+          "href": "mailto:adonias.joshua@gmail.com",
+          "text": "Contato"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://wa.me/5594992993138?text=Ol%C3%A1%2C%20Adonias!%20Vim%20do%20Portal%205S%20e%20Produtividade%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida.",
+          "text": "Fale com o autor"
+        }
+      ],
+      "indexation": "Não verificada no Search Console",
+      "incoming": [
+        "/5s/",
+        "/5s/o-que-e-5s/",
+        "/5s/programa-5s/",
+        "/gestao-ambiental/educacao-ambiental-em-obras/",
+        "/gestao-ambiental/gestao-ambiental-na-construcao-civil/",
+        "/gestao-ambiental/gestao-de-residuos/",
+        "/portal/"
+      ]
+    },
+    {
+      "file": "5s/5s-na-empresa/index.html",
+      "route": "/5s/5s-na-empresa/",
+      "title": "5S na Empresa: Guia Prático para Implantar e Manter",
+      "description": "Aprenda como aplicar 5S na empresa com diagnóstico, participação, organização, limpeza, padrões, auditorias e melhoria contínua.",
+      "h1": [
+        "5S na empresa: da mobilização à rotina"
+      ],
+      "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+      "canonical": "https://zadonidigital.com.br/5s/5s-na-empresa/",
+      "inSitemap": true,
+      "schema": [
+        "Article",
+        "WebPage",
+        "BreadcrumbList",
+        "ListItem"
+      ],
+      "schemaErrors": [],
+      "outgoing": [
+        "/5s/5s-na-empresa/",
+        "/portal/",
+        "/mineracao/",
+        "/5s/",
+        "/produtividade/",
+        "/gestao-ambiental/",
+        "/ferramentas/",
+        "/sobre/",
+        "/5s/programa-5s/",
+        "/produtividade/gestao-do-tempo/",
+        "/5s/o-que-e-5s/",
+        "/produtividade/5s-e-produtividade/",
+        "/carreira-mineracao/",
+        "/politica-editorial/"
+      ],
+      "ctas": [
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Quero acessar a Trilha 10X por R$ 97"
+        },
+        {
+          "href": "mailto:adonias.joshua@gmail.com",
+          "text": "Contato"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://wa.me/5594992993138?text=Ol%C3%A1%2C%20Adonias!%20Vim%20do%20Portal%205S%20e%20Produtividade%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida.",
+          "text": "Fale com o autor"
+        }
+      ],
+      "indexation": "Não verificada no Search Console",
+      "incoming": [
+        "/5s/5s-na-construcao-civil/",
+        "/5s/",
+        "/5s/o-que-e-5s/",
+        "/5s/programa-5s/",
+        "/mineracao/5s-na-mineracao/",
+        "/produtividade/5s-e-produtividade/"
+      ]
+    },
+    {
+      "file": "5s/5s-na-vida-pessoal/index.html",
+      "route": "/5s/5s-na-vida-pessoal/",
+      "title": "5S na Vida Pessoal: Organize Casa, Arquivos e Rotina",
+      "description": "Use os cinco sensos para organizar objetos, documentos, arquivos digitais e hábitos sem buscar perfeição ou descartar por impulso.",
+      "h1": [
+        "Como aplicar 5S na vida pessoal"
+      ],
+      "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+      "canonical": "https://zadonidigital.com.br/5s/5s-na-vida-pessoal/",
+      "inSitemap": true,
+      "schema": [
+        "Article",
+        "WebPage",
+        "BreadcrumbList",
+        "ListItem"
+      ],
+      "schemaErrors": [],
+      "outgoing": [
+        "/5s/5s-na-vida-pessoal/",
+        "/portal/",
+        "/mineracao/",
+        "/5s/",
+        "/produtividade/",
+        "/gestao-ambiental/",
+        "/ferramentas/",
+        "/sobre/",
+        "/produtividade/matriz-eisenhower/",
+        "/produtividade/gestao-do-tempo/",
+        "/5s/o-que-e-5s/",
+        "/carreira-mineracao/",
+        "/politica-editorial/"
+      ],
+      "ctas": [
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Quero acessar a Trilha 10X por R$ 97"
+        },
+        {
+          "href": "mailto:adonias.joshua@gmail.com",
+          "text": "Contato"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://wa.me/5594992993138?text=Ol%C3%A1%2C%20Adonias!%20Vim%20do%20Portal%205S%20e%20Produtividade%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida.",
+          "text": "Fale com o autor"
+        }
+      ],
+      "indexation": "Não verificada no Search Console",
+      "incoming": [
+        "/5s/",
+        "/5s/o-que-e-5s/",
+        "/produtividade/matriz-eisenhower/"
+      ]
+    },
+    {
+      "file": "5s/index.html",
+      "route": "/5s/",
+      "title": "Programa 5S: Guias Práticos para Vida, Empresas e Obras",
+      "description": "Aprenda os cinco sensos do Programa 5S e veja como aplicar utilização, organização, limpeza, padronização e disciplina em diferentes contextos.",
+      "h1": [
+        "Programa 5S: organização que sustenta a melhoria"
+      ],
+      "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+      "canonical": "https://zadonidigital.com.br/5s/",
+      "inSitemap": true,
+      "schema": [
+        "CollectionPage",
+        "BreadcrumbList",
+        "ListItem"
+      ],
+      "schemaErrors": [],
+      "outgoing": [
+        "/5s/",
+        "/portal/",
+        "/mineracao/",
+        "/produtividade/",
+        "/gestao-ambiental/",
+        "/ferramentas/",
+        "/sobre/",
+        "/5s/o-que-e-5s/",
+        "/5s/programa-5s/",
+        "/5s/5s-na-empresa/",
+        "/5s/5s-na-construcao-civil/",
+        "/5s/5s-na-vida-pessoal/",
+        "/produtividade/5s-e-produtividade/",
+        "/carreira-mineracao/",
+        "/politica-editorial/"
+      ],
+      "ctas": [
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Quero acessar a Trilha 10X por R$ 97"
+        },
+        {
+          "href": "mailto:adonias.joshua@gmail.com",
+          "text": "Contato"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://wa.me/5594992993138?text=Ol%C3%A1%2C%20Adonias!%20Vim%20do%20Portal%205S%20e%20Produtividade%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida.",
+          "text": "Fale com o autor"
+        }
+      ],
+      "indexation": "Não verificada no Search Console",
+      "incoming": [
+        "/404.html",
+        "/5s/5s-na-construcao-civil/",
+        "/5s/5s-na-empresa/",
+        "/5s/5s-na-vida-pessoal/",
+        "/5s/o-que-e-5s/",
+        "/5s/programa-5s/",
+        "/atualizacoes/",
+        "/carreira-mineracao/como-trabalhar-na-mineracao/",
+        "/carreira-mineracao/",
+        "/ferramentas/gestao-do-tempo/",
+        "/ferramentas/",
+        "/ferramentas/matriz-eisenhower/",
+        "/gestao-ambiental/educacao-ambiental-em-obras/",
+        "/gestao-ambiental/gestao-ambiental-na-construcao-civil/",
+        "/gestao-ambiental/gestao-de-residuos/",
+        "/gestao-ambiental/",
+        "/mineracao/5s-na-mineracao/",
+        "/mineracao/canaa-dos-carajas/",
+        "/mineracao/gestao-ambiental-na-mineracao/",
+        "/mineracao/",
+        "/mineracao/nr-22/",
+        "/mineracao/parauapebas/",
+        "/mineracao/produtividade-na-mineracao/",
+        "/mineracao/riscos-na-mineracao/",
+        "/mineracao/seguranca-na-mineracao/",
+        "/politica-editorial/",
+        "/portal/",
+        "/produtividade/5s-e-produtividade/",
+        "/produtividade/gestao-do-tempo/",
+        "/produtividade/",
+        "/produtividade/matriz-eisenhower/",
+        "/produtividade/tecnica-pomodoro/",
+        "/sobre/"
+      ]
+    },
+    {
+      "file": "5s/o-que-e-5s/index.html",
+      "route": "/5s/o-que-e-5s/",
+      "title": "O que é 5S? Entenda os 5 Sensos e Como Aplicar na Prática",
+      "description": "Entenda o que é 5S, a origem do método, os cinco sensos, benefícios, exemplos e como aplicar o Programa 5S no trabalho e na vida.",
+      "h1": [
+        "O que é 5S e como aplicar os cinco sensos na prática"
+      ],
+      "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+      "canonical": "https://zadonidigital.com.br/5s/o-que-e-5s/",
+      "inSitemap": true,
+      "schema": [
+        "Article",
+        "WebPage",
+        "BreadcrumbList",
+        "ListItem"
+      ],
+      "schemaErrors": [],
+      "outgoing": [
+        "/5s/o-que-e-5s/",
+        "/portal/",
+        "/mineracao/",
+        "/5s/",
+        "/produtividade/",
+        "/gestao-ambiental/",
+        "/ferramentas/",
+        "/sobre/",
+        "/5s/programa-5s/",
+        "/5s/5s-na-empresa/",
+        "/5s/5s-na-construcao-civil/",
+        "/5s/5s-na-vida-pessoal/",
+        "/produtividade/5s-e-produtividade/",
+        "/carreira-mineracao/",
+        "/politica-editorial/"
+      ],
+      "ctas": [
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Quero acessar a Trilha 10X por R$ 97"
+        },
+        {
+          "href": "mailto:adonias.joshua@gmail.com",
+          "text": "Contato"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://wa.me/5594992993138?text=Ol%C3%A1%2C%20Adonias!%20Vim%20do%20Portal%205S%20e%20Produtividade%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida.",
+          "text": "Fale com o autor"
+        }
+      ],
+      "indexation": "Não verificada no Search Console",
+      "incoming": [
+        "/5s/5s-na-empresa/",
+        "/5s/5s-na-vida-pessoal/",
+        "/5s/",
+        "/5s/programa-5s/",
+        "/mineracao/5s-na-mineracao/",
+        "/portal/",
+        "/produtividade/5s-e-produtividade/"
+      ]
+    },
+    {
+      "file": "5s/programa-5s/index.html",
+      "route": "/5s/programa-5s/",
+      "title": "Programa 5S: Como Implantar, Acompanhar e Melhorar",
+      "description": "Veja como implantar um Programa 5S com diagnóstico, área-piloto, plano de ação, padrões, auditorias educativas e melhoria contínua.",
+      "h1": [
+        "Como implantar um Programa 5S que continue funcionando"
+      ],
+      "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+      "canonical": "https://zadonidigital.com.br/5s/programa-5s/",
+      "inSitemap": true,
+      "schema": [
+        "Article",
+        "WebPage",
+        "BreadcrumbList",
+        "ListItem"
+      ],
+      "schemaErrors": [],
+      "outgoing": [
+        "/5s/programa-5s/",
+        "/portal/",
+        "/mineracao/",
+        "/5s/",
+        "/produtividade/",
+        "/gestao-ambiental/",
+        "/ferramentas/",
+        "/sobre/",
+        "/5s/5s-na-empresa/",
+        "/produtividade/5s-e-produtividade/",
+        "/5s/o-que-e-5s/",
+        "/5s/5s-na-construcao-civil/",
+        "/carreira-mineracao/",
+        "/politica-editorial/"
+      ],
+      "ctas": [
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Quero acessar a Trilha 10X por R$ 97"
+        },
+        {
+          "href": "mailto:adonias.joshua@gmail.com",
+          "text": "Contato"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://wa.me/5594992993138?text=Ol%C3%A1%2C%20Adonias!%20Vim%20do%20Portal%205S%20e%20Produtividade%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida.",
+          "text": "Fale com o autor"
+        }
+      ],
+      "indexation": "Não verificada no Search Console",
+      "incoming": [
+        "/5s/5s-na-empresa/",
+        "/5s/",
+        "/5s/o-que-e-5s/"
+      ]
+    },
+    {
+      "file": "assets/legal/politica-privacidade.html",
+      "route": "/assets/legal/politica-privacidade.html",
+      "title": "Política de Privacidade — Combo Produtividade 10X",
+      "description": "Política de Privacidade do Combo Produtividade 10X (videoaulas e cursos online).",
+      "h1": [
+        "Política de Privacidade"
+      ],
+      "robots": "noindex",
+      "canonical": "",
+      "inSitemap": false,
+      "schema": [],
+      "schemaErrors": [],
+      "outgoing": [
+        "/"
+      ],
+      "ctas": [
+        {
+          "href": "mailto:adonias.joshua@gmail.com",
+          "text": "adonias.joshua@gmail.com"
+        },
+        {
+          "href": "https://wa.me/5594992993138",
+          "text": "+55 94 99299‑3138"
+        },
+        {
+          "href": "mailto:adonias.joshua@gmail.com",
+          "text": "adonias.joshua@gmail.com"
+        },
+        {
+          "href": "https://wa.me/5594992993138?text=Ol%C3%A1%2C%20Adonias!%20Vim%20do%20site%20Produtividade%2010X%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida.",
+          "text": "Fale com o autor"
+        }
+      ],
+      "indexation": "Não verificada no Search Console",
+      "incoming": [
+        "/assets/legal/termos-de-uso.html",
+        "/"
+      ]
+    },
+    {
+      "file": "assets/legal/politica-reembolso.html",
+      "route": "/assets/legal/politica-reembolso.html",
+      "title": "Política de Reembolso — Combo Produtividade 10X",
+      "description": "",
+      "h1": [
+        "Política de Reembolso"
+      ],
+      "robots": "noindex",
+      "canonical": "",
+      "inSitemap": false,
+      "schema": [],
+      "schemaErrors": [],
+      "outgoing": [
+        "/"
+      ],
+      "ctas": [
+        {
+          "href": "mailto:adonias.joshua@gmail.com",
+          "text": "adonias.joshua@gmail.com"
+        },
+        {
+          "href": "https://wa.me/5594992993138",
+          "text": "+55 94 99299‑3138"
+        },
+        {
+          "href": "https://wa.me/5594992993138",
+          "text": "+55 94 99299‑3138"
+        },
+        {
+          "href": "https://wa.me/5594992993138?text=Ol%C3%A1%2C%20Adonias!%20Vim%20do%20site%20Produtividade%2010X%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida.",
+          "text": "Fale com o autor"
+        }
+      ],
+      "indexation": "Não verificada no Search Console",
+      "incoming": [
+        "/assets/legal/termos-de-uso.html",
+        "/"
+      ]
+    },
+    {
+      "file": "assets/legal/termos-de-uso.html",
+      "route": "/assets/legal/termos-de-uso.html",
+      "title": "Termos de Uso — Combo Produtividade 10X",
+      "description": "",
+      "h1": [
+        "Termos de Uso"
+      ],
+      "robots": "noindex",
+      "canonical": "",
+      "inSitemap": false,
+      "schema": [],
+      "schemaErrors": [],
+      "outgoing": [
+        "/assets/legal/politica-privacidade.html",
+        "/assets/legal/politica-reembolso.html",
+        "/"
+      ],
+      "ctas": [
+        {
+          "href": "mailto:adonias.joshua@gmail.com",
+          "text": "adonias.joshua@gmail.com"
+        },
+        {
+          "href": "https://wa.me/5594992993138",
+          "text": "+55 94 99299‑3138"
+        },
+        {
+          "href": "https://wa.me/5594992993138?text=Ol%C3%A1%2C%20Adonias!%20Vim%20do%20site%20Produtividade%2010X%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida.",
+          "text": "Fale com o autor"
+        }
+      ],
+      "indexation": "Não verificada no Search Console",
+      "incoming": [
+        "/"
+      ]
+    },
+    {
+      "file": "atualizacoes/index.html",
+      "route": "/atualizacoes/",
+      "title": "Atualizações sobre Mineração, NR e Gestão Ambiental",
+      "description": "Acompanhe revisões técnicas e editoriais sobre mineração, segurança, normas regulamentadoras, meio ambiente, 5S e produtividade.",
+      "h1": [
+        "Atualizações técnicas e editoriais do portal"
+      ],
+      "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+      "canonical": "https://zadonidigital.com.br/atualizacoes/",
+      "inSitemap": true,
+      "schema": [
+        "CollectionPage",
+        "BreadcrumbList",
+        "ListItem"
+      ],
+      "schemaErrors": [],
+      "outgoing": [
+        "/atualizacoes/",
+        "/portal/",
+        "/mineracao/",
+        "/5s/",
+        "/produtividade/",
+        "/gestao-ambiental/",
+        "/ferramentas/",
+        "/sobre/",
+        "/ferramentas/gestao-do-tempo/",
+        "/mineracao/nr-22/",
+        "/politica-editorial/",
+        "/carreira-mineracao/"
+      ],
+      "ctas": [
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Quero acessar a Trilha 10X por R$ 97"
+        },
+        {
+          "href": "mailto:adonias.joshua@gmail.com",
+          "text": "Contato"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://wa.me/5594992993138?text=Ol%C3%A1%2C%20Adonias!%20Vim%20do%20Portal%205S%20e%20Produtividade%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida.",
+          "text": "Fale com o autor"
+        }
+      ],
+      "indexation": "Não verificada no Search Console",
+      "incoming": [
+        "/politica-editorial/"
+      ]
+    },
+    {
+      "file": "carreira-mineracao/como-trabalhar-na-mineracao/index.html",
+      "route": "/carreira-mineracao/como-trabalhar-na-mineracao/",
+      "title": "Como Trabalhar na Mineração: Formação e Preparação",
+      "description": "Veja como mapear profissões, escolher formação, preparar currículo, buscar vagas oficiais e evitar promessas falsas de emprego na mineração.",
+      "h1": [
+        "Como trabalhar na mineração: um roteiro responsável"
+      ],
+      "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+      "canonical": "https://zadonidigital.com.br/carreira-mineracao/como-trabalhar-na-mineracao/",
+      "inSitemap": true,
+      "schema": [
+        "Article",
+        "WebPage",
+        "BreadcrumbList",
+        "ListItem"
+      ],
+      "schemaErrors": [],
+      "outgoing": [
+        "/carreira-mineracao/como-trabalhar-na-mineracao/",
+        "/portal/",
+        "/mineracao/",
+        "/5s/",
+        "/produtividade/",
+        "/gestao-ambiental/",
+        "/ferramentas/",
+        "/sobre/",
+        "/carreira-mineracao/",
+        "/mineracao/seguranca-na-mineracao/",
+        "/mineracao/gestao-ambiental-na-mineracao/",
+        "/mineracao/nr-22/",
+        "/mineracao/5s-na-mineracao/",
+        "/mineracao/produtividade-na-mineracao/",
+        "/mineracao/canaa-dos-carajas/",
+        "/mineracao/parauapebas/",
+        "/politica-editorial/"
+      ],
+      "ctas": [
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Quero acessar a Trilha 10X por R$ 97"
+        },
+        {
+          "href": "mailto:adonias.joshua@gmail.com",
+          "text": "Contato"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://wa.me/5594992993138?text=Ol%C3%A1%2C%20Adonias!%20Vim%20do%20Portal%205S%20e%20Produtividade%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida.",
+          "text": "Fale com o autor"
+        }
+      ],
+      "indexation": "Não verificada no Search Console",
+      "incoming": [
+        "/carreira-mineracao/",
+        "/mineracao/canaa-dos-carajas/",
+        "/mineracao/parauapebas/"
+      ]
+    },
+    {
+      "file": "carreira-mineracao/index.html",
+      "route": "/carreira-mineracao/",
+      "title": "Carreira na Mineração: Profissões, Cursos e Preparação",
+      "description": "Entenda caminhos de carreira na mineração, áreas profissionais, formação, segurança, currículo e pesquisa responsável de oportunidades.",
+      "h1": [
+        "Carreira na mineração: construa preparação, não promessa"
+      ],
+      "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+      "canonical": "https://zadonidigital.com.br/carreira-mineracao/",
+      "inSitemap": true,
+      "schema": [
+        "CollectionPage",
+        "BreadcrumbList",
+        "ListItem"
+      ],
+      "schemaErrors": [],
+      "outgoing": [
+        "/carreira-mineracao/",
+        "/portal/",
+        "/mineracao/",
+        "/5s/",
+        "/produtividade/",
+        "/gestao-ambiental/",
+        "/ferramentas/",
+        "/sobre/",
+        "/carreira-mineracao/como-trabalhar-na-mineracao/",
+        "/mineracao/nr-22/",
+        "/mineracao/canaa-dos-carajas/",
+        "/mineracao/parauapebas/",
+        "/ferramentas/matriz-eisenhower/",
+        "/ferramentas/gestao-do-tempo/",
+        "/mineracao/produtividade-na-mineracao/",
+        "/politica-editorial/"
+      ],
+      "ctas": [
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Quero acessar a Trilha 10X por R$ 97"
+        },
+        {
+          "href": "mailto:adonias.joshua@gmail.com",
+          "text": "Contato"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://wa.me/5594992993138?text=Ol%C3%A1%2C%20Adonias!%20Vim%20do%20Portal%205S%20e%20Produtividade%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida.",
+          "text": "Fale com o autor"
+        }
+      ],
+      "indexation": "Não verificada no Search Console",
+      "incoming": [
+        "/5s/5s-na-construcao-civil/",
+        "/5s/5s-na-empresa/",
+        "/5s/5s-na-vida-pessoal/",
+        "/5s/",
+        "/5s/o-que-e-5s/",
+        "/5s/programa-5s/",
+        "/atualizacoes/",
+        "/carreira-mineracao/como-trabalhar-na-mineracao/",
+        "/ferramentas/",
+        "/ferramentas/matriz-eisenhower/",
+        "/gestao-ambiental/educacao-ambiental-em-obras/",
+        "/gestao-ambiental/gestao-ambiental-na-construcao-civil/",
+        "/gestao-ambiental/gestao-de-residuos/",
+        "/gestao-ambiental/",
+        "/mineracao/5s-na-mineracao/",
+        "/mineracao/canaa-dos-carajas/",
+        "/mineracao/gestao-ambiental-na-mineracao/",
+        "/mineracao/",
+        "/mineracao/nr-22/",
+        "/mineracao/parauapebas/",
+        "/mineracao/produtividade-na-mineracao/",
+        "/mineracao/riscos-na-mineracao/",
+        "/mineracao/seguranca-na-mineracao/",
+        "/politica-editorial/",
+        "/portal/",
+        "/produtividade/5s-e-produtividade/",
+        "/produtividade/gestao-do-tempo/",
+        "/produtividade/",
+        "/produtividade/matriz-eisenhower/",
+        "/produtividade/tecnica-pomodoro/",
+        "/sobre/"
+      ]
+    },
+    {
+      "file": "ferramentas/gestao-do-tempo/index.html",
+      "route": "/ferramentas/gestao-do-tempo/",
+      "title": "Cronômetro de Tarefas Online Grátis | Tempo 10X",
+      "description": "Cronometre tarefas, controle horas por atividade e acompanhe sua produtividade com filtros, gráficos e relatórios gratuitos no navegador.",
+      "h1": [
+        "Cronômetro de tarefas online e gestão do tempo"
+      ],
+      "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+      "canonical": "https://zadonidigital.com.br/ferramentas/gestao-do-tempo/",
+      "inSitemap": true,
+      "schema": [
+        "WebPage",
+        "WebApplication",
+        "Offer",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "BreadcrumbList",
+        "ListItem"
+      ],
+      "schemaErrors": [],
+      "outgoing": [
+        "/ferramentas/gestao-do-tempo/",
+        "/portal/",
+        "/5s/",
+        "/produtividade/",
+        "/gestao-ambiental/",
+        "/sobre/",
+        "/produtividade/tecnica-pomodoro/",
+        "/produtividade/matriz-eisenhower/",
+        "/produtividade/5s-e-produtividade/"
+      ],
+      "ctas": [
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Trilha 10X"
+        },
+        {
+          "href": "mailto:adonias.joshua@gmail.com",
+          "text": "Contato"
+        },
+        {
+          "href": "https://wa.me/5594992993138?text=Ol%C3%A1%2C%20Adonias!%20Estou%20usando%20o%20Tempo%2010X%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida%20sobre%20a%20ferramenta.",
+          "text": "Dúvidas? Fale com o autor"
+        }
+      ],
+      "indexation": "Não verificada no Search Console",
+      "incoming": [
+        "/atualizacoes/",
+        "/carreira-mineracao/",
+        "/ferramentas/",
+        "/ferramentas/matriz-eisenhower/",
+        "/",
+        "/mineracao/canaa-dos-carajas/",
+        "/mineracao/parauapebas/",
+        "/mineracao/produtividade-na-mineracao/",
+        "/portal/",
+        "/produtividade/gestao-do-tempo/"
+      ]
+    },
+    {
+      "file": "ferramentas/index.html",
+      "route": "/ferramentas/",
+      "title": "Ferramentas Gratuitas de Produtividade, 5S e Gestão",
+      "description": "Acesse ferramentas gratuitas para gestão do tempo e acompanhe o roadmap de recursos práticos para produtividade, 5S e gestão ambiental.",
+      "h1": [
+        "Ferramentas gratuitas para transformar orientação em ação"
+      ],
+      "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+      "canonical": "https://zadonidigital.com.br/ferramentas/",
+      "inSitemap": true,
+      "schema": [
+        "CollectionPage",
+        "BreadcrumbList",
+        "ListItem"
+      ],
+      "schemaErrors": [],
+      "outgoing": [
+        "/ferramentas/",
+        "/portal/",
+        "/mineracao/",
+        "/5s/",
+        "/produtividade/",
+        "/gestao-ambiental/",
+        "/sobre/",
+        "/ferramentas/gestao-do-tempo/",
+        "/ferramentas/matriz-eisenhower/",
+        "/produtividade/gestao-do-tempo/",
+        "/produtividade/matriz-eisenhower/",
+        "/carreira-mineracao/",
+        "/politica-editorial/"
+      ],
+      "ctas": [
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Quero acessar a Trilha 10X por R$ 97"
+        },
+        {
+          "href": "mailto:adonias.joshua@gmail.com",
+          "text": "Contato"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://wa.me/5594992993138?text=Ol%C3%A1%2C%20Adonias!%20Vim%20do%20Portal%205S%20e%20Produtividade%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida.",
+          "text": "Fale com o autor"
+        }
+      ],
+      "indexation": "Não verificada no Search Console",
+      "incoming": [
+        "/404.html",
+        "/5s/5s-na-construcao-civil/",
+        "/5s/5s-na-empresa/",
+        "/5s/5s-na-vida-pessoal/",
+        "/5s/",
+        "/5s/o-que-e-5s/",
+        "/5s/programa-5s/",
+        "/atualizacoes/",
+        "/carreira-mineracao/como-trabalhar-na-mineracao/",
+        "/carreira-mineracao/",
+        "/ferramentas/matriz-eisenhower/",
+        "/gestao-ambiental/educacao-ambiental-em-obras/",
+        "/gestao-ambiental/gestao-ambiental-na-construcao-civil/",
+        "/gestao-ambiental/gestao-de-residuos/",
+        "/gestao-ambiental/",
+        "/mineracao/5s-na-mineracao/",
+        "/mineracao/canaa-dos-carajas/",
+        "/mineracao/gestao-ambiental-na-mineracao/",
+        "/mineracao/",
+        "/mineracao/nr-22/",
+        "/mineracao/parauapebas/",
+        "/mineracao/produtividade-na-mineracao/",
+        "/mineracao/riscos-na-mineracao/",
+        "/mineracao/seguranca-na-mineracao/",
+        "/politica-editorial/",
+        "/portal/",
+        "/produtividade/5s-e-produtividade/",
+        "/produtividade/gestao-do-tempo/",
+        "/produtividade/",
+        "/produtividade/matriz-eisenhower/",
+        "/produtividade/tecnica-pomodoro/",
+        "/sobre/"
+      ]
+    },
+    {
+      "file": "ferramentas/matriz-eisenhower/index.html",
+      "route": "/ferramentas/matriz-eisenhower/",
+      "title": "Matriz de Eisenhower Online Grátis: Organize suas Prioridades",
+      "description": "Organize tarefas por urgência e importância com uma Matriz de Eisenhower online gratuita. Melhore sua gestão de prioridades, planejamento e produtividade.",
+      "h1": [
+        "Matriz de Eisenhower Online para Organizar Prioridades"
+      ],
+      "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+      "canonical": "https://zadonidigital.com.br/ferramentas/matriz-eisenhower/",
+      "inSitemap": true,
+      "schema": [
+        "WebPage",
+        "WebApplication",
+        "Offer",
+        "BreadcrumbList",
+        "ListItem"
+      ],
+      "schemaErrors": [],
+      "outgoing": [
+        "/ferramentas/matriz-eisenhower/",
+        "/portal/",
+        "/mineracao/",
+        "/5s/",
+        "/produtividade/",
+        "/gestao-ambiental/",
+        "/ferramentas/",
+        "/sobre/",
+        "/produtividade/matriz-eisenhower/",
+        "/produtividade/gestao-do-tempo/",
+        "/ferramentas/gestao-do-tempo/",
+        "/produtividade/5s-e-produtividade/",
+        "/produtividade/tecnica-pomodoro/",
+        "/carreira-mineracao/",
+        "/politica-editorial/"
+      ],
+      "ctas": [
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça o Curso de 5S e Produtividade"
+        },
+        {
+          "href": "mailto:adonias.joshua@gmail.com",
+          "text": "Contato"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://wa.me/5594992993138?text=Ol%C3%A1%2C%20Adonias!%20Vim%20do%20Portal%205S%20e%20Produtividade%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida.",
+          "text": "Fale com o autor"
+        }
+      ],
+      "indexation": "Não verificada no Search Console",
+      "incoming": [
+        "/carreira-mineracao/",
+        "/ferramentas/",
+        "/mineracao/canaa-dos-carajas/",
+        "/mineracao/parauapebas/",
+        "/produtividade/"
+      ]
+    },
+    {
+      "file": "gestao-ambiental/educacao-ambiental-em-obras/index.html",
+      "route": "/gestao-ambiental/educacao-ambiental-em-obras/",
+      "title": "Educação Ambiental em Obras: Como Engajar Equipes",
+      "description": "Veja como planejar educação ambiental em obras com temas ligados às tarefas, comunicação acessível, prática e verificação de aprendizagem.",
+      "h1": [
+        "Educação ambiental em obras que chega à prática"
+      ],
+      "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+      "canonical": "https://zadonidigital.com.br/gestao-ambiental/educacao-ambiental-em-obras/",
+      "inSitemap": true,
+      "schema": [
+        "Article",
+        "WebPage",
+        "BreadcrumbList",
+        "ListItem"
+      ],
+      "schemaErrors": [],
+      "outgoing": [
+        "/gestao-ambiental/educacao-ambiental-em-obras/",
+        "/portal/",
+        "/mineracao/",
+        "/5s/",
+        "/produtividade/",
+        "/gestao-ambiental/",
+        "/ferramentas/",
+        "/sobre/",
+        "/gestao-ambiental/gestao-ambiental-na-construcao-civil/",
+        "/gestao-ambiental/gestao-de-residuos/",
+        "/5s/5s-na-construcao-civil/",
+        "/carreira-mineracao/",
+        "/politica-editorial/"
+      ],
+      "ctas": [
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Quero acessar a Trilha 10X por R$ 97"
+        },
+        {
+          "href": "mailto:adonias.joshua@gmail.com",
+          "text": "Contato"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://wa.me/5594992993138?text=Ol%C3%A1%2C%20Adonias!%20Vim%20do%20Portal%205S%20e%20Produtividade%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida.",
+          "text": "Fale com o autor"
+        }
+      ],
+      "indexation": "Não verificada no Search Console",
+      "incoming": [
+        "/gestao-ambiental/gestao-ambiental-na-construcao-civil/",
+        "/gestao-ambiental/gestao-de-residuos/",
+        "/gestao-ambiental/"
+      ]
+    },
+    {
+      "file": "gestao-ambiental/gestao-ambiental-na-construcao-civil/index.html",
+      "route": "/gestao-ambiental/gestao-ambiental-na-construcao-civil/",
+      "title": "Gestão Ambiental na Construção Civil: Guia Prático",
+      "description": "Entenda como planejar controles ambientais em obras para resíduos, água, poeira, ruído, produtos químicos, solo e comunicação.",
+      "h1": [
+        "Gestão ambiental na construção civil: do planejamento ao controle"
+      ],
+      "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+      "canonical": "https://zadonidigital.com.br/gestao-ambiental/gestao-ambiental-na-construcao-civil/",
+      "inSitemap": true,
+      "schema": [
+        "Article",
+        "WebPage",
+        "BreadcrumbList",
+        "ListItem"
+      ],
+      "schemaErrors": [],
+      "outgoing": [
+        "/gestao-ambiental/gestao-ambiental-na-construcao-civil/",
+        "/portal/",
+        "/mineracao/",
+        "/5s/",
+        "/produtividade/",
+        "/gestao-ambiental/",
+        "/ferramentas/",
+        "/sobre/",
+        "/gestao-ambiental/gestao-de-residuos/",
+        "/gestao-ambiental/educacao-ambiental-em-obras/",
+        "/5s/5s-na-construcao-civil/",
+        "/carreira-mineracao/",
+        "/politica-editorial/"
+      ],
+      "ctas": [
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Quero acessar a Trilha 10X por R$ 97"
+        },
+        {
+          "href": "mailto:adonias.joshua@gmail.com",
+          "text": "Contato"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://wa.me/5594992993138?text=Ol%C3%A1%2C%20Adonias!%20Vim%20do%20Portal%205S%20e%20Produtividade%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida.",
+          "text": "Fale com o autor"
+        }
+      ],
+      "indexation": "Não verificada no Search Console",
+      "incoming": [
+        "/5s/5s-na-construcao-civil/",
+        "/gestao-ambiental/educacao-ambiental-em-obras/",
+        "/gestao-ambiental/gestao-de-residuos/",
+        "/gestao-ambiental/",
+        "/portal/"
+      ]
+    },
+    {
+      "file": "gestao-ambiental/gestao-de-residuos/index.html",
+      "route": "/gestao-ambiental/gestao-de-residuos/",
+      "title": "Gestão de Resíduos: Etapas, Segregação e Controle",
+      "description": "Aprenda as etapas da gestão de resíduos: prevenção, classificação, segregação, armazenamento, transporte, destinação e rastreabilidade.",
+      "h1": [
+        "Gestão de resíduos: do planejamento à destinação"
+      ],
+      "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+      "canonical": "https://zadonidigital.com.br/gestao-ambiental/gestao-de-residuos/",
+      "inSitemap": true,
+      "schema": [
+        "Article",
+        "WebPage",
+        "BreadcrumbList",
+        "ListItem"
+      ],
+      "schemaErrors": [],
+      "outgoing": [
+        "/gestao-ambiental/gestao-de-residuos/",
+        "/portal/",
+        "/mineracao/",
+        "/5s/",
+        "/produtividade/",
+        "/gestao-ambiental/",
+        "/ferramentas/",
+        "/sobre/",
+        "/mineracao/gestao-ambiental-na-mineracao/",
+        "/5s/5s-na-construcao-civil/",
+        "/gestao-ambiental/educacao-ambiental-em-obras/",
+        "/gestao-ambiental/gestao-ambiental-na-construcao-civil/",
+        "/carreira-mineracao/",
+        "/politica-editorial/"
+      ],
+      "ctas": [
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Quero acessar a Trilha 10X por R$ 97"
+        },
+        {
+          "href": "mailto:adonias.joshua@gmail.com",
+          "text": "Contato"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://wa.me/5594992993138?text=Ol%C3%A1%2C%20Adonias!%20Vim%20do%20Portal%205S%20e%20Produtividade%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida.",
+          "text": "Fale com o autor"
+        }
+      ],
+      "indexation": "Não verificada no Search Console",
+      "incoming": [
+        "/5s/5s-na-construcao-civil/",
+        "/gestao-ambiental/educacao-ambiental-em-obras/",
+        "/gestao-ambiental/gestao-ambiental-na-construcao-civil/",
+        "/gestao-ambiental/",
+        "/mineracao/gestao-ambiental-na-mineracao/",
+        "/portal/"
+      ]
+    },
+    {
+      "file": "gestao-ambiental/index.html",
+      "route": "/gestao-ambiental/",
+      "title": "Gestão Ambiental: Fundamentos e Práticas em Obras",
+      "description": "Conteúdos educativos sobre gestão ambiental, construção civil, resíduos, educação ambiental e prevenção de impactos.",
+      "h1": [
+        "Gestão ambiental aplicada ao trabalho real"
+      ],
+      "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+      "canonical": "https://zadonidigital.com.br/gestao-ambiental/",
+      "inSitemap": true,
+      "schema": [
+        "CollectionPage",
+        "BreadcrumbList",
+        "ListItem"
+      ],
+      "schemaErrors": [],
+      "outgoing": [
+        "/gestao-ambiental/",
+        "/portal/",
+        "/mineracao/",
+        "/5s/",
+        "/produtividade/",
+        "/ferramentas/",
+        "/sobre/",
+        "/gestao-ambiental/gestao-ambiental-na-construcao-civil/",
+        "/gestao-ambiental/gestao-de-residuos/",
+        "/gestao-ambiental/educacao-ambiental-em-obras/",
+        "/carreira-mineracao/",
+        "/politica-editorial/"
+      ],
+      "ctas": [
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Quero acessar a Trilha 10X por R$ 97"
+        },
+        {
+          "href": "mailto:adonias.joshua@gmail.com",
+          "text": "Contato"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://wa.me/5594992993138?text=Ol%C3%A1%2C%20Adonias!%20Vim%20do%20Portal%205S%20e%20Produtividade%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida.",
+          "text": "Fale com o autor"
+        }
+      ],
+      "indexation": "Não verificada no Search Console",
+      "incoming": [
+        "/404.html",
+        "/5s/5s-na-construcao-civil/",
+        "/5s/5s-na-empresa/",
+        "/5s/5s-na-vida-pessoal/",
+        "/5s/",
+        "/5s/o-que-e-5s/",
+        "/5s/programa-5s/",
+        "/atualizacoes/",
+        "/carreira-mineracao/como-trabalhar-na-mineracao/",
+        "/carreira-mineracao/",
+        "/ferramentas/gestao-do-tempo/",
+        "/ferramentas/",
+        "/ferramentas/matriz-eisenhower/",
+        "/gestao-ambiental/educacao-ambiental-em-obras/",
+        "/gestao-ambiental/gestao-ambiental-na-construcao-civil/",
+        "/gestao-ambiental/gestao-de-residuos/",
+        "/mineracao/5s-na-mineracao/",
+        "/mineracao/canaa-dos-carajas/",
+        "/mineracao/gestao-ambiental-na-mineracao/",
+        "/mineracao/",
+        "/mineracao/nr-22/",
+        "/mineracao/parauapebas/",
+        "/mineracao/produtividade-na-mineracao/",
+        "/mineracao/riscos-na-mineracao/",
+        "/mineracao/seguranca-na-mineracao/",
+        "/politica-editorial/",
+        "/portal/",
+        "/produtividade/5s-e-produtividade/",
+        "/produtividade/gestao-do-tempo/",
+        "/produtividade/",
+        "/produtividade/matriz-eisenhower/",
+        "/produtividade/tecnica-pomodoro/",
+        "/sobre/"
+      ]
+    },
+    {
+      "file": "index.html",
+      "route": "/",
+      "title": "Combo Produtividade 10X — Curso Rápido com Certificação",
+      "description": "Curso de Produtividade 10X, 5S e Comunicação Persuasiva para Vendedores, Líderes e Empreendedores. Aprenda com aulas curtas, certificação e ferramentas digitais.",
+      "h1": [
+        "Do canteiro à liderança sustentável: o método 10X para crescer e liderar com propósito."
+      ],
+      "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+      "canonical": "https://zadonidigital.com.br/",
+      "inSitemap": true,
+      "schema": [
+        "WebSite",
+        "WebPage",
+        "Person"
+      ],
+      "schemaErrors": [],
+      "outgoing": [
+        "/",
+        "/portal/",
+        "/ferramentas/gestao-do-tempo/",
+        "/assets/legal/politica-privacidade.html",
+        "/assets/legal/politica-reembolso.html",
+        "/assets/legal/termos-de-uso.html"
+      ],
+      "ctas": [
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Quero acessar a Trilha 10X"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "QUERO ACESSAR A TRILHA 10X POR R$ 97"
+        },
+        {
+          "href": "https://wa.me/5594992993138?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20Combo%2010X",
+          "text": "Falar com a equipe pelo WhatsApp"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Quero acessar a Trilha 10X"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Quero acessar a Trilha 10X"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Quero começar minha transformação"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Quero começar por R$ 97"
+        },
+        {
+          "href": "mailto:adonias.joshua@gmail.com",
+          "text": "adonias.joshua@gmail.com"
+        },
+        {
+          "href": "https://wa.me/5594992993138?text=Ol%C3%A1!%20Vim%20do%20site%20Combo%2010X%20e%20preciso%20de%20ajuda.",
+          "text": "Falar no WhatsApp"
+        },
+        {
+          "href": "https://wa.me/5594992993138?text=Ol%C3%A1!%20Vim%20do%20site%20Combo%2010X%20e%20preciso%20de%20ajuda.",
+          "text": ""
+        },
+        {
+          "href": "https://wa.me/5594992993138?text=Ol%C3%A1%2C%20Adonias!%20Vim%20do%20site%20Produtividade%2010X%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida.",
+          "text": "Fale com o autor"
+        }
+      ],
+      "indexation": "Não verificada no Search Console",
+      "incoming": [
+        "/assets/legal/politica-privacidade.html",
+        "/assets/legal/politica-reembolso.html",
+        "/assets/legal/termos-de-uso.html"
+      ]
+    },
+    {
+      "file": "mineracao/5s-na-mineracao/index.html",
+      "route": "/mineracao/5s-na-mineracao/",
+      "title": "5S na Mineração: Segurança, Organização e Produtividade",
+      "description": "Aprenda como aplicar os cinco sensos em oficinas, almoxarifados, frentes, depósitos e áreas administrativas da mineração.",
+      "h1": [
+        "5S na Mineração: Como Melhorar Segurança, Organização e Produtividade"
+      ],
+      "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+      "canonical": "https://zadonidigital.com.br/mineracao/5s-na-mineracao/",
+      "inSitemap": true,
+      "schema": [
+        "Article",
+        "WebPage",
+        "BreadcrumbList",
+        "ListItem"
+      ],
+      "schemaErrors": [],
+      "outgoing": [
+        "/mineracao/5s-na-mineracao/",
+        "/portal/",
+        "/mineracao/",
+        "/5s/",
+        "/produtividade/",
+        "/gestao-ambiental/",
+        "/ferramentas/",
+        "/sobre/",
+        "/5s/o-que-e-5s/",
+        "/mineracao/nr-22/",
+        "/mineracao/produtividade-na-mineracao/",
+        "/5s/5s-na-empresa/",
+        "/carreira-mineracao/",
+        "/politica-editorial/"
+      ],
+      "ctas": [
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Quero acessar a Trilha 10X por R$ 97"
+        },
+        {
+          "href": "mailto:adonias.joshua@gmail.com",
+          "text": "Contato"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://wa.me/5594992993138?text=Ol%C3%A1%2C%20Adonias!%20Vim%20do%20Portal%205S%20e%20Produtividade%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida.",
+          "text": "Fale com o autor"
+        }
+      ],
+      "indexation": "Não verificada no Search Console",
+      "incoming": [
+        "/carreira-mineracao/como-trabalhar-na-mineracao/",
+        "/mineracao/gestao-ambiental-na-mineracao/",
+        "/mineracao/",
+        "/mineracao/nr-22/",
+        "/mineracao/produtividade-na-mineracao/",
+        "/mineracao/riscos-na-mineracao/",
+        "/mineracao/seguranca-na-mineracao/"
+      ]
+    },
+    {
+      "file": "mineracao/canaa-dos-carajas/index.html",
+      "route": "/mineracao/canaa-dos-carajas/",
+      "title": "Mineração em Canaã dos Carajás: Carreira, SSMA e Dados",
+      "description": "Contexto educativo sobre mineração em Canaã dos Carajás, qualificação, segurança, meio ambiente e consulta a fontes públicas oficiais.",
+      "h1": [
+        "Mineração em Canaã dos Carajás: contexto e preparação profissional"
+      ],
+      "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+      "canonical": "https://zadonidigital.com.br/mineracao/canaa-dos-carajas/",
+      "inSitemap": true,
+      "schema": [
+        "Article",
+        "WebPage",
+        "BreadcrumbList",
+        "ListItem"
+      ],
+      "schemaErrors": [],
+      "outgoing": [
+        "/mineracao/canaa-dos-carajas/",
+        "/portal/",
+        "/mineracao/",
+        "/5s/",
+        "/produtividade/",
+        "/gestao-ambiental/",
+        "/ferramentas/",
+        "/sobre/",
+        "/mineracao/nr-22/",
+        "/mineracao/seguranca-na-mineracao/",
+        "/mineracao/gestao-ambiental-na-mineracao/",
+        "/carreira-mineracao/como-trabalhar-na-mineracao/",
+        "/ferramentas/matriz-eisenhower/",
+        "/ferramentas/gestao-do-tempo/",
+        "/carreira-mineracao/",
+        "/mineracao/parauapebas/",
+        "/politica-editorial/"
+      ],
+      "ctas": [
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Quero acessar a Trilha 10X por R$ 97"
+        },
+        {
+          "href": "mailto:adonias.joshua@gmail.com",
+          "text": "Contato"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://wa.me/5594992993138?text=Ol%C3%A1%2C%20Adonias!%20Vim%20do%20Portal%205S%20e%20Produtividade%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida.",
+          "text": "Fale com o autor"
+        }
+      ],
+      "indexation": "Não verificada no Search Console",
+      "incoming": [
+        "/carreira-mineracao/como-trabalhar-na-mineracao/",
+        "/carreira-mineracao/",
+        "/mineracao/",
+        "/mineracao/parauapebas/"
+      ]
+    },
+    {
+      "file": "mineracao/gestao-ambiental-na-mineracao/index.html",
+      "route": "/mineracao/gestao-ambiental-na-mineracao/",
+      "title": "Gestão Ambiental na Mineração: Aspectos e Controles",
+      "description": "Entenda aspectos, impactos, controles, monitoramento, resíduos, água, biodiversidade e fechamento na gestão ambiental da mineração.",
+      "h1": [
+        "Gestão ambiental na mineração: planejar, controlar e monitorar"
+      ],
+      "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+      "canonical": "https://zadonidigital.com.br/mineracao/gestao-ambiental-na-mineracao/",
+      "inSitemap": true,
+      "schema": [
+        "Article",
+        "WebPage",
+        "BreadcrumbList",
+        "ListItem"
+      ],
+      "schemaErrors": [],
+      "outgoing": [
+        "/mineracao/gestao-ambiental-na-mineracao/",
+        "/portal/",
+        "/mineracao/",
+        "/5s/",
+        "/produtividade/",
+        "/gestao-ambiental/",
+        "/ferramentas/",
+        "/sobre/",
+        "/gestao-ambiental/gestao-de-residuos/",
+        "/mineracao/riscos-na-mineracao/",
+        "/mineracao/5s-na-mineracao/",
+        "/carreira-mineracao/",
+        "/politica-editorial/"
+      ],
+      "ctas": [
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Quero acessar a Trilha 10X por R$ 97"
+        },
+        {
+          "href": "mailto:adonias.joshua@gmail.com",
+          "text": "Contato"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://wa.me/5594992993138?text=Ol%C3%A1%2C%20Adonias!%20Vim%20do%20Portal%205S%20e%20Produtividade%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida.",
+          "text": "Fale com o autor"
+        }
+      ],
+      "indexation": "Não verificada no Search Console",
+      "incoming": [
+        "/carreira-mineracao/como-trabalhar-na-mineracao/",
+        "/gestao-ambiental/gestao-de-residuos/",
+        "/mineracao/canaa-dos-carajas/",
+        "/mineracao/",
+        "/mineracao/parauapebas/"
+      ]
+    },
+    {
+      "file": "mineracao/index.html",
+      "route": "/mineracao/",
+      "title": "Mineração: Segurança, Meio Ambiente, 5S e Produtividade",
+      "description": "Guias educativos sobre mineração, NR-22, segurança, riscos, gestão ambiental, 5S, produtividade e contexto profissional em Carajás.",
+      "h1": [
+        "Mineração: conhecimento aplicado à segurança, ambiente e produção"
+      ],
+      "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+      "canonical": "https://zadonidigital.com.br/mineracao/",
+      "inSitemap": true,
+      "schema": [
+        "CollectionPage",
+        "BreadcrumbList",
+        "ListItem"
+      ],
+      "schemaErrors": [],
+      "outgoing": [
+        "/mineracao/",
+        "/portal/",
+        "/5s/",
+        "/produtividade/",
+        "/gestao-ambiental/",
+        "/ferramentas/",
+        "/sobre/",
+        "/mineracao/nr-22/",
+        "/mineracao/seguranca-na-mineracao/",
+        "/mineracao/riscos-na-mineracao/",
+        "/mineracao/5s-na-mineracao/",
+        "/mineracao/produtividade-na-mineracao/",
+        "/mineracao/gestao-ambiental-na-mineracao/",
+        "/mineracao/canaa-dos-carajas/",
+        "/mineracao/parauapebas/",
+        "/carreira-mineracao/",
+        "/politica-editorial/"
+      ],
+      "ctas": [
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Quero acessar a Trilha 10X por R$ 97"
+        },
+        {
+          "href": "mailto:adonias.joshua@gmail.com",
+          "text": "Contato"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://wa.me/5594992993138?text=Ol%C3%A1%2C%20Adonias!%20Vim%20do%20Portal%205S%20e%20Produtividade%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida.",
+          "text": "Fale com o autor"
+        }
+      ],
+      "indexation": "Não verificada no Search Console",
+      "incoming": [
+        "/404.html",
+        "/5s/5s-na-construcao-civil/",
+        "/5s/5s-na-empresa/",
+        "/5s/5s-na-vida-pessoal/",
+        "/5s/",
+        "/5s/o-que-e-5s/",
+        "/5s/programa-5s/",
+        "/atualizacoes/",
+        "/carreira-mineracao/como-trabalhar-na-mineracao/",
+        "/carreira-mineracao/",
+        "/ferramentas/",
+        "/ferramentas/matriz-eisenhower/",
+        "/gestao-ambiental/educacao-ambiental-em-obras/",
+        "/gestao-ambiental/gestao-ambiental-na-construcao-civil/",
+        "/gestao-ambiental/gestao-de-residuos/",
+        "/gestao-ambiental/",
+        "/mineracao/5s-na-mineracao/",
+        "/mineracao/canaa-dos-carajas/",
+        "/mineracao/gestao-ambiental-na-mineracao/",
+        "/mineracao/nr-22/",
+        "/mineracao/parauapebas/",
+        "/mineracao/produtividade-na-mineracao/",
+        "/mineracao/riscos-na-mineracao/",
+        "/mineracao/seguranca-na-mineracao/",
+        "/politica-editorial/",
+        "/portal/",
+        "/produtividade/5s-e-produtividade/",
+        "/produtividade/gestao-do-tempo/",
+        "/produtividade/",
+        "/produtividade/matriz-eisenhower/",
+        "/produtividade/tecnica-pomodoro/",
+        "/sobre/"
+      ]
+    },
+    {
+      "file": "mineracao/nr-22/index.html",
+      "route": "/mineracao/nr-22/",
+      "title": "NR-22: Segurança e Saúde Ocupacional na Mineração",
+      "description": "Entenda o objetivo, campo de aplicação, responsabilidades, riscos, máquinas, poeiras, emergências e treinamento previstos na NR-22.",
+      "h1": [
+        "NR-22: Segurança e Saúde Ocupacional na Mineração"
+      ],
+      "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+      "canonical": "https://zadonidigital.com.br/mineracao/nr-22/",
+      "inSitemap": true,
+      "schema": [
+        "Article",
+        "WebPage",
+        "BreadcrumbList",
+        "ListItem"
+      ],
+      "schemaErrors": [],
+      "outgoing": [
+        "/mineracao/nr-22/",
+        "/portal/",
+        "/mineracao/",
+        "/5s/",
+        "/produtividade/",
+        "/gestao-ambiental/",
+        "/ferramentas/",
+        "/sobre/",
+        "/mineracao/seguranca-na-mineracao/",
+        "/mineracao/riscos-na-mineracao/",
+        "/mineracao/5s-na-mineracao/",
+        "/carreira-mineracao/",
+        "/politica-editorial/"
+      ],
+      "ctas": [
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Quero acessar a Trilha 10X por R$ 97"
+        },
+        {
+          "href": "mailto:adonias.joshua@gmail.com",
+          "text": "Contato"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://wa.me/5594992993138?text=Ol%C3%A1%2C%20Adonias!%20Vim%20do%20Portal%205S%20e%20Produtividade%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida.",
+          "text": "Fale com o autor"
+        }
+      ],
+      "indexation": "Não verificada no Search Console",
+      "incoming": [
+        "/atualizacoes/",
+        "/carreira-mineracao/como-trabalhar-na-mineracao/",
+        "/carreira-mineracao/",
+        "/mineracao/5s-na-mineracao/",
+        "/mineracao/canaa-dos-carajas/",
+        "/mineracao/",
+        "/mineracao/parauapebas/",
+        "/mineracao/riscos-na-mineracao/",
+        "/mineracao/seguranca-na-mineracao/"
+      ]
+    },
+    {
+      "file": "mineracao/parauapebas/index.html",
+      "route": "/mineracao/parauapebas/",
+      "title": "Mineração em Parauapebas: Carreira, Segurança e Ambiente",
+      "description": "Guia regional sobre mineração em Parauapebas, preparação profissional, NR-22, segurança, meio ambiente e fontes públicas oficiais.",
+      "h1": [
+        "Mineração em Parauapebas: contexto, segurança e carreira"
+      ],
+      "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+      "canonical": "https://zadonidigital.com.br/mineracao/parauapebas/",
+      "inSitemap": true,
+      "schema": [
+        "Article",
+        "WebPage",
+        "BreadcrumbList",
+        "ListItem"
+      ],
+      "schemaErrors": [],
+      "outgoing": [
+        "/mineracao/parauapebas/",
+        "/portal/",
+        "/mineracao/",
+        "/5s/",
+        "/produtividade/",
+        "/gestao-ambiental/",
+        "/ferramentas/",
+        "/sobre/",
+        "/mineracao/nr-22/",
+        "/mineracao/gestao-ambiental-na-mineracao/",
+        "/carreira-mineracao/como-trabalhar-na-mineracao/",
+        "/ferramentas/matriz-eisenhower/",
+        "/ferramentas/gestao-do-tempo/",
+        "/mineracao/seguranca-na-mineracao/",
+        "/mineracao/canaa-dos-carajas/",
+        "/carreira-mineracao/",
+        "/politica-editorial/"
+      ],
+      "ctas": [
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Quero acessar a Trilha 10X por R$ 97"
+        },
+        {
+          "href": "mailto:adonias.joshua@gmail.com",
+          "text": "Contato"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://wa.me/5594992993138?text=Ol%C3%A1%2C%20Adonias!%20Vim%20do%20Portal%205S%20e%20Produtividade%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida.",
+          "text": "Fale com o autor"
+        }
+      ],
+      "indexation": "Não verificada no Search Console",
+      "incoming": [
+        "/carreira-mineracao/como-trabalhar-na-mineracao/",
+        "/carreira-mineracao/",
+        "/mineracao/canaa-dos-carajas/",
+        "/mineracao/"
+      ]
+    },
+    {
+      "file": "mineracao/produtividade-na-mineracao/index.html",
+      "route": "/mineracao/produtividade-na-mineracao/",
+      "title": "Produtividade na Mineração com Segurança e Confiabilidade",
+      "description": "Entenda produtividade na mineração por fluxo, confiabilidade, planejamento, qualidade, segurança, meio ambiente e melhoria contínua.",
+      "h1": [
+        "Produtividade na Mineração: Como Melhorar Eficiência sem Comprometer a Segurança"
+      ],
+      "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+      "canonical": "https://zadonidigital.com.br/mineracao/produtividade-na-mineracao/",
+      "inSitemap": true,
+      "schema": [
+        "Article",
+        "WebPage",
+        "BreadcrumbList",
+        "ListItem"
+      ],
+      "schemaErrors": [],
+      "outgoing": [
+        "/mineracao/produtividade-na-mineracao/",
+        "/portal/",
+        "/mineracao/",
+        "/5s/",
+        "/produtividade/",
+        "/gestao-ambiental/",
+        "/ferramentas/",
+        "/sobre/",
+        "/mineracao/5s-na-mineracao/",
+        "/mineracao/seguranca-na-mineracao/",
+        "/produtividade/gestao-do-tempo/",
+        "/ferramentas/gestao-do-tempo/",
+        "/carreira-mineracao/",
+        "/politica-editorial/"
+      ],
+      "ctas": [
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Quero acessar a Trilha 10X por R$ 97"
+        },
+        {
+          "href": "mailto:adonias.joshua@gmail.com",
+          "text": "Contato"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://wa.me/5594992993138?text=Ol%C3%A1%2C%20Adonias!%20Vim%20do%20Portal%205S%20e%20Produtividade%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida.",
+          "text": "Fale com o autor"
+        }
+      ],
+      "indexation": "Não verificada no Search Console",
+      "incoming": [
+        "/carreira-mineracao/como-trabalhar-na-mineracao/",
+        "/carreira-mineracao/",
+        "/mineracao/5s-na-mineracao/",
+        "/mineracao/",
+        "/mineracao/seguranca-na-mineracao/"
+      ]
+    },
+    {
+      "file": "mineracao/riscos-na-mineracao/index.html",
+      "route": "/mineracao/riscos-na-mineracao/",
+      "title": "Riscos na Mineração: Como Reconhecer e Controlar",
+      "description": "Conheça grupos de perigos na mineração e um roteiro educativo para identificar exposições, interfaces, mudanças e medidas de prevenção.",
+      "h1": [
+        "Riscos na mineração: reconhecer, avaliar, controlar e revisar"
+      ],
+      "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+      "canonical": "https://zadonidigital.com.br/mineracao/riscos-na-mineracao/",
+      "inSitemap": true,
+      "schema": [
+        "Article",
+        "WebPage",
+        "BreadcrumbList",
+        "ListItem"
+      ],
+      "schemaErrors": [],
+      "outgoing": [
+        "/mineracao/riscos-na-mineracao/",
+        "/portal/",
+        "/mineracao/",
+        "/5s/",
+        "/produtividade/",
+        "/gestao-ambiental/",
+        "/ferramentas/",
+        "/sobre/",
+        "/mineracao/seguranca-na-mineracao/",
+        "/mineracao/nr-22/",
+        "/mineracao/5s-na-mineracao/",
+        "/carreira-mineracao/",
+        "/politica-editorial/"
+      ],
+      "ctas": [
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Quero acessar a Trilha 10X por R$ 97"
+        },
+        {
+          "href": "mailto:adonias.joshua@gmail.com",
+          "text": "Contato"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://wa.me/5594992993138?text=Ol%C3%A1%2C%20Adonias!%20Vim%20do%20Portal%205S%20e%20Produtividade%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida.",
+          "text": "Fale com o autor"
+        }
+      ],
+      "indexation": "Não verificada no Search Console",
+      "incoming": [
+        "/mineracao/gestao-ambiental-na-mineracao/",
+        "/mineracao/",
+        "/mineracao/nr-22/",
+        "/mineracao/seguranca-na-mineracao/"
+      ]
+    },
+    {
+      "file": "mineracao/seguranca-na-mineracao/index.html",
+      "route": "/mineracao/seguranca-na-mineracao/",
+      "title": "Segurança na Mineração: Riscos, Controles e Cultura",
+      "description": "Entenda como planejamento, hierarquia de controles, liderança, comunicação e aprendizagem apoiam a segurança do trabalho na mineração.",
+      "h1": [
+        "Segurança na mineração: do planejamento ao trabalho real"
+      ],
+      "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+      "canonical": "https://zadonidigital.com.br/mineracao/seguranca-na-mineracao/",
+      "inSitemap": true,
+      "schema": [
+        "Article",
+        "WebPage",
+        "BreadcrumbList",
+        "ListItem"
+      ],
+      "schemaErrors": [],
+      "outgoing": [
+        "/mineracao/seguranca-na-mineracao/",
+        "/portal/",
+        "/mineracao/",
+        "/5s/",
+        "/produtividade/",
+        "/gestao-ambiental/",
+        "/ferramentas/",
+        "/sobre/",
+        "/mineracao/riscos-na-mineracao/",
+        "/mineracao/5s-na-mineracao/",
+        "/mineracao/nr-22/",
+        "/mineracao/produtividade-na-mineracao/",
+        "/carreira-mineracao/",
+        "/politica-editorial/"
+      ],
+      "ctas": [
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Quero acessar a Trilha 10X por R$ 97"
+        },
+        {
+          "href": "mailto:adonias.joshua@gmail.com",
+          "text": "Contato"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://wa.me/5594992993138?text=Ol%C3%A1%2C%20Adonias!%20Vim%20do%20Portal%205S%20e%20Produtividade%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida.",
+          "text": "Fale com o autor"
+        }
+      ],
+      "indexation": "Não verificada no Search Console",
+      "incoming": [
+        "/carreira-mineracao/como-trabalhar-na-mineracao/",
+        "/mineracao/canaa-dos-carajas/",
+        "/mineracao/",
+        "/mineracao/nr-22/",
+        "/mineracao/parauapebas/",
+        "/mineracao/produtividade-na-mineracao/",
+        "/mineracao/riscos-na-mineracao/"
+      ]
+    },
+    {
+      "file": "politica-editorial/index.html",
+      "route": "/politica-editorial/",
+      "title": "Política Editorial | Portal 5S, Mineração e Produtividade",
+      "description": "Conheça os critérios de pesquisa, redação, fontes, revisão, correções e transparência usados nos conteúdos do Portal 5S e Produtividade.",
+      "h1": [
+        "Política editorial e compromisso com o leitor"
+      ],
+      "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+      "canonical": "https://zadonidigital.com.br/politica-editorial/",
+      "inSitemap": true,
+      "schema": [
+        "Article",
+        "WebPage",
+        "BreadcrumbList",
+        "ListItem"
+      ],
+      "schemaErrors": [],
+      "outgoing": [
+        "/politica-editorial/",
+        "/portal/",
+        "/mineracao/",
+        "/5s/",
+        "/produtividade/",
+        "/gestao-ambiental/",
+        "/ferramentas/",
+        "/sobre/",
+        "/atualizacoes/",
+        "/carreira-mineracao/"
+      ],
+      "ctas": [
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Quero acessar a Trilha 10X por R$ 97"
+        },
+        {
+          "href": "mailto:adonias.joshua@gmail.com",
+          "text": "Contato"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://wa.me/5594992993138?text=Ol%C3%A1%2C%20Adonias!%20Vim%20do%20Portal%205S%20e%20Produtividade%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida.",
+          "text": "Fale com o autor"
+        }
+      ],
+      "indexation": "Não verificada no Search Console",
+      "incoming": [
+        "/5s/5s-na-construcao-civil/",
+        "/5s/5s-na-empresa/",
+        "/5s/5s-na-vida-pessoal/",
+        "/5s/",
+        "/5s/o-que-e-5s/",
+        "/5s/programa-5s/",
+        "/atualizacoes/",
+        "/carreira-mineracao/como-trabalhar-na-mineracao/",
+        "/carreira-mineracao/",
+        "/ferramentas/",
+        "/ferramentas/matriz-eisenhower/",
+        "/gestao-ambiental/educacao-ambiental-em-obras/",
+        "/gestao-ambiental/gestao-ambiental-na-construcao-civil/",
+        "/gestao-ambiental/gestao-de-residuos/",
+        "/gestao-ambiental/",
+        "/mineracao/5s-na-mineracao/",
+        "/mineracao/canaa-dos-carajas/",
+        "/mineracao/gestao-ambiental-na-mineracao/",
+        "/mineracao/",
+        "/mineracao/nr-22/",
+        "/mineracao/parauapebas/",
+        "/mineracao/produtividade-na-mineracao/",
+        "/mineracao/riscos-na-mineracao/",
+        "/mineracao/seguranca-na-mineracao/",
+        "/portal/",
+        "/produtividade/5s-e-produtividade/",
+        "/produtividade/gestao-do-tempo/",
+        "/produtividade/",
+        "/produtividade/matriz-eisenhower/",
+        "/produtividade/tecnica-pomodoro/",
+        "/sobre/"
+      ]
+    },
+    {
+      "file": "portal/index.html",
+      "route": "/portal/",
+      "title": "Portal 5S, Produtividade e Gestão Ambiental | Produtividade 10X",
+      "description": "Conteúdo prático e responsável sobre 5S, produtividade, gestão do tempo e gestão ambiental aplicado ao trabalho, às obras e à vida.",
+      "h1": [
+        "Conhecimento prático para organizar, produzir e melhorar"
+      ],
+      "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+      "canonical": "https://zadonidigital.com.br/portal/",
+      "inSitemap": true,
+      "schema": [
+        "CollectionPage",
+        "BreadcrumbList",
+        "ListItem",
+        "WebSite",
+        "Person"
+      ],
+      "schemaErrors": [],
+      "outgoing": [
+        "/portal/",
+        "/mineracao/",
+        "/5s/",
+        "/produtividade/",
+        "/gestao-ambiental/",
+        "/ferramentas/",
+        "/sobre/",
+        "/ferramentas/gestao-do-tempo/",
+        "/carreira-mineracao/",
+        "/5s/o-que-e-5s/",
+        "/produtividade/matriz-eisenhower/",
+        "/gestao-ambiental/gestao-ambiental-na-construcao-civil/",
+        "/5s/5s-na-construcao-civil/",
+        "/gestao-ambiental/gestao-de-residuos/",
+        "/produtividade/tecnica-pomodoro/",
+        "/politica-editorial/"
+      ],
+      "ctas": [
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Quero acessar a Trilha 10X por R$ 97"
+        },
+        {
+          "href": "mailto:adonias.joshua@gmail.com",
+          "text": "Contato"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://wa.me/5594992993138?text=Ol%C3%A1%2C%20Adonias!%20Vim%20do%20Portal%205S%20e%20Produtividade%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida.",
+          "text": "Fale com o autor"
+        }
+      ],
+      "indexation": "Não verificada no Search Console",
+      "incoming": [
+        "/404.html",
+        "/5s/5s-na-construcao-civil/",
+        "/5s/5s-na-empresa/",
+        "/5s/5s-na-vida-pessoal/",
+        "/5s/",
+        "/5s/o-que-e-5s/",
+        "/5s/programa-5s/",
+        "/atualizacoes/",
+        "/carreira-mineracao/como-trabalhar-na-mineracao/",
+        "/carreira-mineracao/",
+        "/ferramentas/gestao-do-tempo/",
+        "/ferramentas/",
+        "/ferramentas/matriz-eisenhower/",
+        "/gestao-ambiental/educacao-ambiental-em-obras/",
+        "/gestao-ambiental/gestao-ambiental-na-construcao-civil/",
+        "/gestao-ambiental/gestao-de-residuos/",
+        "/gestao-ambiental/",
+        "/",
+        "/mineracao/5s-na-mineracao/",
+        "/mineracao/canaa-dos-carajas/",
+        "/mineracao/gestao-ambiental-na-mineracao/",
+        "/mineracao/",
+        "/mineracao/nr-22/",
+        "/mineracao/parauapebas/",
+        "/mineracao/produtividade-na-mineracao/",
+        "/mineracao/riscos-na-mineracao/",
+        "/mineracao/seguranca-na-mineracao/",
+        "/politica-editorial/",
+        "/produtividade/5s-e-produtividade/",
+        "/produtividade/gestao-do-tempo/",
+        "/produtividade/",
+        "/produtividade/matriz-eisenhower/",
+        "/produtividade/tecnica-pomodoro/",
+        "/sobre/"
+      ]
+    },
+    {
+      "file": "produtividade/5s-e-produtividade/index.html",
+      "route": "/produtividade/5s-e-produtividade/",
+      "title": "5S e Produtividade: Como Organização Reduz Desperdícios",
+      "description": "Entenda como 5S e produtividade se conectam por meio de menos buscas, excessos, interrupções, anomalias e decisões repetitivas.",
+      "h1": [
+        "5S e produtividade: organização a serviço do trabalho"
+      ],
+      "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+      "canonical": "https://zadonidigital.com.br/produtividade/5s-e-produtividade/",
+      "inSitemap": true,
+      "schema": [
+        "Article",
+        "WebPage",
+        "BreadcrumbList",
+        "ListItem"
+      ],
+      "schemaErrors": [],
+      "outgoing": [
+        "/produtividade/5s-e-produtividade/",
+        "/portal/",
+        "/mineracao/",
+        "/5s/",
+        "/produtividade/",
+        "/gestao-ambiental/",
+        "/ferramentas/",
+        "/sobre/",
+        "/produtividade/matriz-eisenhower/",
+        "/produtividade/tecnica-pomodoro/",
+        "/5s/o-que-e-5s/",
+        "/produtividade/gestao-do-tempo/",
+        "/5s/5s-na-empresa/",
+        "/carreira-mineracao/",
+        "/politica-editorial/"
+      ],
+      "ctas": [
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Quero acessar a Trilha 10X por R$ 97"
+        },
+        {
+          "href": "mailto:adonias.joshua@gmail.com",
+          "text": "Contato"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://wa.me/5594992993138?text=Ol%C3%A1%2C%20Adonias!%20Vim%20do%20Portal%205S%20e%20Produtividade%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida.",
+          "text": "Fale com o autor"
+        }
+      ],
+      "indexation": "Não verificada no Search Console",
+      "incoming": [
+        "/5s/5s-na-empresa/",
+        "/5s/",
+        "/5s/o-que-e-5s/",
+        "/5s/programa-5s/",
+        "/ferramentas/gestao-do-tempo/",
+        "/ferramentas/matriz-eisenhower/",
+        "/produtividade/gestao-do-tempo/",
+        "/produtividade/",
+        "/produtividade/tecnica-pomodoro/"
+      ]
+    },
+    {
+      "file": "produtividade/gestao-do-tempo/index.html",
+      "route": "/produtividade/gestao-do-tempo/",
+      "title": "Gestão do Tempo: Como Planejar Prioridades e Rotina",
+      "description": "Aprenda gestão do tempo com prioridades, blocos de agenda, margem para imprevistos, revisão semanal e práticas sustentáveis.",
+      "h1": [
+        "Gestão do tempo para uma rotina possível"
+      ],
+      "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+      "canonical": "https://zadonidigital.com.br/produtividade/gestao-do-tempo/",
+      "inSitemap": true,
+      "schema": [
+        "Article",
+        "WebPage",
+        "BreadcrumbList",
+        "ListItem"
+      ],
+      "schemaErrors": [],
+      "outgoing": [
+        "/produtividade/gestao-do-tempo/",
+        "/portal/",
+        "/mineracao/",
+        "/5s/",
+        "/produtividade/",
+        "/gestao-ambiental/",
+        "/ferramentas/",
+        "/sobre/",
+        "/produtividade/matriz-eisenhower/",
+        "/produtividade/tecnica-pomodoro/",
+        "/produtividade/5s-e-produtividade/",
+        "/ferramentas/gestao-do-tempo/",
+        "/carreira-mineracao/",
+        "/politica-editorial/"
+      ],
+      "ctas": [
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Quero acessar a Trilha 10X por R$ 97"
+        },
+        {
+          "href": "mailto:adonias.joshua@gmail.com",
+          "text": "Contato"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://wa.me/5594992993138?text=Ol%C3%A1%2C%20Adonias!%20Vim%20do%20Portal%205S%20e%20Produtividade%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida.",
+          "text": "Fale com o autor"
+        }
+      ],
+      "indexation": "Não verificada no Search Console",
+      "incoming": [
+        "/5s/5s-na-empresa/",
+        "/5s/5s-na-vida-pessoal/",
+        "/ferramentas/",
+        "/ferramentas/matriz-eisenhower/",
+        "/mineracao/produtividade-na-mineracao/",
+        "/produtividade/5s-e-produtividade/",
+        "/produtividade/",
+        "/produtividade/matriz-eisenhower/",
+        "/produtividade/tecnica-pomodoro/"
+      ]
+    },
+    {
+      "file": "produtividade/index.html",
+      "route": "/produtividade/",
+      "title": "Produtividade: Foco, Prioridades e Gestão do Tempo",
+      "description": "Guias práticos de produtividade, Técnica Pomodoro, Matriz de Eisenhower, gestão do tempo e organização com 5S.",
+      "h1": [
+        "Produtividade com foco no que importa"
+      ],
+      "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+      "canonical": "https://zadonidigital.com.br/produtividade/",
+      "inSitemap": true,
+      "schema": [
+        "CollectionPage",
+        "BreadcrumbList",
+        "ListItem"
+      ],
+      "schemaErrors": [],
+      "outgoing": [
+        "/produtividade/",
+        "/portal/",
+        "/mineracao/",
+        "/5s/",
+        "/gestao-ambiental/",
+        "/ferramentas/",
+        "/sobre/",
+        "/produtividade/matriz-eisenhower/",
+        "/produtividade/tecnica-pomodoro/",
+        "/produtividade/gestao-do-tempo/",
+        "/produtividade/5s-e-produtividade/",
+        "/ferramentas/matriz-eisenhower/",
+        "/carreira-mineracao/",
+        "/politica-editorial/"
+      ],
+      "ctas": [
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Quero acessar a Trilha 10X por R$ 97"
+        },
+        {
+          "href": "mailto:adonias.joshua@gmail.com",
+          "text": "Contato"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://wa.me/5594992993138?text=Ol%C3%A1%2C%20Adonias!%20Vim%20do%20Portal%205S%20e%20Produtividade%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida.",
+          "text": "Fale com o autor"
+        }
+      ],
+      "indexation": "Não verificada no Search Console",
+      "incoming": [
+        "/404.html",
+        "/5s/5s-na-construcao-civil/",
+        "/5s/5s-na-empresa/",
+        "/5s/5s-na-vida-pessoal/",
+        "/5s/",
+        "/5s/o-que-e-5s/",
+        "/5s/programa-5s/",
+        "/atualizacoes/",
+        "/carreira-mineracao/como-trabalhar-na-mineracao/",
+        "/carreira-mineracao/",
+        "/ferramentas/gestao-do-tempo/",
+        "/ferramentas/",
+        "/ferramentas/matriz-eisenhower/",
+        "/gestao-ambiental/educacao-ambiental-em-obras/",
+        "/gestao-ambiental/gestao-ambiental-na-construcao-civil/",
+        "/gestao-ambiental/gestao-de-residuos/",
+        "/gestao-ambiental/",
+        "/mineracao/5s-na-mineracao/",
+        "/mineracao/canaa-dos-carajas/",
+        "/mineracao/gestao-ambiental-na-mineracao/",
+        "/mineracao/",
+        "/mineracao/nr-22/",
+        "/mineracao/parauapebas/",
+        "/mineracao/produtividade-na-mineracao/",
+        "/mineracao/riscos-na-mineracao/",
+        "/mineracao/seguranca-na-mineracao/",
+        "/politica-editorial/",
+        "/portal/",
+        "/produtividade/5s-e-produtividade/",
+        "/produtividade/gestao-do-tempo/",
+        "/produtividade/matriz-eisenhower/",
+        "/produtividade/tecnica-pomodoro/",
+        "/sobre/"
+      ]
+    },
+    {
+      "file": "produtividade/matriz-eisenhower/index.html",
+      "route": "/produtividade/matriz-eisenhower/",
+      "title": "Matriz de Eisenhower: Como Priorizar Tarefas na Prática",
+      "description": "Aprenda a usar a Matriz de Eisenhower para separar tarefas urgentes e importantes, decidir ações e revisar prioridades.",
+      "h1": [
+        "Matriz de Eisenhower: transforme tarefas em decisões"
+      ],
+      "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+      "canonical": "https://zadonidigital.com.br/produtividade/matriz-eisenhower/",
+      "inSitemap": true,
+      "schema": [
+        "Article",
+        "WebPage",
+        "BreadcrumbList",
+        "ListItem"
+      ],
+      "schemaErrors": [],
+      "outgoing": [
+        "/produtividade/matriz-eisenhower/",
+        "/portal/",
+        "/mineracao/",
+        "/5s/",
+        "/produtividade/",
+        "/gestao-ambiental/",
+        "/ferramentas/",
+        "/sobre/",
+        "/produtividade/gestao-do-tempo/",
+        "/produtividade/tecnica-pomodoro/",
+        "/5s/5s-na-vida-pessoal/",
+        "/carreira-mineracao/",
+        "/politica-editorial/"
+      ],
+      "ctas": [
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Quero acessar a Trilha 10X por R$ 97"
+        },
+        {
+          "href": "mailto:adonias.joshua@gmail.com",
+          "text": "Contato"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://wa.me/5594992993138?text=Ol%C3%A1%2C%20Adonias!%20Vim%20do%20Portal%205S%20e%20Produtividade%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida.",
+          "text": "Fale com o autor"
+        }
+      ],
+      "indexation": "Não verificada no Search Console",
+      "incoming": [
+        "/5s/5s-na-vida-pessoal/",
+        "/ferramentas/gestao-do-tempo/",
+        "/ferramentas/",
+        "/ferramentas/matriz-eisenhower/",
+        "/portal/",
+        "/produtividade/5s-e-produtividade/",
+        "/produtividade/gestao-do-tempo/",
+        "/produtividade/",
+        "/produtividade/tecnica-pomodoro/"
+      ]
+    },
+    {
+      "file": "produtividade/tecnica-pomodoro/index.html",
+      "route": "/produtividade/tecnica-pomodoro/",
+      "title": "Técnica Pomodoro: Como Usar para Foco e Produtividade",
+      "description": "Aprenda como funciona a Técnica Pomodoro, como adaptar ciclos de foco e pausas e como combinar execução com prioridades.",
+      "h1": [
+        "Técnica Pomodoro: como usar ciclos de foco"
+      ],
+      "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+      "canonical": "https://zadonidigital.com.br/produtividade/tecnica-pomodoro/",
+      "inSitemap": true,
+      "schema": [
+        "Article",
+        "WebPage",
+        "BreadcrumbList",
+        "ListItem"
+      ],
+      "schemaErrors": [],
+      "outgoing": [
+        "/produtividade/tecnica-pomodoro/",
+        "/portal/",
+        "/mineracao/",
+        "/5s/",
+        "/produtividade/",
+        "/gestao-ambiental/",
+        "/ferramentas/",
+        "/sobre/",
+        "/produtividade/matriz-eisenhower/",
+        "/produtividade/gestao-do-tempo/",
+        "/produtividade/5s-e-produtividade/",
+        "/carreira-mineracao/",
+        "/politica-editorial/"
+      ],
+      "ctas": [
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Quero acessar a Trilha 10X por R$ 97"
+        },
+        {
+          "href": "mailto:adonias.joshua@gmail.com",
+          "text": "Contato"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://wa.me/5594992993138?text=Ol%C3%A1%2C%20Adonias!%20Vim%20do%20Portal%205S%20e%20Produtividade%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida.",
+          "text": "Fale com o autor"
+        }
+      ],
+      "indexation": "Não verificada no Search Console",
+      "incoming": [
+        "/ferramentas/gestao-do-tempo/",
+        "/ferramentas/matriz-eisenhower/",
+        "/portal/",
+        "/produtividade/5s-e-produtividade/",
+        "/produtividade/gestao-do-tempo/",
+        "/produtividade/",
+        "/produtividade/matriz-eisenhower/"
+      ]
+    },
+    {
+      "file": "sobre/index.html",
+      "route": "/sobre/",
+      "title": "Sobre Adonias Pereira da Silva | Portal Produtividade 10X",
+      "description": "Conheça Adonias Pereira da Silva, a experiência prática por trás do portal e os princípios de produção e revisão dos conteúdos.",
+      "h1": [
+        "Experiência de campo transformada em conhecimento prático"
+      ],
+      "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+      "canonical": "https://zadonidigital.com.br/sobre/",
+      "inSitemap": true,
+      "schema": [
+        "ProfilePage",
+        "BreadcrumbList",
+        "ListItem",
+        "Person"
+      ],
+      "schemaErrors": [],
+      "outgoing": [
+        "/sobre/",
+        "/portal/",
+        "/mineracao/",
+        "/5s/",
+        "/produtividade/",
+        "/gestao-ambiental/",
+        "/ferramentas/",
+        "/carreira-mineracao/",
+        "/politica-editorial/"
+      ],
+      "ctas": [
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "mailto:adonias.joshua@gmail.com",
+          "text": "Contato"
+        },
+        {
+          "href": "https://hotm.io/trilha10x",
+          "text": "Conheça a Trilha 10X"
+        },
+        {
+          "href": "https://wa.me/5594992993138?text=Ol%C3%A1%2C%20Adonias!%20Vim%20do%20Portal%205S%20e%20Produtividade%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida.",
+          "text": "Fale com o autor"
+        }
+      ],
+      "indexation": "Não verificada no Search Console",
+      "incoming": [
+        "/5s/5s-na-construcao-civil/",
+        "/5s/5s-na-empresa/",
+        "/5s/5s-na-vida-pessoal/",
+        "/5s/",
+        "/5s/o-que-e-5s/",
+        "/5s/programa-5s/",
+        "/atualizacoes/",
+        "/carreira-mineracao/como-trabalhar-na-mineracao/",
+        "/carreira-mineracao/",
+        "/ferramentas/gestao-do-tempo/",
+        "/ferramentas/",
+        "/ferramentas/matriz-eisenhower/",
+        "/gestao-ambiental/educacao-ambiental-em-obras/",
+        "/gestao-ambiental/gestao-ambiental-na-construcao-civil/",
+        "/gestao-ambiental/gestao-de-residuos/",
+        "/gestao-ambiental/",
+        "/mineracao/5s-na-mineracao/",
+        "/mineracao/canaa-dos-carajas/",
+        "/mineracao/gestao-ambiental-na-mineracao/",
+        "/mineracao/",
+        "/mineracao/nr-22/",
+        "/mineracao/parauapebas/",
+        "/mineracao/produtividade-na-mineracao/",
+        "/mineracao/riscos-na-mineracao/",
+        "/mineracao/seguranca-na-mineracao/",
+        "/politica-editorial/",
+        "/portal/",
+        "/produtividade/5s-e-produtividade/",
+        "/produtividade/gestao-do-tempo/",
+        "/produtividade/",
+        "/produtividade/matriz-eisenhower/",
+        "/produtividade/tecnica-pomodoro/"
+      ]
+    }
+  ]
+}
