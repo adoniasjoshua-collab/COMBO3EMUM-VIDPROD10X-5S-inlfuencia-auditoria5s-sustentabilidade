@@ -102,3 +102,10 @@
 .home-discovery .home-explore-grid { grid-template-columns:1fr; }
 .home-commercial-help { line-height:1.8; }
 .home-discovery .home-commercial-help { color:#234935; }
+
+.home-commercial-guide { margin-block:32px; padding:24px; border:1px solid #cbd9cc; border-radius:5px; background:#fff; color:#234935; }
+.home-commercial-guide li { margin-block:12px; line-height:1.7; }
+.home-discovery .home-commercial-guide p { color:#234935; line-height:1.7; }
+.home-commercial-guide details { border-top:1px solid #d5e0d8; padding-block:8px; }
+.home-commercial-guide summary { cursor:pointer; padding:12px 4px; font-weight:600; }
+.home-commercial-guide a { text-decoration:underline; }

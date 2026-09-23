@@ -97,3 +97,9 @@
 @media(max-width:850px) { .zd-hero-grid { grid-template-columns:1fr; gap:35px; } .zd-hero-panel { max-width:550px; } .zd-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .zd-split { gap:35px; } .zd-header-inner { flex-wrap:wrap; } }
 @media(max-width:540px) { .zd-shell { width:calc(100% - 32px); } .zd-hero { padding:20px 0 40px; } .zd-header-inner { gap:16px; } .zd-header nav { width:100%; gap:4px 18px; font-size:.82rem; justify-content:space-between; } .zd-header nav .zd-nav-cta { padding:9px 11px; } .zd-section { padding-block:35px; } .zd-grid,.zd-split,.zd-footer-grid { grid-template-columns:1fr; } .zd-actions { flex-direction:column; align-items:stretch; } .zd-hero-panel { padding:24px; box-shadow:6px 7px 0 #e4eddc; } .zd-final { padding:24px; } .zd-diagnostic form,.zd-result { padding:18px; } .zd-note { padding-left:20px; } .zd-commercial .whatsapp-contact { width:48px; height:48px; bottom:12px; right:12px; } }
 @media print { .zd-header,.zd-footer,.zd-actions,.zd-inline-cta,.zd-final { display:none; } .zd-hero { padding:0; background:white; } .zd-shell { width:100%; } }
+
+.zd-header-inner { flex-wrap:wrap; }
+.zd-header nav { flex-wrap:wrap; }
+.zd-section details { border-top:1px solid #cbd9cc; padding-block:8px; }
+.zd-section summary { cursor:pointer; padding:12px 4px; font-weight:600; }
+.zd-section ol li { margin-block:12px; line-height:1.7; }
