@@ -38,7 +38,7 @@ for(const [file,addition]of [
       .replace(/    <!-- HEADER -->[\s\S]*?    <main>/,'    <main>')
       .replace(/      <!-- HOME DISCOVERY START -->[\s\S]*?      <!-- HOME DISCOVERY END -->\n/,'');
     assert.equal(withoutHomeNavigation(after.replace(addition,'')),withoutHomeNavigation(before),'Home: preservar metadados e todo o conteúdo histórico do curso fora da navegação autorizada');
-  } else assert.equal(after.replace(addition,''),before,'Só o link comercial é permitido em '+file);
+  } else assert.equal(after.replace(addition,'').replace(/<nav[^>]*data-zadoni-access>[\s\S]*?<\/nav>\n/,''),before,'Só o link comercial é permitido em '+file);
 }
 const sitemap=fs.readFileSync('sitemap.xml','utf8');
 for(const url of snapshot.sitemap)assert.ok(sitemap.includes('<loc>'+url+'</loc>'),'URL histórica removida '+url);

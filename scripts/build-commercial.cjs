@@ -74,6 +74,8 @@ function build() {
   let portal=fs.readFileSync(portalPath,'utf8');
   const link='<li><a href="../servicos-digitais/">Serviços digitais — Zadoni Digital</a></li>';
   if(!portal.includes(link)) portal=portal.replace('<h3>Transparência</h3><ul>','<h3>Transparência</h3><ul>'+link);
+  const access='<nav class="portal-shell hero-actions" aria-label="Zadoni Digital" data-zadoni-access><a class="button button--secondary" href="../">Home Zadoni Digital</a><a class="button button--secondary" href="../servicos-digitais/">Serviços digitais</a><a class="button button--primary" href="../diagnostico-presenca-digital/">Diagnóstico de presença digital</a></nav>';
+  if(!portal.includes('data-zadoni-access')) portal=portal.replace('<nav class="breadcrumb',access+'\n<nav class="breadcrumb');
   fs.writeFileSync(portalPath,portal);
   const sitemapPath=path.join(root,'sitemap.xml');
   let xml=fs.readFileSync(sitemapPath,'utf8');
