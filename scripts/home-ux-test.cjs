@@ -32,7 +32,10 @@ const server=http.createServer((req,res)=>{const url=new URL(req.url,'http://loc
     await page.screenshot({path:path.join(out,'home-'+width+'.png')});
     results.push({width,servicesTop:Math.round(top.y),overflow:false,axeViolations:0});
   }
-  await page.locator('.home-action').click();await page.waitForURL('**/servicos-digitais/');
+  const contact = new URL(await page.locator('.home-action').getAttribute('href'));
+  assert.equal(contact.hostname,'wa.me');
+  assert.ok(contact.searchParams.get('text').includes('marketing'));
+  await page.locator('.home-intro a[href="./servicos-digitais/"]').click();await page.waitForURL('**/servicos-digitais/');
   const nojs=await browser.newContext({javaScriptEnabled:false,viewport:{width:390,height:900}}),fallback=await nojs.newPage();await fallback.goto(base+'/');assert.ok(await fallback.locator('#primary-nav a').first().isVisible());await nojs.close();
   assert.deepEqual(errors,[]);fs.writeFileSync(path.join(out,'results.json'),JSON.stringify({passed:true,scope:'Header e acessos novos; não certifica seções antigas do curso',results,consoleErrors:errors},null,2));console.log('HOME UX: cinco larguras, menu por teclado, destinos, contraste e acesso sem JavaScript aprovados.');
 }finally{await browser?.close();server.close();}})().catch(e=>{console.error(e);process.exitCode=1;});
