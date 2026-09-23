@@ -103,3 +103,7 @@
 .zd-section details { border-top:1px solid #cbd9cc; padding-block:8px; }
 .zd-section summary { cursor:pointer; padding:12px 4px; font-weight:600; }
 .zd-section ol li { margin-block:12px; line-height:1.7; }
+
+.zd-guidance-image { margin:24px 0; max-width:640px; }
+.zd-guidance-image img { display:block; width:100%; height:auto; border-radius:8px; }
+.zd-guidance-image figcaption { color:#53675c; font-size:.8rem; margin-top:8px; }
